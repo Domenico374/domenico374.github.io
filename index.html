@@ -6,10 +6,6 @@
   <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #e6f8f2;
@@ -45,21 +41,6 @@
       font-size: 2.5em;
       margin: 0;
       color: #043c4e;
-    }
-
-    nav {
-      margin-top: 1em;
-    }
-
-    nav a {
-      margin: 0 1em;
-      text-decoration: none;
-      color: #043c4e;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
     }
 
     .sottotitolo {
@@ -149,52 +130,33 @@
     }
 
     .contatti h2 {
-      font-size: 2em;
       color: #043c4e;
-      margin-bottom: 1em;
     }
 
     form {
-      max-width: 400px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      max-width: 400px;
+      margin: 0 auto;
     }
 
     input, textarea {
+      margin: 0.5em 0;
       padding: 0.8em;
-      border: none;
-      border-radius: 8px;
       font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
 
     button {
+      margin-top: 1em;
       padding: 0.8em;
-      background-color: #4ca678;
-      color: white;
+      background-color: #043c4e;
+      color: #fff;
       border: none;
       border-radius: 8px;
       font-size: 1em;
       cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #3b865f;
-    }
-
-    footer {
-      background-color: #043c4e;
-      color: #ffffff;
-      text-align: center;
-      padding: 1em;
-    }
-
-    footer a {
-      color: #ffffff;
-      margin: 0 0.5em;
-      font-size: 1.2em;
-      text-decoration: none;
     }
 
     @media (max-width: 768px) {
@@ -209,21 +171,15 @@
   </style>
 </head>
 <body>
-
   <header class="sticky-header">
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
     </div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#progetti">Progetti</a>
-      <a href="#contatti">Contattami</a>
-    </nav>
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <section id="home" class="intro">
+  <section class="intro">
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
       <p><strong>Benvenuti a tutti!</strong><br>
@@ -234,42 +190,35 @@
     </div>
   </section>
 
-  <section id="progetti" class="progetti">
+  <section class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam.png" alt="Fantateam Logo" />
+        <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen.png" alt="Storygen Logo" />
+        <img src="img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
+        <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
 
-  <section id="contatti" class="contatti">
+  <section class="contatti" id="contatti">
     <h2>Contattami</h2>
-    <form action="https://formspree.io/f/TUO_EMAIL" method="POST">
+    <form action="https://formspree.io/f/xgvyzngp" method="POST">
       <input type="text" name="name" placeholder="Il tuo nome" required>
       <input type="email" name="email" placeholder="La tua email" required>
-      <textarea name="message" placeholder="Il tuo messaggio" rows="5" required></textarea>
+      <textarea name="message" placeholder="Scrivi qui il tuo messaggio" rows="5" required></textarea>
       <button type="submit">Invia</button>
     </form>
   </section>
-
-  <footer>
-    <p>© 2025 La Fucina delle Idee | Realizzato da Domenico Cocco</p>
-    <a href="mailto:tuamail@email.com">📧</a>
-    <a href="https://github.com/domenico374" target="_blank">🐙</a>
-  </footer>
-
 </body>
 </html>
