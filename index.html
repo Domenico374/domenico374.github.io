@@ -14,10 +14,29 @@
       padding: 0;
     }
 
-    header.sticky-header {
+    nav {
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 1001;
+      background-color: #043c4e;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header.sticky-header {
       background-color: #aee2ef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 2em 1em;
@@ -123,6 +142,24 @@
       margin: 0;
     }
 
+    footer {
+      background-color: #aee2ef;
+      padding: 2em 1em;
+      text-align: center;
+      font-size: 0.9em;
+      color: #043c4e;
+    }
+
+    footer a {
+      color: #043c4e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .logo-titolo {
         flex-direction: column;
@@ -136,7 +173,15 @@
 </head>
 <body>
 
-  <header class="sticky-header">
+  <!-- Navbar sticky -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="sticky-header" id="home">
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
@@ -144,6 +189,7 @@
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
+  <!-- Intro -->
   <section class="intro">
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
@@ -155,26 +201,33 @@
     </div>
   </section>
 
-  <section class="progetti">
+  <!-- Progetti -->
+  <section class="progetti" id="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam.png" alt="Fantateam Logo" />
+        <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen.png" alt="Storygen Logo" />
+        <img src="img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
+        <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
+
+  <!-- Footer / Contatti -->
+  <footer id="contatti">
+    <p>© 2025 La Fucina delle Idee | Realizzato da Domenico Cocco</p>
+    <p><a href="mailto:tuamail@example.com">Scrivimi via email</a> • <a href="https://github.com/Domenico374" target="_blank">GitHub</a></p>
+  </footer>
 
 </body>
 </html>
