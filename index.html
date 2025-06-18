@@ -43,21 +43,6 @@
       color: #043c4e;
     }
 
-    nav {
-      margin-top: 1em;
-    }
-
-    nav a {
-      margin: 0 1em;
-      text-decoration: none;
-      font-weight: bold;
-      color: #043c4e;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
     .sottotitolo {
       font-style: italic;
       margin-top: 1em;
@@ -138,54 +123,6 @@
       margin: 0;
     }
 
-    .contatti {
-      background-color: #aee2ef;
-      padding: 3em 2em;
-      text-align: center;
-    }
-
-    .contatti h2 {
-      color: #043c4e;
-      font-size: 2em;
-      margin-bottom: 1em;
-    }
-
-    .contatti form {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .contatti input,
-    .contatti textarea {
-      width: 100%;
-      padding: 1em;
-      margin: 0.5em 0;
-      border: none;
-      border-radius: 6px;
-    }
-
-    .contatti button {
-      background-color: #043c4e;
-      color: white;
-      padding: 0.8em 1.5em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .contatti button:hover {
-      background-color: #022f3c;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
-      color: #666;
-      background-color: #e6f8f2;
-    }
-
     @media (max-width: 768px) {
       .logo-titolo {
         flex-direction: column;
@@ -205,21 +142,16 @@
       <h1>La Fucina delle Idee</h1>
     </div>
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#progetti">Progetti</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
   </header>
 
-  <section class="intro" id="home">
+  <section class="intro">
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
       <p><strong>Benvenuti a tutti!</strong><br>
-        Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
-        Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
-        trarre ispirazione e far nascere nuove idee e progetti.<br>
-        Che il viaggio incominci!</p>
+      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
+      trarre ispirazione e far nascere nuove idee e progetti.<br>
+      Che il viaggio incominci!</p>
     </div>
   </section>
 
@@ -227,36 +159,22 @@
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam.png" alt="Fantateam Logo" />
+        <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen.png" alt="Storygen Logo" />
+        <img src="img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
+        <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
-
-  <section class="contatti" id="contatti">
-    <h2>Contattami</h2>
-    <form action="https://formspree.io/f/xgvyzngp" method="POST">
-      <input type="text" name="name" placeholder="Il tuo nome" required>
-      <input type="email" name="_replyto" placeholder="La tua email" required>
-      <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 La Fucina delle Idee — Tutti i diritti riservati.
-  </footer>
 
 </body>
 </html>
