@@ -12,36 +12,12 @@
       color: #043c4e;
       margin: 0;
       padding: 0;
-    }
-
-    nav {
-      background-color: #043c4e;
-      padding: 1em;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
+      text-align: center;
     }
 
     header {
       background-color: #aee2ef;
       padding: 2em 1em;
-      text-align: center;
     }
 
     .logo-titolo {
@@ -69,35 +45,47 @@
       font-size: 1.1em;
     }
 
-    .immagine {
-      margin-top: 2em;
+    .intro {
       display: flex;
-      justify-content: flex-start;
-      padding-left: 2em;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      flex-wrap: wrap;
+      padding: 2em;
     }
 
-    .immagine img {
+    .einstein-img img {
       width: 280px;
       max-width: 90vw;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    @media (max-width: 768px) {
-      .immagine {
-        justify-content: center;
-        padding-left: 0;
-      }
+    .presentazione {
+      max-width: 500px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #043c4e;
+      background-color: #ffffffb8;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
+    @media (max-width: 768px) {
       .logo-titolo {
         flex-direction: column;
+      }
+
+      .intro {
+        flex-direction: column;
+        text-align: center;
       }
     }
 
     .progetti {
       padding: 2em 1em;
       background-color: #e6f8f2;
-      text-align: center;
     }
 
     .progetti h2 {
@@ -140,15 +128,6 @@
 </head>
 <body>
 
-  <nav>
-    <div class="nav-container">
-      <a href="https://domenico374.github.io/">Home</a>
-      <a href="https://domenico374.github.io/fantateam">Fantateam</a>
-      <a href="https://domenico374.github.io/storygen">Storygen</a>
-      <a href="https://domenico374.github.io/castello-kids">Castello Kids</a>
-    </div>
-  </nav>
-
   <header>
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
@@ -157,23 +136,34 @@
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <div class="immagine">
-    <img src="einstein.png" alt="Einstein e robot" />
+  <div class="intro">
+    <div class="einstein-img">
+      <img src="einstein.png" alt="Einstein e robot" />
+    </div>
+    <div class="presentazione">
+      <p>
+        Benvenuti a tutti.<br>
+        Einstein diceva che <strong>la creatività è l'intelligenza che si diverte</strong>.<br>
+        Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo dove sviluppare, trarre ispirazione,
+        e far nascere nuove idee e progetti.<br>
+        <em>Che il viaggio incominci!</em>
+      </p>
+    </div>
   </div>
 
   <section class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <h3><a href="https://domenico374.github.io/fantateam">Fantateam</a></h3>
+        <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <h3><a href="https://domenico374.github.io/storygen">Storygen</a></h3>
+        <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <h3><a href="https://domenico374.github.io/castello-kids">Castello Kids</a></h3>
+        <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
