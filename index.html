@@ -6,6 +6,10 @@
   <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #e6f8f2;
@@ -14,29 +18,10 @@
       padding: 0;
     }
 
-    nav {
+    header.sticky-header {
       position: sticky;
       top: 0;
-      z-index: 1001;
-      background-color: #043c4e;
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      padding: 1em;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header.sticky-header {
+      z-index: 1000;
       background-color: #aee2ef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 2em 1em;
@@ -60,6 +45,21 @@
       font-size: 2.5em;
       margin: 0;
       color: #043c4e;
+    }
+
+    nav {
+      margin-top: 1em;
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #043c4e;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .sottotitolo {
@@ -142,22 +142,59 @@
       margin: 0;
     }
 
-    footer {
+    .contatti {
       background-color: #aee2ef;
-      padding: 2em 1em;
+      padding: 3em 1em;
       text-align: center;
-      font-size: 0.9em;
+    }
+
+    .contatti h2 {
+      font-size: 2em;
       color: #043c4e;
+      margin-bottom: 1em;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input, textarea {
+      padding: 0.8em;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      padding: 0.8em;
+      background-color: #4ca678;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3b865f;
+    }
+
+    footer {
+      background-color: #043c4e;
+      color: #ffffff;
+      text-align: center;
+      padding: 1em;
     }
 
     footer a {
-      color: #043c4e;
+      color: #ffffff;
+      margin: 0 0.5em;
+      font-size: 1.2em;
       text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -173,24 +210,20 @@
 </head>
 <body>
 
-  <!-- Navbar sticky -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#progetti">Progetti</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
-
-  <!-- Header -->
-  <header class="sticky-header" id="home">
+  <header class="sticky-header">
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
     </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#contatti">Contattami</a>
+    </nav>
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <!-- Intro -->
-  <section class="intro">
+  <section id="home" class="intro">
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
       <p><strong>Benvenuti a tutti!</strong><br>
@@ -201,32 +234,41 @@
     </div>
   </section>
 
-  <!-- Progetti -->
-  <section class="progetti" id="progetti">
+  <section id="progetti" class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
+        <img src="img/fantateam.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen_logo.png" alt="Storygen Logo" />
+        <img src="img/storygen.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
+        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer / Contatti -->
-  <footer id="contatti">
+  <section id="contatti" class="contatti">
+    <h2>Contattami</h2>
+    <form action="https://formspree.io/f/TUO_EMAIL" method="POST">
+      <input type="text" name="name" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="message" placeholder="Il tuo messaggio" rows="5" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </section>
+
+  <footer>
     <p>© 2025 La Fucina delle Idee | Realizzato da Domenico Cocco</p>
-    <p><a href="mailto:tuamail@example.com">Scrivimi via email</a> • <a href="https://github.com/Domenico374" target="_blank">GitHub</a></p>
+    <a href="mailto:tuamail@email.com">📧</a>
+    <a href="https://github.com/domenico374" target="_blank">🐙</a>
   </footer>
 
 </body>
