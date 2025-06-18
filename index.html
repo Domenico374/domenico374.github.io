@@ -6,10 +6,6 @@
   <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #e6f8f2;
@@ -18,55 +14,73 @@
       padding: 0;
     }
 
-    nav {
-      background-color: #aee2ef;
-      padding: 1em;
-      position: fixed;
+    header.sticky-header {
+      position: sticky;
       top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 2em;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      background-color: #aee2ef;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 2em 1em;
+      text-align: center;
     }
 
-    nav a {
+    .logo-titolo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    .logo-titolo img {
+      width: 160px;
+      height: auto;
+    }
+
+    .logo-titolo h1 {
+      font-size: 2.5em;
+      margin: 0;
       color: #043c4e;
-      text-decoration: none;
-      font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .sottotitolo {
+      font-style: italic;
+      margin-top: 1em;
+      font-size: 1.1em;
     }
 
-    section {
-      padding: 6em 2em 3em;
-    }
-
-    header {
+    .intro {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      background-color: #aee2ef;
-      padding: 3em 1em 2em;
+      gap: 2em;
+      padding: 3em 2em 2em;
+    }
+
+    .intro img {
+      width: 280px;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .intro-text {
+      max-width: 500px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .progetti {
+      padding: 2em 1em 4em;
+      background-color: #ffffff;
       text-align: center;
     }
 
-    header img {
-      width: 280px;
-      max-width: 100%;
-      margin-right: 2em;
-    }
-
-    header div {
-      max-width: 500px;
-    }
-
-    h1, h2 {
+    .progetti h2 {
+      font-size: 2em;
       color: #043c4e;
+      margin-bottom: 1em;
     }
 
     .cards {
@@ -78,13 +92,14 @@
 
     .card {
       background-color: #d9f3e2;
-      border-left: 5px solid #4ca678;
-      padding: 1em;
-      width: 280px;
-      border-radius: 10px;
+      padding: 1.5em;
+      width: 260px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
       transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .card:hover {
@@ -92,119 +107,74 @@
     }
 
     .card img {
-      width: 60px;
+      width: 100px;
       height: auto;
       margin-bottom: 1em;
     }
 
-    #contatti {
-      background-color: #aee2ef;
-      padding-bottom: 4em;
-      scroll-margin-top: 120px;
+    .card h3 {
+      color: #2c6e57;
+      margin: 0.5em 0;
     }
 
-    form {
-      max-width: 400px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-
-    input, textarea {
-      padding: 0.8em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-
-    button {
-      background-color: #043c4e;
-      color: white;
-      border: none;
-      padding: 0.8em;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    footer {
-      background-color: #aee2ef;
-      text-align: center;
-      padding: 2em 1em;
-      font-size: 0.9em;
+    .card p {
+      color: #333;
+      font-size: 0.95em;
+      margin: 0;
     }
 
     @media (max-width: 768px) {
-      header {
+      .logo-titolo {
         flex-direction: column;
-        text-align: center;
       }
 
-      header img {
-        margin: 0 auto 1em;
+      .intro {
+        flex-direction: column;
       }
     }
   </style>
 </head>
-
 <body>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#chi-sono">Chi sono</a>
-    <a href="#progetti">Progetti</a>
-    <a href="#contatti">Contattami</a>
-  </nav>
-
-  <header id="home">
-    <img src="einstein.png" alt="Einstein e robot" />
-    <div>
+  <header class="sticky-header">
+    <div class="logo-titolo">
+      <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
-      <p>Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo per sviluppare, trarre ispirazione e far nascere nuove idee e progetti. Che il viaggio abbia inizio!</p>
     </div>
+    <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <section id="chi-sono">
-    <h2>Chi sono</h2>
-    <p>Mi chiamo Domenico Cocco e ho creato questo spazio per sperimentare con progetti digitali, creatività e intelligenza artificiale. Se ti piace l’idea, esplora, divertiti e contattami!</p>
+  <section class="intro">
+    <img src="einstein.png" alt="Einstein e robot" />
+    <div class="intro-text">
+      <p><strong>Benvenuti a tutti!</strong><br>
+      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
+      trarre ispirazione e far nascere nuove idee e progetti.<br>
+      Che il viaggio incominci!</p>
+    </div>
   </section>
 
-  <section id="progetti">
+  <section class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam_logo.png" alt="Fantateam Logo">
+        <img src="img/fantateam.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen_logo.png" alt="Storygen Logo">
+        <img src="img/storygen.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castellokids_logo.png" alt="Castello Kids Logo">
+        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
-
-  <section id="contatti">
-    <h2>Contattami</h2>
-    <p style="text-align:center;">Hai domande, suggerimenti o vuoi collaborare?</p>
-    <form action="mailto:tuaemail@example.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Il tuo nome" required />
-      <input type="email" name="email" placeholder="La tua email" required />
-      <textarea name="message" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
-  </section>
-
-  <footer>
-    © 2025 La Fucina delle Idee | Realizzato da Domenico Cocco<br />
-    <a href="mailto:tuaemail@example.com">Scrivimi via email</a> • <a href="https://github.com/domenico374" target="_blank">GitHub</a>
-  </footer>
 
 </body>
 </html>
