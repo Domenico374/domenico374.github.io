@@ -12,12 +12,12 @@
       color: #043c4e;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     header {
       background-color: #aee2ef;
       padding: 2em 1em;
+      text-align: center;
     }
 
     .logo-titolo {
@@ -43,18 +43,19 @@
       font-style: italic;
       margin-top: 1em;
       font-size: 1.1em;
+      text-align: center;
     }
 
-    .intro {
+    .contenuto-iniziale {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2em;
       flex-wrap: wrap;
-      padding: 2em;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+      margin: 2em 1em;
     }
 
-    .einstein-img img {
+    .immagine img {
       width: 280px;
       max-width: 90vw;
       border-radius: 10px;
@@ -62,30 +63,15 @@
     }
 
     .presentazione {
-      max-width: 500px;
-      font-size: 1.2em;
+      max-width: 400px;
+      font-size: 1.1em;
       line-height: 1.6;
-      color: #043c4e;
-      background-color: #ffffffb8;
-      padding: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-      .logo-titolo {
-        flex-direction: column;
-      }
-
-      .intro {
-        flex-direction: column;
-        text-align: center;
-      }
     }
 
     .progetti {
       padding: 2em 1em;
-      background-color: #e6f8f2;
+      background-color: #f2fffc;
+      text-align: center;
     }
 
     .progetti h2 {
@@ -97,35 +83,67 @@
     .cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5em;
+      gap: 2em;
       justify-content: center;
     }
 
     .card {
-      background-color: #d9f3e2;
-      border-left: 5px solid #4ca678;
-      padding: 1em;
       width: 280px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      border-radius: 12px;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 80px;
+      margin-bottom: 0.5em;
     }
 
     .card h3 {
-      color: #2c6e57;
-      margin-top: 0;
+      margin: 0.5em 0 0.3em;
+      font-size: 1.3em;
     }
 
     .card p {
-      color: #333;
       font-size: 0.95em;
+      color: #333;
+    }
+
+    /* Stili personalizzati per ogni progetto */
+    .fantateam {
+      background-color: #d0f0fd;
+      border-left: 6px solid #0077b6;
+    }
+
+    .storygen {
+      background-color: #fff4e6;
+      border-left: 6px solid #f4a261;
+    }
+
+    .castellokids {
+      background-color: #e6f9e6;
+      border-left: 6px solid #2e8b57;
+    }
+
+    @media (max-width: 768px) {
+      .logo-titolo {
+        flex-direction: column;
+      }
+
+      .contenuto-iniziale {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
@@ -136,36 +154,38 @@
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <div class="intro">
-    <div class="einstein-img">
+  <section class="contenuto-iniziale">
+    <div class="immagine">
       <img src="einstein.png" alt="Einstein e robot" />
     </div>
     <div class="presentazione">
-      <p>
-        Benvenuti a tutti.<br>
-        Einstein diceva che <strong>la creatività è l'intelligenza che si diverte</strong>.<br>
-        Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo dove sviluppare, trarre ispirazione,
-        e far nascere nuove idee e progetti.<br>
-        <em>Che il viaggio incominci!</em>
-      </p>
+      <p>Come diceva Einstein: “La creatività è l’intelligenza che si diverte.”</p>
+      <p>Da questo concetto nasce <strong>La Fucina delle Idee</strong>, uno spazio digitale dove sviluppare, trarre ispirazione e far nascere nuovi progetti. Che il viaggio abbia inizio!</p>
     </div>
-  </div>
+  </section>
 
   <section class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
-      <div class="card">
+
+      <div class="card fantateam">
+        <img src="fantateam_icon.png" alt="Fantateam" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
-      <div class="card">
+
+      <div class="card storygen">
+        <img src="storygen_icon.png" alt="Storygen" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
-      <div class="card">
+
+      <div class="card castellokids">
+        <img src="castellokids_icon.png" alt="Castello Kids" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
+
     </div>
   </section>
 
