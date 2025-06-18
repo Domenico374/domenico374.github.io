@@ -4,86 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Fucina delle Idee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #e6f7f1;
-      color: #003c3c;
+      background-color: #e6f7f2;
+      color: #033b3c;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
-
     header {
+      background-color: #b3e5f3;
+      padding: 1em 2em;
+      border-bottom: 6px dotted #49a6a6;
       display: flex;
       align-items: center;
-      background-color: #b5e3eb;
-      padding: 1em 2em;
-      border-bottom: 4px dotted #55b1a6;
+      justify-content: center;
+      gap: 20px;
     }
-
-    header img {
-      height: 60px;
-      margin-right: 1em;
+    header img.logo {
+      height: 80px;
+      width: auto;
     }
-
-    header h1 {
-      font-size: 2em;
+    h1 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 2.4em;
       margin: 0;
-      color: #004c4c;
     }
-
-    .subtitle {
-      text-align: center;
+    .sottotitolo {
+      margin-top: 1.2em;
       font-size: 1.2em;
-      margin: 1em;
-      color: #004c4c;
     }
-
-    .main-section {
+    .contenuto {
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 2em;
+      align-items: flex-start;
+      gap: 40px;
       padding: 2em;
       flex-wrap: wrap;
     }
-
-    .main-section img {
+    .einstein {
       max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
-    blockquote {
-      font-style: italic;
-      color: #2e4e4e;
-      font-size: 1.1em;
-      max-width: 400px;
-    }
-
     footer {
-      text-align: center;
-      font-size: 0.9em;
-      margin-top: 2em;
+      font-size: 0.85em;
       color: #555;
-      padding: 1em;
+      margin: 3em 0 1em;
     }
   </style>
 </head>
 <body>
- <header>
-  <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" style="height: 60px; vertical-align: middle; margin-right: 10px;" />
-  <h1 style="display: inline-block; vertical-align: middle;">La Fucina delle Idee</h1>
-</header>
+  <header>
+    <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" class="logo" />
+    <h1>La Fucina delle Idee</h1>
+  </header>
 
+  <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
 
-  <div class="subtitle">
-    Quando la tecnologia incontra la fantasia nasce la creatività
-  </div>
-
-  <div class="main-section">
-    <img src="einstein.png" alt="Einstein con robot" />
-    <!-- La citazione è già dentro l’immagine -->
+  <div class="contenuto">
+    <img src="einstein.png" alt="Einstein illustrazione" class="einstein" />
   </div>
 
   <footer>
@@ -91,6 +73,8 @@
   </footer>
 </body>
 </html>
+
+
 
 
    
