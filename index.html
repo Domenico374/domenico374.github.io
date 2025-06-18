@@ -12,68 +12,64 @@
       color: #043c4e;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
 
     header {
-      background-color: #afe2ef;
-      text-align: center;
+      background-color: #aee2ef;
       padding: 2em 1em 1em;
-      border-bottom: 5px dotted #54a5ac;
     }
 
-    .logo {
-      max-width: 140px;
-      margin-bottom: 1em;
-      opacity: 0;
-      animation: fadeIn 1.5s ease-out forwards;
+    header img {
+      width: 140px;
+      height: auto;
+      margin-bottom: 0.5em;
     }
 
     h1 {
-      font-size: 2.8em;
-      margin: 0.4em 0 0.2em;
-      font-weight: 600;
+      font-size: 2.5em;
+      margin: 0.2em 0;
+      color: #043c4e;
     }
 
-    .subtitle {
-      font-size: 1.3em;
-      color: #14555a;
-      margin: 0 auto 2em;
-      max-width: 700px;
+    .sottotitolo {
       font-style: italic;
-      text-align: center;
+      margin-top: 1em;
+      font-size: 1.1em;
     }
 
-    .main-content {
+    .immagine {
+      margin-top: 2em;
       display: flex;
       justify-content: flex-start;
-      align-items: flex-start;
-      gap: 2em;
-      padding: 2em 4em;
+      padding-left: 2em;
     }
 
-    .einstein-img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    .immagine img {
+      width: 280px;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
+    @media (max-width: 768px) {
+      .immagine {
+        justify-content: center;
+        padding-left: 0;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo La Fucina delle Idee" class="logo">
+    <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
     <h1>La Fucina delle Idee</h1>
   </header>
 
-  <p class="subtitle">Quando la tecnologia incontra la fantasia nasce la creatività</p>
+  <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
 
-  <div class="main-content">
-    <img src="einstein.png" alt="Einstein e robot" class="einstein-img">
+  <div class="immagine">
+    <img src="einstein.png" alt="Einstein e robot" />
   </div>
 </body>
 </html>
