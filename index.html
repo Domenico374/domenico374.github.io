@@ -3,77 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Domenico374 - Portfolio Creativo</title>
+  <title>La Fucina delle Idee</title>
   <style>
     body {
       font-family: 'Georgia', serif;
-      background-color: #e6fdf6;
-      color: #064444;
+      background-color: #e6f7f1;
+      color: #003c3c;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
 
     header {
-      background-color: #b2e6f7;
-      padding: 2em 1em;
-      border-bottom: 5px dotted #55b9a5;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      margin: 0.2em 0;
-      font-weight: bold;
-    }
-
-    .quote-block {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 3em;
+      background-color: #b5e3eb;
       padding: 1em 2em;
+      border-bottom: 4px dotted #55b1a6;
+    }
+
+    header img {
+      height: 60px;
+      margin-right: 1em;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin: 0;
+      color: #004c4c;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      margin: 1em;
+      color: #004c4c;
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      padding: 2em;
       flex-wrap: wrap;
     }
 
-    .quote-block img {
-      max-width: 250px;
+    .main-section img {
+      max-width: 300px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
     }
 
-    .quote-text {
+    blockquote {
       font-style: italic;
+      color: #2e4e4e;
       font-size: 1.1em;
       max-width: 400px;
-      text-align: left;
-    }
-
-    p.sottotitolo {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: 1em auto;
     }
 
     footer {
-      font-size: 0.85em;
-      color: #777;
-      margin: 3em 0 1em;
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 2em;
+      color: #555;
+      padding: 1em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🎨 Quando la tecnologia incontra la fantasia nasce la creatività</h1>
+    <img src="logo.png" alt="Logo La Fucina delle Idee" />
+    <h1>La Fucina delle Idee</h1>
   </header>
 
-  <p class="sottotitolo">Con l'AI, attraverso il percorso dei Codici costruiamo un mondo nuovo. Seguimi in questo viaggio.</p>
+  <div class="subtitle">
+    Quando la tecnologia incontra la fantasia nasce la creatività
+  </div>
 
-  <div class="quote-block">
-    <img src="einstein.png" alt="Einstein illustrazione" />
-    <div class="quote-text">
-      <p>“La creatività è l’intelligenza che si diverte.”<br>— Albert Einstein</p>
-    </div>
+  <div class="main-section">
+    <img src="einstein.png" alt="Einstein con robot" />
+    <!-- La citazione è già dentro l’immagine -->
   </div>
 
   <footer>
@@ -81,6 +90,11 @@
   </footer>
 </body>
 </html>
+
+
+   
+   
+
 
 
 
