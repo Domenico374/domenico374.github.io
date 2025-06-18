@@ -6,17 +6,17 @@
   <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #e6f8f2;
       color: #043c4e;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
     }
-
-    /* Navbar */
-    <a href="#contatti">Contattami</a>
 
     nav {
       background-color: #aee2ef;
@@ -41,81 +41,38 @@
       text-decoration: underline;
     }
 
+    section {
+      padding: 6em 2em 3em;
+    }
+
     header {
-      padding: 6em 1em 2em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       background-color: #aee2ef;
-      text-align: center;
-    }
-    html {
-  scroll-behavior: smooth;
-}
-
-
-    .logo-titolo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1.5em;
-      flex-wrap: wrap;
-    }
-
-    .logo-titolo img {
-      width: 160px;
-      height: auto;
-    }
-
-    .logo-titolo h1 {
-      font-size: 2.5em;
-      margin: 0;
-      color: #043c4e;
-    }
-
-    .sottotitolo {
-      font-style: italic;
-      margin-top: 1em;
-      font-size: 1.1em;
+      padding: 3em 1em 2em;
       text-align: center;
     }
 
-    .contenuto {
-      padding: 2em 1em;
+    header img {
+      width: 280px;
+      max-width: 100%;
+      margin-right: 2em;
     }
 
-    .immagine-testuale {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2em;
-      justify-content: center;
-    }
-
-    .immagine-testuale img {
-      width: 250px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-
-    .presentazione {
+    header div {
       max-width: 500px;
-      text-align: left;
     }
 
-    .progetti {
-      padding: 2em 1em;
-      background-color: #e6f8f2;
-    }
-
-    .progetti h2 {
-      font-size: 2em;
+    h1, h2 {
       color: #043c4e;
-      margin-bottom: 1em;
-      text-align: center;
     }
 
     .cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5em;
+      gap: 2em;
       justify-content: center;
     }
 
@@ -126,6 +83,7 @@
       width: 280px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
       transition: transform 0.2s ease;
     }
 
@@ -133,98 +91,120 @@
       transform: scale(1.03);
     }
 
-    .card h3 {
-      color: #2c6e57;
-      margin-top: 0;
+    .card img {
+      width: 60px;
+      height: auto;
+      margin-bottom: 1em;
     }
 
-    .card p {
-      color: #333;
-      font-size: 0.95em;
+    #contatti {
+      background-color: #aee2ef;
+      padding-bottom: 4em;
+      scroll-margin-top: 120px;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    input, textarea {
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #043c4e;
+      color: white;
+      border: none;
+      padding: 0.8em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #aee2ef;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.9em;
     }
 
     @media (max-width: 768px) {
-      .logo-titolo {
+      header {
         flex-direction: column;
+        text-align: center;
       }
 
-      .immagine-testuale {
-        flex-direction: column;
+      header img {
+        margin: 0 auto 1em;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
   <nav>
     <a href="#home">Home</a>
-    <a href="#chi">Chi sono</a>
+    <a href="#chi-sono">Chi sono</a>
     <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contattami</a>
   </nav>
 
-  <!-- Header -->
   <header id="home">
-    <div class="logo-titolo">
-      <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
+    <img src="einstein.png" alt="Einstein e robot" />
+    <div>
       <h1>La Fucina delle Idee</h1>
+      <p>Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo per sviluppare, trarre ispirazione e far nascere nuove idee e progetti. Che il viaggio abbia inizio!</p>
     </div>
-    <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <!-- Sezione Chi Sono -->
-  <section class="contenuto" id="chi">
-    <div class="immagine-testuale">
-      <img src="einstein.png" alt="Einstein e robot">
-      <div class="presentazione">
-        <h2>Chi sono</h2>
-        <p>
-          Einstein diceva che la creatività è l'intelligenza che si diverte.  
-          Da questo concetto nasce <strong>La Fucina delle Idee</strong>,  
-          un luogo per sviluppare, trarre ispirazione,  
-          far nascere nuove idee e progetti.  
-          <br><br>Che il viaggio incominci!
-        </p>
-      </div>
-    </div>
+  <section id="chi-sono">
+    <h2>Chi sono</h2>
+    <p>Mi chiamo Domenico Cocco e ho creato questo spazio per sperimentare con progetti digitali, creatività e intelligenza artificiale. Se ti piace l’idea, esplora, divertiti e contattami!</p>
   </section>
 
-  <!-- Sezione Progetti -->
-  <section class="progetti" id="progetti">
+  <section id="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
+        <img src="img/fantateam_logo.png" alt="Fantateam Logo">
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
+        <img src="img/storygen_logo.png" alt="Storygen Logo">
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
+        <img src="img/castellokids_logo.png" alt="Castello Kids Logo">
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
-  </section> 
-  <!-- Sezione Contattami -->
-<section id="contatti" style="background-color: #aee2ef; padding: 2em 1em; text-align: center;">
-  <h2 style="color: #043c4e; font-size: 2em; margin-bottom: 0.5em;">Contattami</h2>
-  <p style="font-size: 1.1em; color: #043c4e;">Hai domande, suggerimenti o vuoi collaborare?</p>
+  </section>
 
-  <form action="mailto:tuaemail@example.com" method="POST" enctype="text/plain" style="margin-top: 1.5em;">
-    <input type="text" name="nome" placeholder="Il tuo nome" required style="padding: 0.8em; margin: 0.5em; width: 250px;"><br>
-    <input type="email" name="email" placeholder="La tua email" required style="padding: 0.8em; margin: 0.5em; width: 250px;"><br>
-    <textarea name="messaggio" rows="5" placeholder="Scrivi qui il tuo messaggio" required style="padding: 0.8em; margin: 0.5em; width: 250px;"></textarea><br>
-    <button type="submit" style="background-color: #043c4e; color: white; padding: 0.8em 1.5em; border: none; border-radius: 5px;">Invia</button>
-  </form>
+  <section id="contatti">
+    <h2>Contattami</h2>
+    <p style="text-align:center;">Hai domande, suggerimenti o vuoi collaborare?</p>
+    <form action="mailto:tuaemail@example.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Il tuo nome" required />
+      <input type="email" name="email" placeholder="La tua email" required />
+      <textarea name="message" rows="5" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </section>
 
-  <div style="margin-top: 2em;">
-    <a href="domenico.cocco@gmail.com" style="color: #043c4e; text-decoration: underline;">Scrivimi via email</a> · 
-    <a href="https://github.com/domenico374" target="_blank" style="color: #043c4e; text-decoration: underline;">GitHub</a>
-  </div>
-</section>
-
+  <footer>
+    © 2025 La Fucina delle Idee | Realizzato da Domenico Cocco<br />
+    <a href="mailto:tuaemail@example.com">Scrivimi via email</a> • <a href="https://github.com/domenico374" target="_blank">GitHub</a>
+  </footer>
 
 </body>
 </html>
