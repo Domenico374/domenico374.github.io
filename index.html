@@ -17,7 +17,7 @@
 
     header {
       background-color: #aee2ef;
-      padding: 2em 1em 1em;
+      padding: 2em 1em;
     }
 
     .logo-titolo {
@@ -28,12 +28,10 @@
       flex-wrap: wrap;
     }
 
-   .logo-titolo img {
-  width: 180px;
-  height: auto;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
-}
-
+    .logo-titolo img {
+      width: 160px;
+      height: auto;
+    }
 
     .logo-titolo h1 {
       font-size: 2.5em;
@@ -70,25 +68,82 @@
       .logo-titolo {
         flex-direction: column;
       }
+    }
 
-      .logo-titolo h1 {
-        font-size: 2em;
-      }
+    .progetti {
+      padding: 2em 1em;
+      background-color: #e6f8f2;
+    }
+
+    .progetti h2 {
+      font-size: 2em;
+      color: #043c4e;
+      margin-bottom: 1em;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #d9f3e2;
+      border-left: 5px solid #4ca678;
+      padding: 1em;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card h3 {
+      color: #2c6e57;
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #333;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <header>
-   <div class="logo-titolo-colonna">
-  <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
-  <h1>La Fucina delle Idee</h1>
-</div>
 
+  <header>
+    <div class="logo-titolo">
+      <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
+      <h1>La Fucina delle Idee</h1>
+    </div>
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
   <div class="immagine">
     <img src="einstein.png" alt="Einstein e robot" />
   </div>
+
+  <section class="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Fantateam</h3>
+        <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+      </div>
+      <div class="card">
+        <h3>Storygen</h3>
+        <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+      </div>
+      <div class="card">
+        <h3>Castello Kids</h3>
+        <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
