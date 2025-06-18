@@ -12,12 +12,36 @@
       color: #043c4e;
       margin: 0;
       padding: 0;
-      text-align: center;
+    }
+
+    nav {
+      background-color: #043c4e;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     header {
       background-color: #aee2ef;
       padding: 2em 1em;
+      text-align: center;
     }
 
     .logo-titolo {
@@ -45,8 +69,35 @@
       font-size: 1.1em;
     }
 
+    .immagine {
+      margin-top: 2em;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 2em;
+    }
+
+    .immagine img {
+      width: 280px;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .immagine {
+        justify-content: center;
+        padding-left: 0;
+      }
+
+      .logo-titolo {
+        flex-direction: column;
+      }
+    }
+
     .progetti {
       padding: 2em 1em;
+      background-color: #e6f8f2;
+      text-align: center;
     }
 
     .progetti h2 {
@@ -65,12 +116,11 @@
     .card {
       background-color: #d9f3e2;
       border-left: 5px solid #4ca678;
-      padding: 1.5em;
-      width: 300px;
+      padding: 1em;
+      width: 280px;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s ease;
-      text-align: left;
     }
 
     .card:hover {
@@ -86,21 +136,18 @@
       color: #333;
       font-size: 0.95em;
     }
-
-    .card a {
-      display: inline-block;
-      margin-top: 0.5em;
-      color: #02735E;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .card a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="https://domenico374.github.io/">Home</a>
+      <a href="https://domenico374.github.io/fantateam">Fantateam</a>
+      <a href="https://domenico374.github.io/storygen">Storygen</a>
+      <a href="https://domenico374.github.io/castello-kids">Castello Kids</a>
+    </div>
+  </nav>
 
   <header>
     <div class="logo-titolo">
@@ -110,23 +157,24 @@
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
+  <div class="immagine">
+    <img src="einstein.png" alt="Einstein e robot" />
+  </div>
+
   <section class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <h3>Fantateam</h3>
+        <h3><a href="https://domenico374.github.io/fantateam">Fantateam</a></h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-        <a href="https://domenico374.github.io/fantateam" target="_blank">🌐 Vai al progetto</a>
       </div>
       <div class="card">
-        <h3>Storygen</h3>
+        <h3><a href="https://domenico374.github.io/storygen">Storygen</a></h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-        <a href="https://domenico374.github.io/storygen" target="_blank">🌐 Vai al progetto</a>
       </div>
       <div class="card">
-        <h3>Castello Kids</h3>
+        <h3><a href="https://domenico374.github.io/castello-kids">Castello Kids</a></h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-        <a href="https://domenico374.github.io/castello-kids" target="_blank">🌐 Vai al progetto</a>
       </div>
     </div>
   </section>
