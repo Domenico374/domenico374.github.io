@@ -39,33 +39,36 @@
       color: #043c4e;
     }
 
-    .presentazione {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 2em;
-      padding: 2em;
+    .sottotitolo {
+      font-style: italic;
+      margin-top: 1em;
+      font-size: 1.1em;
     }
 
-    .presentazione img {
-      width: 260px;
-      max-width: 90vw;
+    .sezione-einstein {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 2em 1em;
+      gap: 2em;
+    }
+
+    .sezione-einstein img {
+      width: 280px;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
 
-    .presentazione p {
-      max-width: 480px;
-      font-size: 1.2em;
+    .presentazione {
+      max-width: 400px;
       text-align: left;
     }
 
     h2 {
       font-size: 2em;
-      margin-top: 1em;
-      margin-bottom: 1em;
       color: #043c4e;
+      margin-top: 1em;
     }
 
     .cards {
@@ -73,19 +76,17 @@
       flex-wrap: wrap;
       gap: 2em;
       justify-content: center;
-      padding: 1em 2em 3em;
+      padding: 2em 1em;
     }
 
     .card {
       background-color: #d9f3e2;
       border-left: 5px solid #4ca678;
-      padding: 1.5em 1em;
+      padding: 1.5em;
       width: 260px;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.2s ease;
-      text-decoration: none;
-      color: inherit;
     }
 
     .card:hover {
@@ -93,19 +94,13 @@
     }
 
     .card img {
-      width: 60px;
-      height: auto;
+      width: 80px;
       margin-bottom: 1em;
     }
 
     .card h3 {
       color: #2c6e57;
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-    }
-
-    .card:hover h3 {
-      text-decoration: underline;
+      margin-top: 0;
     }
 
     .card p {
@@ -113,17 +108,34 @@
       font-size: 0.95em;
     }
 
+    footer {
+      background-color: #aee2ef;
+      text-align: center;
+      padding: 1.5em;
+      margin-top: 3em;
+      color: #043c4e;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #043c4e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .logo-titolo {
         flex-direction: column;
       }
-
-      .presentazione {
+      .sezione-einstein {
         flex-direction: column;
-        padding: 1em;
+        text-align: center;
       }
-
-      .presentazione p {
+      .presentazione {
         text-align: center;
       }
     }
@@ -136,36 +148,42 @@
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
     </div>
+    <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <div class="presentazione">
+  <section class="sezione-einstein">
     <img src="einstein.png" alt="Einstein e robot" />
-    <p>
-      Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo per sviluppare, trarre ispirazione e far nascere nuove idee e progetti. Che il viaggio abbia inizio!
-    </p>
-  </div>
+    <div class="presentazione">
+      <p>Da questo concetto nasce <strong>La Fucina delle Idee</strong>, un luogo per sviluppare, trarre ispirazione e far nascere nuove idee e progetti. Che il viaggio abbia inizio!</p>
+    </div>
+  </section>
 
   <h2>I Miei Progetti</h2>
-
   <div class="cards">
-    <a href="fantateam/" class="card">
-      <img src="img/fantateam_logo.png" alt="Logo Fantateam">
+    <div class="card">
+      <img src="img/fantateam_logo.png" alt="Fantateam logo" />
       <h3>Fantateam</h3>
       <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-    </a>
-
-    <a href="storygen/" class="card">
-      <img src="img/storygen_logo.png" alt="Logo Storygen">
+    </div>
+    <div class="card">
+      <img src="img/storygen_logo.png" alt="Storygen logo" />
       <h3>Storygen</h3>
       <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-    </a>
-
-    <a href="castello-kids/" class="card">
-      <img src="img/castellokids_logo.png" alt="Logo Castello Kids">
+    </div>
+    <div class="card">
+      <img src="img/castellokids_logo.png" alt="Castello Kids logo" />
       <h3>Castello Kids</h3>
       <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-    </a>
+    </div>
   </div>
+
+  <footer>
+    <p>© 2025 La Fucina delle Idee | Realizzato da Domenico Cocco</p>
+    <p>
+      <a href="mailto:tuamail@example.com">Contattami</a> · 
+      <a href="https://github.com/domenico374">GitHub</a>
+    </p>
+  </footer>
 
 </body>
 </html>
