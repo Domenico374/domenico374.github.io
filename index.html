@@ -1,55 +1,142 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantateam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Fucina delle Idee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Unbounded:wght@500&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: 'Rubik', sans-serif;
-      background-color: #eaf6ff;
-      color: #002b49;
+      background-color: #e6f8f2;
+      color: #043c4e;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #aee2ef;
+      padding: 2em 1em;
       text-align: center;
-      padding: 2em;
     }
-    .logo {
+    .logo-titolo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+    .logo-titolo img {
       width: 120px;
-      margin-bottom: 1em;
+      height: auto;
     }
-    h1 {
+    .logo-titolo h1 {
       font-size: 2.5em;
-      margin-bottom: 0.5em;
-      color: #b30000;
+      margin: 0;
+      color: #043c4e;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin: 0 auto 2em;
+    nav {
+      background-color: #003b4e;
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
     }
-    .back {
-      background-color: #004080;
-      color: #fff;
-      padding: 0.75em 1.5em;
-      border-radius: 8px;
+    nav a {
+      color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
     }
-    .back:hover {
-      background-color: #0066cc;
+    section {
+      padding: 3em 1em;
+      text-align: center;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+    .card {
+      padding: 1.5em;
+      border-radius: 12px;
+      width: 260px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1em;
+    }
+    .card h3 {
+      margin: 0.5em 0;
+    }
+    .card p {
+      font-size: 0.95em;
+    }
+    .fantateam {
+      background-color: #99ccff;
+    }
+    .fantateam h3 {
+      font-family: 'Unbounded', cursive;
+      color: #b30000;
+    }
+    .storygen {
+      background-color: #b3e6cc;
+    }
+    .storygen h3 {
+      font-family: 'Comic Neue', cursive;
+      color: #043c4e;
+    }
+    .castello {
+      background-color: #fff7b3;
+    }
+    .castello h3 {
+      font-family: 'Unbounded', cursive;
+      color: #6e2c00;
     }
   </style>
 </head>
 <body>
-  <img src="../img/fantateam.png" alt="Fantateam Logo" class="logo">
-  <h1>Fantateam</h1>
-  <p>Benvenuto nell'app Fantateam! Presto potrai creare la tua rosa, visualizzare punteggi, e competere con altri nel tuo campionato personalizzato di fantacalcio.</p>
-  <a class="back" href="../index.html#progetti">Torna alla Fucina delle Idee</a>
+  <header>
+    <div class="logo-titolo">
+      <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+      <h1>La Fucina delle Idee</h1>
+    </div>
+    <p><em>Quando la tecnologia incontra la fantasia nasce la creatività</em></p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+
+  <section id="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="cards">
+      <div class="card fantateam">
+        <img src="img/fantateam.png" alt="Fantateam Logo" />
+        <h3>Fantateam</h3>
+        <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+      </div>
+      <div class="card storygen">
+        <img src="img/storygen_new.png" alt="Storygen Illustrazione" />
+        <h3>Storygen</h3>
+        <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+      </div>
+      <div class="card castello">
+        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
+        <h3>Castello Kids</h3>
+        <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
