@@ -20,7 +20,7 @@
       z-index: 1000;
       background-color: #aee2ef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 2em 1em 1em;
+      padding: 1.5em 1em;
       text-align: center;
     }
 
@@ -28,42 +28,58 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1.5em;
+      gap: 1em;
       flex-wrap: wrap;
     }
 
     .logo-titolo img {
-      width: 160px;
+      width: 120px;
       height: auto;
     }
 
     .logo-titolo h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
       margin: 0;
       color: #043c4e;
     }
 
     .sottotitolo {
       font-style: italic;
-      margin-top: 1em;
-      font-size: 1.1em;
+      margin-top: 0.5em;
+      font-size: 1em;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      padding-top: 1em;
+      margin-top: 1em;
     }
 
     nav a {
+      margin: 0 1em;
       color: #043c4e;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2em;
+      padding: 3em 2em 2em;
+    }
+
+    .intro img {
+      width: 280px;
+      max-width: 90vw;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .intro-text {
+      max-width: 500px;
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     .progetti {
@@ -91,27 +107,20 @@
       width: 260px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
     .card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      background-color: #c8efd8;
+      transform: scale(1.03);
     }
 
     .card img {
       width: 100px;
       height: auto;
       margin-bottom: 1em;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover img {
-      transform: scale(1.1);
     }
 
     .card h3 {
@@ -125,18 +134,52 @@
       margin: 0;
     }
 
+    .contatti {
+      padding: 3em 1em;
+      background-color: #f0fbf8;
+      text-align: center;
+    }
+
+    .contatti h2 {
+      color: #043c4e;
+      margin-bottom: 1em;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #4ca678;
+      color: white;
+      border: none;
+      padding: 0.8em 1.5em;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
     @media (max-width: 768px) {
       .logo-titolo {
         flex-direction: column;
       }
-      .cards {
+      .intro {
         flex-direction: column;
-        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header class="sticky-header">
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
@@ -150,25 +193,47 @@
     </nav>
   </header>
 
-  <section class="progetti" id="progetti">
+  <section id="home" class="intro">
+    <img src="einstein.png" alt="Einstein e robot" />
+    <div class="intro-text">
+      <p><strong>Benvenuti a tutti!</strong><br>
+      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
+      trarre ispirazione e far nascere nuove idee e progetti.<br>
+      Che il viaggio incominci!</p>
+    </div>
+  </section>
+
+  <section id="progetti" class="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
       <div class="card">
-        <img src="img/fantateam_logo.png" alt="Fantateam Logo">
+        <img src="img/fantateam.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
       <div class="card">
-        <img src="img/storygen_logo.png" alt="Storygen Logo">
+        <img src="img/storygen.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
       <div class="card">
-        <img src="img/castellokids_logo.png" alt="Castello Kids Logo">
+        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
     </div>
   </section>
+
+  <section id="contatti" class="contatti">
+    <h2>Contattami</h2>
+    <form action="https://formspree.io/f/xgvyzngp" method="POST">
+      <input type="text" name="name" placeholder="Il tuo nome" required />
+      <input type="email" name="email" placeholder="La tua email" required />
+      <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+  </section>
+
 </body>
 </html>
