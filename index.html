@@ -1,12 +1,14 @@
-<!-- fantateam.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fantateam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <title>La Fucina delle Idee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap&family=Staatliches&family=Patrick+Hand&family=Cinzel&display=swap" rel="stylesheet">
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Rubik', sans-serif;
       margin: 0;
@@ -15,52 +17,194 @@
     }
     header {
       background-color: #aee2ef;
-      padding: 1em;
       text-align: center;
+      padding: 2em 1em;
     }
     header img {
-      height: 80px;
+      width: 100px;
+    }
+    header h1 {
+      margin: 0.5em 0 0;
     }
     nav {
       background-color: #043c4e;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
       padding: 1em;
-      text-align: center;
     }
     nav a {
       color: white;
-      margin: 0 1em;
       text-decoration: none;
       font-weight: bold;
+      transition: opacity 0.3s;
     }
-    main {
+    nav a:hover {
+      opacity: 0.7;
+    }
+    section {
       padding: 2em;
       text-align: center;
     }
-    a.back {
-      display: inline-block;
+    .progetti {
+      background-color: #ffffff;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
       margin-top: 2em;
-      background-color: #4ca678;
-      padding: 0.5em 1em;
-      color: white;
-      text-decoration: none;
+    }
+    .card {
+      border-radius: 10px;
+      padding: 1.5em;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .fantateam {
+      background-color: #cce5ff;
+      font-family: 'Staatliches', sans-serif;
+      color: #a10e1a;
+    }
+    .storygen {
+      background-color: #d2f8d2;
+      font-family: 'Patrick Hand', cursive;
+      color: #043c4e;
+    }
+    .castello {
+      background-color: #fff4c4;
+      font-family: 'Cinzel', serif;
+      color: #6d4004;
+    }
+    .card img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 1em;
+    }
+    .contatti {
+      background-color: #f8f8f8;
+    }
+    form {
+      max-width: 400px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    input, textarea {
+      padding: 0.8em;
+      border: 1px solid #ccc;
       border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #014f5e;
+      color: white;
+      border: none;
+      padding: 0.8em;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #026b85;
+    }
+    .message {
+      color: green;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    .social-icons {
+      margin-top: 2em;
+    }
+    .social-icons a {
+      font-size: 1.5em;
+      margin: 0 1em;
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      transform: scale(1.3);
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo_fucina.png" alt="Logo Fucina delle Idee">
-    <h1>Fantateam</h1>
+  <header id="home">
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee">
+    <h1>La Fucina delle Idee</h1>
+    <p><em>Quando la tecnologia incontra la fantasia nasce la creatività</em></p>
   </header>
+
   <nav>
-    <a href="index.html#home">Home</a>
-    <a href="index.html#progetti">Progetti</a>
-    <a href="index.html#contatti">Contatti</a>
+    <a href="#home">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
   </nav>
-  <main>
-    <h2>Benvenuto nel progetto Fantateam</h2>
-    <p>Prossimamente qui troverai tutte le funzionalità dell’app di fantacalcio.</p>
-    <a class="back" href="index.html">Torna alla Home</a>
-  </main>
+
+  <section id="progetti" class="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="cards">
+      <div class="card fantateam">
+        <img src="img/fantateam_logo.png" alt="Fantateam Logo">
+        <h3>Fantateam</h3>
+        <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+      </div>
+      <div class="card storygen">
+        <img src="img/storygen_logo.png" alt="Storygen Logo">
+        <h3>Storygen</h3>
+        <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+      </div>
+      <div class="card castello">
+        <img src="img/castellokids_logo.png" alt="Castello Kids Logo">
+        <h3>Castello Kids</h3>
+        <p>App educativa e turistica per bambini sul quartiere Castello di Cagliari.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contatti" class="contatti">
+    <h2>Contattaci</h2>
+    <form action="https://formspree.io/f/xgvyzngp" method="POST">
+      <input type="text" name="name" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="message" placeholder="Scrivi il tuo messaggio" required></textarea>
+      <div class="g-recaptcha" data-sitekey="6LdWMGYrAAAAAAAbHX6_DhGpJh5b8fxHCTtEMIZk"></div>
+      <button type="submit">Invia</button>
+      <p class="message">Grazie per averci contattato!</p>
+    </form>
+    <div class="social-icons">
+      <a href="#" title="Blog">📄</a>
+      <a href="#" title="Fotogallery">📷</a>
+      <a href="#" title="Portfolio">💼</a>
+    </div>
+  </section>
+
+  <script>
+    const form = document.querySelector("form");
+    const message = document.querySelector(".message");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      })
+        .then(response => {
+          if (response.ok) {
+            message.style.display = "block";
+            form.reset();
+          }
+        })
+        .catch(() => alert("Errore nell'invio del messaggio"));
+    });
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
