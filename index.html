@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Fucina delle Idee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Russo+One&family=Pacifico&family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Orbitron:wght@600&family=Pacifico&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Rubik', sans-serif;
@@ -99,13 +100,34 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #fff;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
     }
 
     .card img {
       width: 100px;
       height: auto;
       margin-bottom: 1em;
+    }
+
+    .fantateam {
+      background-color: #007BFF;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .storygen {
+      background-color: #4CAF50;
+      color: white;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .castello {
+      background-color: #D32F2F;
+      color: white;
+      font-family: 'Indie Flower', cursive;
     }
 
     .card h3 {
@@ -117,31 +139,16 @@
       margin: 0;
     }
 
-    .fantateam {
-      background-color: #003366;
-      font-family: 'Russo One', sans-serif;
-    }
-
-    .storygen {
-      background-color: #2e8b57;
-      font-family: 'Pacifico', cursive;
-    }
-
-    .castellokids {
-      background-color: #c0392b;
-      font-family: 'Fredoka One', cursive;
-    }
-
     .contatti {
-      background-color: #aee2ef;
+      background-color: #f4f4f4;
       padding: 3em 1em;
       text-align: center;
     }
 
     .contatti h2 {
       font-size: 2em;
-      margin-bottom: 1em;
       color: #043c4e;
+      margin-bottom: 1em;
     }
 
     .contatti form {
@@ -155,23 +162,46 @@
     .contatti input,
     .contatti textarea {
       padding: 0.8em;
-      border: none;
-      border-radius: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 1em;
     }
 
     .contatti button {
       background-color: #043c4e;
       color: white;
-      padding: 0.8em;
       border: none;
-      border-radius: 8px;
+      padding: 0.8em;
+      border-radius: 6px;
       font-size: 1em;
       cursor: pointer;
     }
 
     .contatti button:hover {
-      background-color: #022c3a;
+      background-color: #065a73;
+    }
+
+    footer {
+      background-color: #043c4e;
+      padding: 2em 0;
+      text-align: center;
+    }
+
+    footer p {
+      color: white;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    footer a {
+      margin: 0 1em;
+      color: white;
+      font-size: 1.8em;
+      transition: transform 0.2s ease;
+    }
+
+    footer a:hover {
+      transform: scale(1.1);
     }
 
     @media (max-width: 768px) {
@@ -187,7 +217,7 @@
 </head>
 <body>
 
-  <header class="sticky-header">
+  <header class="sticky-header" id="home">
     <div class="logo-titolo">
       <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
@@ -199,10 +229,10 @@
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
       <p><strong>Benvenuti a tutti!</strong><br>
-        Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
-        Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
-        trarre ispirazione e far nascere nuove idee e progetti.<br>
-        Che il viaggio incominci!</p>
+      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
+      trarre ispirazione e far nascere nuove idee e progetti.<br>
+      Che il viaggio incominci!</p>
     </div>
   </section>
 
@@ -219,7 +249,7 @@
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
-      <div class="card castellokids">
+      <div class="card castello">
         <img src="img/castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
@@ -236,6 +266,13 @@
       <button type="submit">Invia</button>
     </form>
   </section>
+
+  <footer>
+    <p>Seguimi sui social</p>
+    <a href="https://github.com/domenico374" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/tuo-nome" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/tuo-username" target="_blank"><i class="fab fa-instagram"></i></a>
+  </footer>
 
 </body>
 </html>
