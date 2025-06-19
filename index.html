@@ -4,19 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Fucina delle Idee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Orbitron&family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Bebas+Neue&family=Pacifico&family=Fredoka:wght@500&display=swap" rel="stylesheet">
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #e6f8f2;
       color: #043c4e;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     header.sticky-header {
@@ -25,25 +21,37 @@
       z-index: 1000;
       background-color: #aee2ef;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      padding: 1em;
+      padding: 1.5em 1em;
+      text-align: center;
     }
 
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 0.5em;
+      background-color: #fff;
+      padding: 0.5em;
+      text-align: center;
     }
 
     nav a {
+      margin: 0 1em;
       text-decoration: none;
       color: #043c4e;
       font-weight: bold;
-      transition: color 0.3s;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #2c6e57;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #2c6e57;
+      left: 0;
+      bottom: -4px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     .logo-titolo {
@@ -56,7 +64,7 @@
 
     .logo-titolo img {
       width: 140px;
-      cursor: pointer;
+      height: auto;
     }
 
     .logo-titolo h1 {
@@ -67,8 +75,8 @@
 
     .sottotitolo {
       font-style: italic;
+      margin-top: 1em;
       font-size: 1.1em;
-      text-align: center;
     }
 
     .intro {
@@ -82,7 +90,6 @@
 
     .intro img {
       width: 280px;
-      max-width: 90vw;
       border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
     }
@@ -117,18 +124,39 @@
       width: 260px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .card:nth-child(1) {
+      background-color: #0055aa;
+      color: white;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    .card:nth-child(2) {
+      background-color: #4caf50;
+      font-family: 'Pacifico', cursive;
+      animation-delay: 0.2s;
+    }
+    .card:nth-child(3) {
+      background-color: #f44336;
+      font-family: 'Fredoka', sans-serif;
+      animation-delay: 0.4s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
     }
 
     .card img {
       width: 100px;
+      height: auto;
       margin-bottom: 1em;
     }
 
@@ -139,130 +167,117 @@
     .card p {
       font-size: 0.95em;
       margin: 0;
+      text-align: center;
     }
 
-    .fantateam {
-      background-color: #0d3b66;
-      color: white;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    .storygen {
-      background-color: #2c6e57;
-      color: white;
-      font-family: 'Pacifico', cursive;
-    }
-
-    .castello {
-      background-color: #f2545b;
-      color: white;
-      font-family: 'Quicksand', sans-serif;
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .contatti {
-      background-color: #d9f3e2;
-      padding: 3em 1em;
+      background-color: #e6f8f2;
+      padding: 3em 2em;
       text-align: center;
     }
 
-    .contatti h2 {
-      margin-bottom: 1em;
-    }
-
-    form {
-      max-width: 400px;
+    .contatti form {
+      max-width: 500px;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
     }
 
-    input, textarea {
-      width: 100%;
-      margin: 0.5em 0;
+    .contatti input, .contatti textarea {
       padding: 0.8em;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-size: 1em;
     }
 
-    button {
+    .contatti button {
       background-color: #4ca678;
       color: white;
       border: none;
-      padding: 0.8em 1.5em;
+      padding: 0.8em;
+      border-radius: 8px;
+      font-size: 1em;
       cursor: pointer;
-      border-radius: 6px;
     }
 
     footer {
-      background-color: #aee2ef;
-      padding: 1.5em 1em;
+      background-color: #043c4e;
+      color: white;
       text-align: center;
-    }
-
-    .social {
-      margin: 1em 0;
+      padding: 2em 1em;
     }
 
     .social a {
-      margin: 0 1em;
-      color: #043c4e;
-      font-size: 1.4em;
-      transition: transform 0.3s;
+      margin: 0 0.8em;
+      color: white;
+      text-decoration: none;
+      font-size: 1.5em;
+      transition: color 0.3s;
     }
 
     .social a:hover {
-      transform: scale(1.2);
+      color: #aee2ef;
     }
 
     @media (max-width: 768px) {
-      .intro {
+      .logo-titolo {
         flex-direction: column;
       }
-      .logo-titolo {
+      .intro {
         flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-
   <header class="sticky-header" id="home">
     <div class="logo-titolo">
-      <a href="#home"><img src="logo_fucina.png" alt="Logo" /></a>
+      <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
       <h1>La Fucina delle Idee</h1>
     </div>
     <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#progetti">Progetti</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
   </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
 
   <section class="intro">
     <img src="einstein.png" alt="Einstein e robot" />
     <div class="intro-text">
       <p><strong>Benvenuti a tutti!</strong><br>
-      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
-      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
-      trarre ispirazione e far nascere nuove idee e progetti.<br>
-      Che il viaggio incominci!</p>
+        Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+        Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare,
+        trarre ispirazione e far nascere nuove idee e progetti.<br>
+        Che il viaggio incominci!</p>
     </div>
   </section>
 
   <section class="progetti" id="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
-      <div class="card fantateam">
-        <img src="img/fantateam.png" alt="Fantateam" />
+      <div class="card">
+        <img src="img/fantateam.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
       </div>
-      <div class="card storygen">
-        <img src="img/storygen.png" alt="Storygen" />
+      <div class="card">
+        <img src="img/storygen.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
       </div>
-      <div class="card castello">
-        <img src="img/castello_kids.png" alt="Castello Kids" />
+      <div class="card">
+        <img src="img/castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
       </div>
@@ -274,19 +289,19 @@
     <form action="https://formspree.io/f/xgvyzngp" method="POST">
       <input type="text" name="nome" placeholder="Il tuo nome" required>
       <input type="email" name="email" placeholder="La tua email" required>
-      <textarea name="messaggio" rows="5" placeholder="Il tuo messaggio..." required></textarea>
+      <textarea name="messaggio" rows="5" placeholder="Scrivi il tuo messaggio" required></textarea>
       <button type="submit">Invia</button>
     </form>
   </section>
 
   <footer>
+    <p>Seguimi anche su:</p>
     <div class="social">
-      <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:email@esempio.com"><i class="fas fa-envelope"></i></a>
+      <a href="#" title="Instagram">📷</a>
+      <a href="#" title="LinkedIn">💼</a>
+      <a href="#" title="YouTube">▶️</a>
     </div>
     <p>&copy; 2025 La Fucina delle Idee. Tutti i diritti riservati.</p>
   </footer>
-
 </body>
 </html>
