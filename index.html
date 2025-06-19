@@ -3,156 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contatti - La Fucina delle Idee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <title>La Fucina delle Idee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&family=Orbitron:wght@500&family=Pacifico&family=Fredoka:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Rubik', sans-serif;
-      background-color: #f6f6f6;
+      background-color: #e6f8f2;
+      color: #043c4e;
       margin: 0;
-      padding: 0;
+      scroll-behavior: smooth;
     }
 
-    .contatti {
-      padding: 3em 1em;
-      background-color: #ffffff;
+    header.sticky-header {
+      position: sticky;
+      top: 0;
+      background-color: #aee2ef;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1.5em 1em;
+      z-index: 1000;
       text-align: center;
     }
 
-    .contatti h2 {
-      font-size: 2em;
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
       color: #043c4e;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .logo-titolo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    .logo-titolo img {
+      width: 120px;
+    }
+
+    .sottotitolo {
+      font-style: italic;
+      margin-top: 1em;
+      font-size: 1.1em;
+    }
+
+    section {
+      padding: 3em 2em;
+    }
+
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2em;
+      align-items: center;
+    }
+
+    .intro img {
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .cards {
+      display: flex;
+      gap: 2em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 260px;
+      padding: 1.5em;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100px;
       margin-bottom: 1em;
     }
 
-    form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-
-    input, textarea {
-      padding: 0.75em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1em;
-    }
-
-    button {
-      background-color: #043c4e;
-      color: white;
-      border: none;
-      padding: 0.75em;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #06566f;
-    }
-
-    .message {
+    .card a {
+      display: block;
       margin-top: 1em;
-      font-size: 1.1em;
-      color: green;
-      display: none;
+      text-decoration: none;
+      color: #043c4e;
+      font-weight: bold;
     }
 
-    .error {
-      color: red;
-      font-size: 0.9em;
+    .fantateam {
+      background-color: #003366;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .storygen {
+      background-color: #2e8b57;
+      color: white;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .castello {
+      background-color: #b22222;
+      color: white;
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .contatti input, .contatti textarea {
+      width: 100%;
+      padding: 0.75em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 1em;
+    }
+
+    .contatti button {
+      background-color: #4ca678;
+      color: white;
+      padding: 0.75em 1.5em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
 
     .social-icons a {
+      font-size: 1.5em;
       margin: 0 0.5em;
       text-decoration: none;
       color: #043c4e;
-      font-size: 1.5em;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .social-icons a:hover {
-      transform: scale(1.3);
+      transform: scale(1.2);
       color: #4ca678;
     }
   </style>
 </head>
 <body>
+  <header class="sticky-header">
+    <div class="logo-titolo">
+      <img src="logo_fucina.png" alt="Logo Fucina" />
+      <h1>La Fucina delle Idee</h1>
+    </div>
+    <p class="sottotitolo">Quando la tecnologia incontra la fantasia nasce la creatività</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#progetti">Progetti</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </header>
 
-<section class="contatti" id="contatti">
-  <h2>Contattaci</h2>
-  <form action="https://formspree.io/f/xgvyzngp" method="POST" id="contact-form">
-    <input type="text" name="name" placeholder="Nome" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
-    <input type="hidden" name="_replyto" value="tua@email.com">
-    <input type="hidden" name="_subject" value="Nuovo messaggio da La Fucina delle Idee">
+  <section id="home" class="intro">
+    <img src="einstein.png" alt="Einstein" />
+    <div class="intro-text">
+      <p><strong>Benvenuti a tutti!</strong><br>
+      Einstein diceva che la creatività è l'intelligenza che si diverte.<br>
+      Da questo concetto nasce <strong>La Fucina delle Idee</strong>: un luogo per sviluppare, trarre ispirazione e far nascere nuove idee e progetti.<br>
+      Che il viaggio incominci!</p>
+    </div>
+  </section>
 
-    <!-- ✅ Chiave reCAPTCHA aggiornata -->
-    <div class="g-recaptcha" data-sitekey="6LdWMGYrAAAAAAAbHX6_DhGpJh5b8fxHCTtEMIZk"></div>
+  <section id="progetti">
+    <h2 style="text-align:center">I Miei Progetti</h2>
+    <div class="cards">
+      <div class="card fantateam">
+        <img src="img/fantateam.png" alt="Fantateam" />
+        <h3>Fantateam</h3>
+        <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+        <a href="fantateam.html">Vai al sito →</a>
+      </div>
+      <div class="card storygen">
+        <img src="img/storygen.png" alt="Storygen" />
+        <h3>Storygen</h3>
+        <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+        <a href="storygen.html">Scopri di più →</a>
+      </div>
+      <div class="card castello">
+        <img src="img/castello_kids.png" alt="Castello Kids" />
+        <h3>Castello Kids</h3>
+        <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
+        <a href="castellokids.html">Entra nell'app →</a>
+      </div>
+    </div>
+  </section>
 
-    <button type="submit">Invia Messaggio</button>
-    <p class="message" id="form-message">✅ Grazie per averci contattato! Ti risponderemo presto.</p>
-  </form>
-
-  <div class="social-icons" style="margin-top:2em;">
-    <a href="#" aria-label="Facebook">📻</a>
-    <a href="#" aria-label="Instagram">📸</a>
-    <a href="#" aria-label="LinkedIn">🔗</a>
-  </div>
-</section>
-
-
-  <div class="social-icons" style="margin-top: 2em;">
-    <a href="#" aria-label="Facebook">📘</a>
-    <a href="#" aria-label="Instagram">📸</a>
-    <a href="#" aria-label="LinkedIn">💼</a>
-  </div>
-</section>
-
-<script>
-  const form = document.getElementById('contact-form');
-  const message = document.getElementById('form-message');
-
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    if (!form.checkValidity()) {
-      alert("Compila tutti i campi obbligatori.");
-      return;
-    }
-
-    const recaptcha = grecaptcha.getResponse();
-    if (!recaptcha) {
-      alert("Verifica reCAPTCHA richiesta.");
-      return;
-    }
-
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        message.style.display = 'block';
-        form.reset();
-        grecaptcha.reset();
-      } else {
-        alert("Errore nell'invio del messaggio.");
-      }
-    })
-    .catch(error => {
-      alert("Errore di rete.");
-    });
-  });
-</script>
-
+  <section id="contatti" class="contatti">
+    <h2>Contattaci</h2>
+    <form action="https://formspree.io/f/xgvyzngp" method="POST">
+      <input type="text" name="name" placeholder="Nome" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Il tuo messaggio" rows="5" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
+    <div class="social-icons">
+      <a href="#">📻</a>
+      <a href="#">📸</a>
+      <a href="#">🔗</a>
+    </div>
+  </section>
 </body>
 </html>
