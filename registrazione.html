@@ -41,7 +41,7 @@
       background: #e0e1dd;
       margin-bottom: 0.5em;
     }
-    .form-box button {
+    .form-box button, .form-box a.button {
       width: 100%;
       padding: 1em;
       background: #0077cc;
@@ -51,8 +51,11 @@
       font-size: 1em;
       cursor: pointer;
       margin-top: 1em;
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
     }
-    .form-box button:hover {
+    .form-box button:hover, .form-box a.button:hover {
       background: #005fa3;
     }
     .checkbox {
@@ -78,42 +81,9 @@
       <img src="img/fantateam.png" alt="Logo Fantateam">
     </div>
     <h2>Registrazione</h2>
-    <form>
-      <label for="email">E-mail</label>
-      <input type="email" id="email" placeholder="nome@email.com" required>
 
-      <label for="username">Username</label>
-      <input type="text" id="username" placeholder="Scegli uno username" required>
-
-      <label for="password">Password</label>
-      <input type="password" id="password" placeholder="Password" required>
-
-      <label for="confirm">Conferma Password</label>
-      <input type="password" id="confirm" placeholder="Conferma Password" required>
-
-      <label for="anno">Anno di nascita</label>
-      <select id="anno" required>
-        <option value="">Seleziona anno</option>
-        <script>
-          for (let i = 2015; i >= 1920; i--) {
-            document.write(`<option value="${i}">${i}</option>`);
-          }
-        </script>
-      </select>
-
-      <label for="provincia">Provincia</label>
-      <input type="text" id="provincia" placeholder="Es. Cagliari">
-
-      <label for="squadra">Squadra del cuore</label>
-      <input type="text" id="squadra" placeholder="Es. Cagliari">
-
-      <div class="checkbox">
-        <input type="checkbox" id="consenso" required>
-        <label for="consenso">Acconsento al trattamento dei dati</label>
-      </div>
-
-      <button type="submit">Registrati</button>
-    </form>
+    <p style="text-align:center; font-size: 0.95em;">Per completare la registrazione clicca il pulsante qui sotto:</p>
+    <a class="button" href="https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/" target="_blank">📝 Vai al form di registrazione online</a>
   </div>
 </body>
 </html>
