@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrazione - Fantateam</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1b2a url('https://www.transparenttextures.com/patterns/swirl.png') repeat;
+      background-size: cover;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .form-box {
+      background: #1b263b;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      max-width: 400px;
+      width: 90%;
+    }
+    .form-box h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .form-box label {
+      display: block;
+      margin: 0.8em 0 0.2em;
+      font-weight: 600;
+    }
+    .form-box input, .form-box select {
+      width: 100%;
+      padding: 0.8em;
+      border: none;
+      border-radius: 6px;
+      background: #e0e1dd;
+      margin-bottom: 0.5em;
+    }
+    .form-box button {
+      width: 100%;
+      padding: 1em;
+      background: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    .form-box button:hover {
+      background: #005fa3;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 0.5em;
+    }
+    .checkbox input {
+      margin-right: 0.5em;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .logo img {
+      max-width: 180px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <div class="logo">
+      <img src="img/fantateam.png" alt="Logo Fantateam">
+    </div>
+    <h2>Registrazione</h2>
+    <form>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="nome@email.com" required>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Scegli uno username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" required>
+
+      <label for="confirm">Conferma Password</label>
+      <input type="password" id="confirm" placeholder="Conferma Password" required>
+
+      <label for="anno">Anno di nascita</label>
+      <select id="anno" required>
+        <option value="">Seleziona anno</option>
+        <script>
+          for (let i = 2015; i >= 1920; i--) {
+            document.write(`<option value="${i}">${i}</option>`);
+          }
+        </script>
+      </select>
+
+      <label for="provincia">Provincia</label>
+      <input type="text" id="provincia" placeholder="Es. Cagliari">
+
+      <label for="squadra">Squadra del cuore</label>
+      <input type="text" id="squadra" placeholder="Es. Cagliari">
+
+      <div class="checkbox">
+        <input type="checkbox" id="consenso" required>
+        <label for="consenso">Acconsento al trattamento dei dati</label>
+      </div>
+
+      <button type="submit">Registrati</button>
+    </form>
+  </div>
+</body>
+</html>
