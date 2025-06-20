@@ -3,36 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantateam – La Fucina delle Idee</title>
+  <title>Castello Kids – La Fucina delle Idee</title>
   <style>
-    body { margin:0; font-family:'Segoe UI',sans-serif; background:#e6f7f4; }
-    header, footer, nav { /* uguali a index */ }
-    .content { padding:2em; text-align:center; }
-    .content img { max-width:300px; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6f7f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #b3e5fc;
+      text-align: center;
+      padding: 1em;
+    }
+    header img {
+      width: 80px;
+    }
+    .content {
+      flex: 1;
+      text-align: center;
+      padding: 2em;
+    }
+    .content img {
+      width: 200px;
+      margin-bottom: 1em;
+    }
+    .content h1 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+    }
+    .content p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 2em;
+    }
+    a.button {
+      background: #003b4f;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    footer {
+      background-color: #003b4f;
+      color: white;
+      text-align: center;
+      padding: 1.2em;
+    }
   </style>
 </head>
 <body>
-<!-- Header/nav/footer identici -->
-<h1>Castello Kids</h1>
-<img src="img/castello_kids.png" alt="Castello Kids Logo">
-<p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-<!-- Aggiungi demo o dettagli qui -->
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#progetti">Progetti</a>
-    <a href="index.html#contatti">Contatti</a>
-  </nav>
+  <header>
+    <img src="logo_fucina.png" alt="Logo Fucina delle Idee">
+  </header>
 
   <div class="content">
-    <img src="img/fantateam.png" alt="Fantateam Logo">
-    <p>Mini‑app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-    <p>(Qui potrai inserire screenshot, link alla demo o dettagli tecnici.)</p>
+    <img src="img/castello_kids.png" alt="Logo Castello Kids">
+    <h1>Castello Kids</h1>
+    <p>App educativa e turistica per bambini sul quartiere storico di Castello a Cagliari. Con mappe, quiz e curiosità, i più piccoli scoprono la città giocando!</p>
+    <a href="index.html" class="button">← Torna alla Home</a>
   </div>
 
   <footer>
-    <p><a href="index.html" style="color:white;">← Torna alla Home</a></p>
     <p>© 2025 La Fucina delle Idee</p>
   </footer>
+
 </body>
 </html>
