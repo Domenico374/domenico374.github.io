@@ -4,151 +4,101 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Fucina delle Idee</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Rubik', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #e6f8f2;
-      color: #043c4e;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f7f4;
     }
-
     header {
-      background-color: #aee2ef;
+      background-color: #b3e5fc;
       text-align: center;
-      padding: 2em 1em;
-    }
-
-    header img {
-      width: 100px;
-    }
-
-    nav {
-      background-color: #043c4e;
-      display: flex;
-      justify-content: center;
-      gap: 2em;
       padding: 1em;
     }
-
+    header img {
+      width: 80px;
+    }
+    header h1 {
+      margin: 0.2em 0 0;
+      font-size: 2em;
+    }
+    header p {
+      font-style: italic;
+      margin: 0;
+      font-size: 0.95em;
+    }
+    nav {
+      background-color: #003b4f;
+      padding: 0.7em 0;
+      text-align: center;
+    }
     nav a {
       color: white;
+      margin: 0 1.5em;
       text-decoration: none;
       font-weight: bold;
     }
-
-    .progetti {
-      padding: 3em 1em;
-      background-color: #e6f8f2;
+    .projects-section {
+      padding: 2em;
       text-align: center;
     }
-
-    .cards {
+    .projects-section h2 {
+      margin-bottom: 1.5em;
+    }
+    .project-grid {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 2em;
-      margin-top: 2em;
+      flex-wrap: wrap;
     }
-
-    .card {
-      background-color: #fff;
-      padding: 1.5em;
-      border-radius: 12px;
-      width: 250px;
+    .project-box {
+      width: 220px;
+      height: 220px;
+      background-color: white;
+      border-radius: 20px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
     }
-
-    .card img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 1em;
-    }
-
-    .card h3 {
-      margin: 0.5em 0;
-    }
-
-    .fantateam { background-color: #a2caff; }
-    .storygen { background-color: #c8f3d4; }
-    .castello { background-color: #fffabf; }
-
-    .contatti {
-      background-color: #f2f2f2;
-      padding: 3em 1em;
-      text-align: center;
-    }
-
-    .contatti form {
-      max-width: 400px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-    }
-
-    .contatti input, .contatti textarea {
-      padding: 0.75em;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .contatti button {
-      background-color: #043c4e;
-      color: white;
-      border: none;
-      padding: 0.75em;
-      border-radius: 6px;
+    .project-box:hover {
+      transform: scale(1.05);
       cursor: pointer;
+    }
+    .project-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
 
-<header id="home">
-  <img src="logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <header>
+    <img src="img/logo_fucina.png" alt="Logo Fucina delle Idee">
+    <h1>La Fucina delle Idee</h1>
+    <p>Quando la tecnologia incontra la fantasia nasce la creatività</p>
+  </header>
 
-  <h1>La Fucina delle Idee</h1>
-  <p><em>Quando la tecnologia incontra la fantasia nasce la creatività</em></p>
-</header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#progetti">Progetti</a>
-  <a href="#contatti">Contatti</a>
-</nav>
-
-<section class="progetti" id="progetti">
-  <h2>I Miei Progetti</h2>
-  <div class="cards">
-    <div class="card fantateam">
-      <img src="img/fantateam.png" alt="Fantateam Logo">
-      <h3 style="color:#c41111">Fantateam</h3>
-      <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+  <section class="projects-section" id="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="project-grid">
+      <div class="project-box">
+        <img src="img/fantateam.png" alt="Fantateam">
+      </div>
+      <div class="project-box">
+        <img src="img/storygen.png" alt="Storygen">
+      </div>
+      <div class="project-box">
+        <img src="img/castello_kids.png" alt="Castello Kids">
+      </div>
     </div>
-    <div class="card storygen">
-      <img src="img/storygen.png" alt="Storygen Illustrazione">
-      <h3>Storygen</h3>
-      <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-    </div>
-    <div class="card castello">
-      <img src="img/castello_kids.png" alt="Castello Kids Logo">
-      <h3 style="color:#7f3f00">Castello Kids</h3>
-      <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-    </div>
-  </div>
-</section>
-
-<section class="contatti" id="contatti">
-  <h2>Contattami</h2>
-  <form action="https://formspree.io/f/xgvyzngp" method="POST">
-    <input type="text" name="name" placeholder="Il tuo nome" required>
-    <input type="email" name="email" placeholder="La tua email" required>
-    <textarea name="message" rows="5" placeholder="Scrivi il tuo messaggio" required></textarea>
-    <button type="submit">Invia</button>
-  </form>
-</section>
+  </section>
 
 </body>
 </html>
