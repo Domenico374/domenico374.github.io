@@ -3,85 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fantateam – La Fucina delle Idee</title>
+  <title>La Fucina delle Idee</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
     <img src="logo_fucina.png" alt="Logo Fucina delle Idee">
+    <h1>La Fucina delle Idee</h1>
+    <p>Quando la tecnologia incontra la fantasia nasce la creatività</p>
   </header>
 
-  <div class="content">
-    <img src="img/fantateam.png" alt="Logo Fantateam">
-    <h1>Fantateam</h1>
-    <p>Mini‑app per il fantacalcio: login, rose personalizzate, punteggi e mercato. Scopri tutte le funzionalità pensate per gli appassionati del fantacalcio!</p>
-    <a href="index.html" class="button">← Torna alla Home</a>
-  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
 
-  <footer>
-    <p>© 2025 La Fucina delle Idee</p>
-  </footer>
+  <section class="projects-section" id="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="project-grid">
+      <a class="project-box" href="fantateam.html">
+        <img src="img/fantateam.png" alt="Fantateam">
+      </a>
+      <a class="project-box" href="storygen.html">
+        <img src="img/storygen.png" alt="Storygen">
+      </a>
+      <a class="project-box" href="castello_kids.html">
+        <img src="img/castello_kids.png" alt="Castello Kids">
+      </a>
+    </div>
+  </section>
 
-</body>
-</html>
-
-    header {
-      background: #b3e5fc;
-      text-align: center;
-      padding: 1em;
-    }
-    header img {
-      width: 80px;
-    }
-    .content {
-      flex: 1;
-      text-align: center;
-      padding: 2em;
-    }
-    .content img {
-      width: 200px;
-      margin-bottom: 1em;
-    }
-    .content h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
-    }
-    .content p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 2em;
-    }
-    a.button {
-      background: #003b4f;
-      color: white;
-      padding: 0.6em 1.2em;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    footer {
-      background-color: #003b4f;
-      color: white;
-      text-align: center;
-      padding: 1.2em;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="logo_fucina.png" alt="Logo Fucina delle Idee">
-  </header>
-
-  <div class="content">
-    <img src="img/fantateam.png" alt="Logo Fantateam">
-    <h1>Fantateam</h1>
-    <p>Mini‑app per il fantacalcio: login, rose personalizzate, punteggi e mercato. Scopri tutte le funzionalità pensate per gli appassionati del fantacalcio!</p>
-    <a href="index.html" class="button">← Torna alla Home</a>
-  </div>
-
-  <footer>
+  <footer id="contatti">
+    <h3>Contattaci</h3>
+    <form action="mailto:info@fucinadelleidee.it" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Il tuo nome" required>
+      <input type="email" name="email" placeholder="La tua email" required>
+      <textarea name="message" rows="5" placeholder="Scrivi il tuo messaggio" required></textarea>
+      <button type="submit">Invia</button>
+    </form>
     <p>© 2025 La Fucina delle Idee</p>
   </footer>
 
