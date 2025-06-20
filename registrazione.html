@@ -1,89 +1,107 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrazione - Fantateam</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registrazione – Fantateam</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #0d1b2a url('https://www.transparenttextures.com/patterns/swirl.png') repeat;
-      background-size: cover;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
     }
-    .form-box {
-      background: #1b263b;
+
+    .container {
+      max-width: 500px;
+      margin: 3em auto;
+      background: rgba(0, 0, 0, 0.5);
       padding: 2em;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      max-width: 400px;
-      width: 90%;
     }
-    .form-box h2 {
+
+    h1 {
       text-align: center;
       margin-bottom: 1em;
     }
-    .form-box label {
+
+    label {
       display: block;
-      margin: 0.8em 0 0.2em;
-      font-weight: 600;
+      margin-top: 1em;
+      font-weight: bold;
     }
-    .form-box input, .form-box select {
+
+    input, select {
       width: 100%;
       padding: 0.8em;
       border: none;
-      border-radius: 6px;
-      background: #e0e1dd;
-      margin-bottom: 0.5em;
-    }
-    .form-box button, .form-box a.button {
-      width: 100%;
-      padding: 1em;
-      background: #0077cc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 1em;
-      cursor: pointer;
-      margin-top: 1em;
-      text-align: center;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .form-box button:hover, .form-box a.button:hover {
-      background: #005fa3;
-    }
-    .checkbox {
-      display: flex;
-      align-items: center;
+      border-radius: 5px;
       margin-top: 0.5em;
     }
-    .checkbox input {
-      margin-right: 0.5em;
+
+    button {
+      background: #00bcd4;
+      color: white;
+      border: none;
+      padding: 1em;
+      width: 100%;
+      font-size: 1em;
+      margin-top: 2em;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .logo {
+
+    button:hover {
+      background: #008fa1;
+    }
+
+    .footer {
       text-align: center;
-      margin-bottom: 1em;
-    }
-    .logo img {
-      max-width: 180px;
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <div class="form-box">
-    <div class="logo">
-      <img src="img/fantateam.png" alt="Logo Fantateam">
-    </div>
-    <h2>Registrazione</h2>
 
-    <p style="text-align:center; font-size: 0.95em;">Per completare la registrazione clicca il pulsante qui sotto:</p>
-    <a class="button" href="https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/" target="_blank">📝 Vai al form di registrazione online</a>
+  <div class="container">
+    <h1>Registrati ora</h1>
+    <form action="#" method="post">
+      <label for="email">📩 Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="username">👤 Username</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="password">🔐 Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirm">🔐 Conferma password</label>
+      <input type="password" id="confirm" name="confirm" required />
+
+      <label for="anno">📅 Anno di nascita</label>
+      <input type="number" id="anno" name="anno" min="1900" max="2025" required />
+
+      <label for="provincia">🌍 Provincia</label>
+      <input type="text" id="provincia" name="provincia" required />
+
+      <label for="squadra">❤️ Squadra del cuore</label>
+      <input type="text" id="squadra" name="squadra" required />
+
+      <label>
+        <input type="checkbox" name="consenso" />
+        Acconsento al trattamento dei dati personali
+      </label>
+
+      <button type="submit">Invia registrazione</button>
+    </form>
   </div>
+
+  <div class="footer">
+    © 2025 Fantateam – La Fucina delle Idee
+  </div>
+
 </body>
 </html>
