@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registrazione – Fantateam</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrazione Fantateam</title>
   <style>
     body {
-      background: linear-gradient(to right, #000428, #004e92);
-      color: white;
       font-family: Arial, sans-serif;
-      padding: 2em;
-      max-width: 500px;
-      margin: auto;
+      background: linear-gradient(to bottom right, #003366, #006699);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    h1 {
-      text-align: center;
-    }
-    label {
-      display: block;
-      margin-top: 1em;
-    }
-    input, select {
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
       width: 100%;
-      padding: 0.6em;
-      margin-top: 0.3em;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
       border: none;
       border-radius: 5px;
+    }
+    input::placeholder {
+      color: #999;
     }
     button {
-      margin-top: 2em;
-      width: 100%;
-      padding: 0.8em;
-      background: #00c6ff;
-      border: none;
+      background-color: #00ccff;
       color: white;
       font-weight: bold;
-      border-radius: 5px;
       cursor: pointer;
+    }
+    button:hover {
+      background-color: #0099cc;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-
-  <h1>Registrati ora ✨</h1>
-
   <form id="registrationForm">
-    <label>Email 📩
-      <input type="email" name="email" required />
-    </label>
-
-    <label>Username 👤
-      <input type="text" name="username" required />
-    </label>
-
-    <label>Password 🔐
-      <input type="password" name="password" required />
-    </label>
-
-    <label>Conferma Password 🔐
-      <input type="password" name="conferma_password" required />
-    </label>
-
-    <label>Anno di nascita 📅
-      <input type="number" name="anno" min="1900" max="2025" required />
-    </label>
-
-    <label>Provincia 🌍
-      <input type="text" name="provincia" required />
-    </label>
-
-    <label>Squadra del cuore ❤️
-      <input type="text" name="squadra" required />
-    </label>
-
+    <h2>Registrati al Fantateam</h2>
+    <input type="email" name="email" placeholder="Email 📧" required>
+    <input type="text" name="username" placeholder="Username 🧑‍💻" required>
+    <input type="password" name="password" placeholder="Password 🔐" required>
+    <input type="password" name="conferma_password" placeholder="Conferma Password 🔐" required>
+    <input type="number" name="anno" placeholder="Anno di nascita 📅" required>
+    <input type="text" name="provincia" placeholder="Provincia 🌍" required>
+    <input type="text" name="squadra" placeholder="Squadra del cuore 💓" required>
     <button type="submit">Registrati ora</button>
   </form>
 
@@ -83,28 +68,22 @@
       const data = {};
       formData.forEach((value, key) => data[key] = value);
 
-      fetch("fetch("https://script.google.com/macros/s/AKfycbzk3OVzbRj54Z8S7_RMjkYaUesZGx030_jrSBwPCMlkJuPrkGzasi7GRHttNYrj8mcUIg/exec", {
-", {
+      fetch("https://script.google.com/macros/s/AKfycbxJB7EO4QaRu4RKqQCQ79XeGYlCrtAL1qJlSWQWx11QjSatVpNT_AWzcILPlUX9qVLnpA/exec", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json",
+        },
       })
-      .then(response => {
-        if (response.ok) {
-          alert("✅ Registrazione completata!");
-          document.getElementById("registrationForm").reset();
-        } else {
-          alert("❌ Errore nella registrazione.");
-        }
+      .then(response => response.text())
+      .then(result => {
+        alert("✅ Registrazione completata con successo!");
+        document.getElementById("registrationForm").reset();
       })
       .catch(error => {
-        console.error("Errore:", error);
-        alert("❌ Errore di rete.");
+        alert("❌ Errore di rete: " + error);
       });
     });
   </script>
-
 </body>
 </html>
