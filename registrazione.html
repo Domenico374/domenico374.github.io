@@ -2,106 +2,108 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Registrazione – Fantateam</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      background: linear-gradient(to right, #000428, #004e92);
       color: white;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: 3em auto;
-      background: rgba(0, 0, 0, 0.5);
+      font-family: Arial, sans-serif;
       padding: 2em;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      max-width: 500px;
+      margin: auto;
     }
-
     h1 {
       text-align: center;
-      margin-bottom: 1em;
     }
-
     label {
       display: block;
       margin-top: 1em;
-      font-weight: bold;
     }
-
     input, select {
       width: 100%;
-      padding: 0.8em;
+      padding: 0.6em;
+      margin-top: 0.3em;
       border: none;
       border-radius: 5px;
-      margin-top: 0.5em;
     }
-
     button {
-      background: #00bcd4;
-      color: white;
-      border: none;
-      padding: 1em;
-      width: 100%;
-      font-size: 1em;
       margin-top: 2em;
+      width: 100%;
+      padding: 0.8em;
+      background: #00c6ff;
+      border: none;
+      color: white;
+      font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
-    }
-
-    button:hover {
-      background: #008fa1;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.9em;
-      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Registrati ora</h1>
-    <form action="#" method="post">
-      <label for="email">📩 Email</label>
-      <input type="email" id="email" name="email" required />
+  <h1>Registrati ora ✨</h1>
 
-      <label for="username">👤 Username</label>
-      <input type="text" id="username" name="username" required />
+  <form id="registrationForm">
+    <label>Email 📩
+      <input type="email" name="email" required />
+    </label>
 
-      <label for="password">🔐 Password</label>
-      <input type="password" id="password" name="password" required />
+    <label>Username 👤
+      <input type="text" name="username" required />
+    </label>
 
-      <label for="confirm">🔐 Conferma password</label>
-      <input type="password" id="confirm" name="confirm" required />
+    <label>Password 🔐
+      <input type="password" name="password" required />
+    </label>
 
-      <label for="anno">📅 Anno di nascita</label>
-      <input type="number" id="anno" name="anno" min="1900" max="2025" required />
+    <label>Conferma Password 🔐
+      <input type="password" name="conferma_password" required />
+    </label>
 
-      <label for="provincia">🌍 Provincia</label>
-      <input type="text" id="provincia" name="provincia" required />
+    <label>Anno di nascita 📅
+      <input type="number" name="anno" min="1900" max="2025" required />
+    </label>
 
-      <label for="squadra">❤️ Squadra del cuore</label>
-      <input type="text" id="squadra" name="squadra" required />
+    <label>Provincia 🌍
+      <input type="text" name="provincia" required />
+    </label>
 
-      <label>
-        <input type="checkbox" name="consenso" />
-        Acconsento al trattamento dei dati personali
-      </label>
+    <label>Squadra del cuore ❤️
+      <input type="text" name="squadra" required />
+    </label>
 
-      <button type="submit">Invia registrazione</button>
-    </form>
-  </div>
+    <button type="submit">Registrati ora</button>
+  </form>
 
-  <div class="footer">
-    © 2025 Fantateam – La Fucina delle Idee
-  </div>
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+
+      fetch("https://script.google.com/macros/s/AKfycbwTI8DXkUuv1wvtWB00PxmI5-2_eV3GEbtpb63YBtnYhGhTiJGJjGtfUrUKxsi5Hh4-vA/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("✅ Registrazione completata!");
+          document.getElementById("registrationForm").reset();
+        } else {
+          alert("❌ Errore nella registrazione.");
+        }
+      })
+      .catch(error => {
+        console.error("Errore:", error);
+        alert("❌ Errore di rete.");
+      });
+    });
+  </script>
 
 </body>
 </html>
