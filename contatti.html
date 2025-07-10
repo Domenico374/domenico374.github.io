@@ -10,34 +10,48 @@
 <body>
 
 <header>
-  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" style="width:70px; height:auto; border-radius:6px;" />
   <h1>La Fucina delle Idee</h1>
 </header>
 
 <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="progetti.html">Progetti</a></li>
+    <li><a href="index.html#progetti">Progetti</a></li>
     <li><a href="contatti.html" class="active">Contatti</a></li>
     <li><a href="login.html">👤 Login</a></li>
   </ul>
 </nav>
 
 <main>
-  <section>
+  <section style="max-width: 600px; margin: 3rem auto; padding: 0 1rem; text-align: center;">
     <h2>Contattami</h2>
     <p>Per informazioni o collaborazioni, puoi scrivermi a:</p>
-    <ul>
+    <ul style="list-style-type: none; padding: 0; font-size: 1.1rem;">
       <li>Email: <a href="mailto:domenico.cocco@gmail.com">domenico.cocco@gmail.com</a></li>
       <li>LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/domenico-cocco-577aab83</a></li>
-      <!-- Aggiungi altri contatti se vuoi -->
     </ul>
   </section>
 </main>
 
-<footer>
+<footer style="background: #003b4f; color: white; text-align: center; padding: 1rem 2rem; font-size: 0.9rem; margin-top: auto;">
   <p>© 2025 La Fucina delle Idee</p>
 </footer>
+
+<script>
+  // Evidenzia link attivo nel menu
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
