@@ -96,9 +96,12 @@ main h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 colonne di larghezza uguale */
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto; /* centrato */
 }
+
 
 .card {
   background: white;
