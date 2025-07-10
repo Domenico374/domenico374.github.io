@@ -94,15 +94,6 @@ main h2 {
   text-align: center;
 }
 
-/* Sezione Chi Sono */
-#about {
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  font-size: 1.1rem;
-  color: #2a4b6d;
-  text-align: center;
-}
-
 /* Cards Progetti */
 .cards {
   display: grid;
