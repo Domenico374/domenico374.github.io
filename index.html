@@ -20,14 +20,6 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    nav ul li a.active {
-      background-color: #005bb5;
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      color: white !important;
-    }
-  </style>
 </head>
 <body>
 
@@ -38,7 +30,7 @@
 
 <nav>
   <ul>
-    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li><a href="#progetti">Progetti</a></li>
     <li><a href="#contatti">Contatti</a></li>
     <li><a href="login.html">👤 Login</a></li>
@@ -84,13 +76,16 @@
 </footer>
 
 <script>
-  // Evidenzia automaticamente il link attivo nel menu
-  document.querySelectorAll('nav ul li a').forEach(link => {
-    if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+      }
+    });
   });
 </script>
 
