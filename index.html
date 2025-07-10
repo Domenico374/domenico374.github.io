@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <title>La Fucina delle Idee – Progetti digitali creativi e innovativi in fantacalcio, AI e app educative</title>
-
+  
+  <!-- Meta description -->
   <meta name="description" content="Scopri La Fucina delle Idee: progetti innovativi di fantacalcio, intelligenza artificiale e app educative. Fantateam, Storygen e Castello Kids ti aspettano!" />
+  
+  <!-- Keywords -->
   <meta name="keywords" content="fantacalcio, intelligenza artificiale, app educative, storie illustrate, Sardegna, progetti digitali" />
+  
   <meta name="author" content="Domenico Cocco" />
   <meta name="robots" content="index, follow" />
-
+  
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -41,47 +46,52 @@
   <section id="progetti" aria-label="I Miei Progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
+      
       <article class="card">
-        <a href="fantateam.html">
+        <a href="fantateam.html" aria-label="Vai al progetto Fantateam">
           <img src="img/fantateam_logo.png" alt="Logo Fantateam" loading="lazy" />
           <h3>Fantateam</h3>
           <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-          <ul class="skills">
-            <li>React</li>
-            <li>API REST</li>
-            <li>OAuth2</li>
-          </ul>
-          <button class="btn-more" onclick="window.location.href='fantateam.html'">Scopri di più</button>
         </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Fantateam">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">MySQL</span>
+        </div>
+        <a href="fantateam.html" class="btn-discover" aria-label="Scopri di più su Fantateam">Scopri di più</a>
       </article>
 
       <article class="card">
-        <a href="storygen.html">
+        <a href="storygen.html" aria-label="Vai al progetto Storygen">
           <img src="img/storygen_logo.png" alt="Logo Storygen" loading="lazy" />
           <h3>Storygen</h3>
           <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-          <ul class="skills">
-            <li>Python</li>
-            <li>Machine Learning</li>
-            <li>Stable Diffusion</li>
-          </ul>
-          <button class="btn-more" onclick="window.location.href='storygen.html'">Scopri di più</button>
         </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Storygen">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI API</span>
+          <span class="tech-tag">SVG</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <a href="storygen.html" class="btn-discover" aria-label="Scopri di più su Storygen">Scopri di più</a>
       </article>
 
       <article class="card">
-        <a href="castello_kids.html">
+        <a href="castello_kids.html" aria-label="Vai al progetto Castello Kids">
           <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" loading="lazy" />
           <h3>Castello Kids</h3>
           <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-          <ul class="skills">
-            <li>Flutter</li>
-            <li>UI/UX Design</li>
-            <li>Gamification</li>
-          </ul>
-          <button class="btn-more" onclick="window.location.href='castello_kids.html'">Scopri di più</button>
         </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Castello Kids">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Dart</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Google Maps API</span>
+        </div>
+        <a href="castello_kids.html" class="btn-discover" aria-label="Scopri di più su Castello Kids">Scopri di più</a>
       </article>
+
     </div>
   </section>
 </main>
@@ -104,6 +114,14 @@
         link.classList.remove('active');
         link.removeAttribute('aria-current');
       }
+    });
+
+    // Animazione fade-in delle card
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, 150 * index);
     });
   });
 </script>
