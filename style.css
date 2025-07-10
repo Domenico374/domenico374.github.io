@@ -19,8 +19,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
   text-decoration: underline;
+  outline: none;
 }
 
 /* Header */
@@ -35,7 +37,7 @@ header {
 }
 
 header img {
-  width: 70px; /* aumentato da 50px */
+  width: 70px;
   height: auto;
   border-radius: 6px;
 }
@@ -66,30 +68,25 @@ nav ul li a {
   font-size: 1rem;
   padding: 0.25rem 0;
   display: block;
-  position: relative;
-  transition: color 0.3s ease;
-}
-nav ul li a {
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.25rem 0;
-  display: block;
-  transition: background-color 0.3s ease, color 0.3s ease; /* aggiunto */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
   background-color: #005bb5;
   border-radius: 4px;
-  color: #a8d0ff; /* facciamo il testo più chiaro in hover */
-}
-
-nav ul li a.active {
-  background-color: #003b70;
-  border-radius: 4px;
   color: #a8d0ff;
+  outline: none;
 }
 
+/* Link attivo */
+nav ul li a.active {
+  background-color: #005bb5;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  color: white !important;
+  outline-offset: 2px;
+}
 
 /* Main */
 main {
@@ -121,8 +118,10 @@ main h2 {
   transition: box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-within {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  outline: none;
 }
 
 .card img {
@@ -157,14 +156,7 @@ footer {
   header h1 {
     font-size: 1.3rem;
   }
- nav ul li a:hover {
-  background-color: #005bb5;
-  border-radius: 4px;
-}
-
-nav ul li a.active {
-  background-color: #005bb5;
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  color: white !important;
+  nav ul {
+    gap: 1rem;
+  }
 }
