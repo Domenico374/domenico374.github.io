@@ -35,7 +35,7 @@ header {
 }
 
 header img {
-  width: 50px;
+  width: 70px; /* aumentato da 50px */
   height: auto;
   border-radius: 6px;
 }
@@ -66,11 +66,25 @@ nav ul li a {
   font-size: 1rem;
   padding: 0.25rem 0;
   display: block;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  background-color: #005bb5;
-  border-radius: 4px;
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffd700; /* oro */
+  text-decoration: none;
+}
+
+nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #ffd700;
+  border-radius: 2px;
 }
 
 /* Main */
