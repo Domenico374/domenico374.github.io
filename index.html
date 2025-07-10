@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Fucina delle Idee – Progetti digitali creativi e innovativi in fantacalcio, AI e app educative</title>
   <meta name="description" content="Scopri La Fucina delle Idee: progetti innovativi di fantacalcio, intelligenza artificiale e app educative. Fantateam, Storygen e Castello Kids ti aspettano!" />
+  <meta name="keywords" content="fantacalcio, intelligenza artificiale, app educative, storie illustrate, Sardegna, progetti digitali" />
+  <meta name="author" content="Domenico Cocco" />
+  <meta name="robots" content="index, follow" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -33,28 +36,71 @@
 
 <main>
 
-  <!-- Hero -->
-  <section id="hero" aria-label="Introduzione a La Fucina delle Idee" class="hero-section">
+  <!-- Hero Section -->
+  <section class="hero-section" aria-label="Benvenuto">
     <h2>Ciao, sono Domenico Cocco</h2>
     <p>Realizzo progetti digitali innovativi nel fantacalcio, intelligenza artificiale e app educative per bambini.</p>
     <a href="#progetti" class="btn-primary" aria-label="Scopri i miei progetti">Scopri i miei progetti</a>
+    <br/><br/>
+    <img src="img/domenico_cocco.jpg" alt="Foto di Domenico Cocco" width="180" height="180" style="border-radius: 50%; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" />
   </section>
 
-  <!-- Chi Sono -->
-  <section id="about" aria-label="Chi sono Domenico Cocco" class="about-section">
-    <img src="img/foto_domenico.jpg" alt="Foto di Domenico Cocco" class="about-photo" />
-    <div class="about-text">
-      <h2>Chi sono</h2>
-      <p>Sono un appassionato sviluppatore e designer, con esperienza nella creazione di soluzioni tecnologiche innovative. Amo trasformare idee in progetti concreti e di valore.</p>
-    </div>
+  <!-- About Section -->
+  <section class="about-section" aria-label="Chi sono">
+    <h2>Chi sono</h2>
+    <p>Sono un appassionato sviluppatore e designer, con esperienza nella creazione di soluzioni tecnologiche innovative. Amo trasformare idee in progetti concreti e di valore.</p>
   </section>
 
-  <!-- Progetti -->
+  <!-- Progetti Section -->
   <section id="progetti" aria-label="I Miei Progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
-      <!-- Le cards come già definite prima -->
-      <!-- ... -->
+
+      <article class="card">
+        <a href="fantateam.html" aria-label="Vai al progetto Fantateam">
+          <img src="img/fantateam_logo.png" alt="Logo Fantateam" loading="lazy" />
+          <h3>Fantateam</h3>
+          <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+        </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Fantateam">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">Flask</span>
+          <span class="tech-tag">MySQL</span>
+        </div>
+        <a href="fantateam.html" class="btn-discover" aria-label="Scopri di più su Fantateam">Scopri di più</a>
+      </article>
+
+      <article class="card">
+        <a href="storygen.html" aria-label="Vai al progetto Storygen">
+          <img src="img/storygen_logo.png" alt="Logo Storygen" loading="lazy" />
+          <h3>Storygen</h3>
+          <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+        </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Storygen">
+          <span class="tech-tag">Python</span>
+          <span class="tech-tag">OpenAI API</span>
+          <span class="tech-tag">SVG</span>
+          <span class="tech-tag">JavaScript</span>
+        </div>
+        <a href="storygen.html" class="btn-discover" aria-label="Scopri di più su Storygen">Scopri di più</a>
+      </article>
+
+      <article class="card">
+        <a href="castello_kids.html" aria-label="Vai al progetto Castello Kids">
+          <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" loading="lazy" />
+          <h3>Castello Kids</h3>
+          <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
+        </a>
+        <div class="tech-tags" aria-label="Tecnologie usate in Castello Kids">
+          <span class="tech-tag">Flutter</span>
+          <span class="tech-tag">Dart</span>
+          <span class="tech-tag">Firebase</span>
+          <span class="tech-tag">Google Maps API</span>
+        </div>
+        <a href="castello_kids.html" class="btn-discover" aria-label="Scopri di più su Castello Kids">Scopri di più</a>
+      </article>
+
     </div>
   </section>
 
@@ -68,6 +114,7 @@
 </footer>
 
 <script>
+  // Evidenzia automaticamente il link attivo nel menu
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('nav ul li a').forEach(link => {
       if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
