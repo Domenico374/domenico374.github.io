@@ -17,63 +17,72 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    nav ul li a.active {
+      background-color: #005bb5;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      color: white !important;
+    }
+  </style>
 </head>
 
 <body>
 
-<header role="banner">
+<header>
   <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
   <h1>La Fucina delle Idee</h1>
 </header>
 
-<nav role="navigation" aria-label="Menu principale">
+<nav>
   <ul>
-    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="#progetti">Progetti</a></li>
     <li><a href="#contatti">Contatti</a></li>
     <li><a href="login.html">👤 Login</a></li>
   </ul>
 </nav>
 
-<main role="main">
-  <section id="progetti" aria-label="Sezione progetti">
+<main>
+  <section id="progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
-      <article class="card">
+      <div class="card">
         <a href="fantateam.html">
-          <img src="img/fantateam_logo.png" alt="Logo del progetto Fantateam" />
+          <img src="img/fantateam_logo.png" alt="Fantateam" loading="lazy" />
           <h3>Fantateam</h3>
           <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
         </a>
-      </article>
+      </div>
 
-      <article class="card">
+      <div class="card">
         <a href="storygen.html">
-          <img src="img/storygen_logo.png" alt="Logo del progetto Storygen" />
+          <img src="img/storygen_logo.png" alt="Storygen" loading="lazy" />
           <h3>Storygen</h3>
           <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
         </a>
-      </article>
+      </div>
 
-      <article class="card">
+      <div class="card">
         <a href="castello_kids.html">
-          <img src="img/castello_kids_logo.png" alt="Logo del progetto Castello Kids" />
+          <img src="img/castello_kids_logo.png" alt="Castello Kids" loading="lazy" />
           <h3>Castello Kids</h3>
           <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
         </a>
-      </article>
+      </div>
     </div>
   </section>
 </main>
 
-<footer id="contatti" role="contentinfo" style="background: #003b4f; color: white; text-align: center; padding: 1rem 2rem; font-size: 0.9rem; margin-top: auto;">
+<footer id="contatti">
   <p>
-    Mail: <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | 
-    LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">www.linkedin.com/in/domenico-cocco-577aab83</a>
+    Mail: <a href="mailto:domenico.cocco@gmail.com">domenico.cocco@gmail.com</a> | 
+    LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/domenico-cocco-577aab83</a>
   </p>
 </footer>
 
 <script>
+  // Evidenzia automaticamente il link attivo nel menu
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('nav ul li a').forEach(link => {
       if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
