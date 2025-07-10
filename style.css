@@ -87,11 +87,74 @@ main {
   padding: 0 1rem;
 }
 
-main h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #004080;
+/* Hero Section */
+.hero-section {
+  max-width: 800px;
+  margin: 3rem auto 5rem auto;
+  padding: 0 1rem;
   text-align: center;
+  color: #003b4f;
+}
+
+.hero-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #005bb5;
+}
+
+.btn-primary {
+  background-color: #0073e6;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005bb5;
+}
+
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: #003b4f;
+}
+
+.about-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #005bb5;
 }
 
 /* Cards Progetti */
@@ -223,5 +286,14 @@ footer a:hover {
   nav ul li a {
     padding: 0.8rem 1.2rem;
     font-size: 1.1rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-photo {
+    margin-bottom: 1rem;
   }
 }
