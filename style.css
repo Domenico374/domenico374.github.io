@@ -1,47 +1,35 @@
-/* Reset di base */
-*,
-*::before,
-*::after {
+/* Reset e base */
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background-color: #f8fafc;
+  background: #f8fafc;
   color: #033f50;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Link */
 a {
   color: #0073e6;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #005bb5;
+a:hover {
   text-decoration: underline;
-  outline: none;
-}
-
-a:focus-visible {
-  outline: 3px solid #a8d0ff;
-  outline-offset: 2px;
+  color: #005bb5;
 }
 
 /* Header */
 header {
   background-color: #004080;
   color: white;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -60,9 +48,9 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Navigation */
+/* Nav */
 nav {
-  background-color: #0073e6;
+  background: #0073e6;
 }
 
 nav ul {
@@ -78,23 +66,17 @@ nav ul li a {
   color: white;
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0;
   display: block;
-  border-radius: 4px;
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover,
-nav ul li a:focus {
-  background-color: #005bb5;
-  color: #a8d0ff;
-  outline: none;
-}
-
-nav ul li a.active,
-nav ul li a[aria-current="page"] {
-  background-color: #003b70;
-  color: #a8d0ff;
+nav ul li a.active {
+  background-color: #004a99;
+  border-radius: 4px;
+  color: #d0e4ff;
 }
 
 /* Main */
@@ -112,14 +94,12 @@ main h2 {
   text-align: center;
 }
 
-/* Cards container */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* Card styling */
 .card {
   background: white;
   border-radius: 10px;
@@ -129,11 +109,9 @@ main h2 {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.card:hover,
-.card:focus-within {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transform: translateY(-5px);
-  outline: none;
+.card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
 }
 
 .card img {
@@ -163,24 +141,28 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav ul {
-    justify-content: center;
-  }
+footer a {
+  color: #a8d0ff;
+  transition: color 0.3s ease;
 }
 
+footer a:hover {
+  color: #c0d8ff;
+  text-decoration: underline;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
   header h1 {
     font-size: 1.3rem;
   }
-
   nav ul {
     gap: 1rem;
-    padding: 0.5rem 1rem;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .cards {
-    grid-template-columns: 1fr;
+  nav ul li a {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
   }
 }
