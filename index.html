@@ -2,67 +2,192 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Fucina delle Idee</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset e base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background: #f8fafc;
+      color: #033f50;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header img {
+      width: 50px;
+      height: auto;
+      border-radius: 6px;
+    }
+    header h1 {
+      font-weight: 600;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    /* Nav */
+    nav {
+      background: #0073e6;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 2rem;
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    nav ul li a {
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.25rem 0;
+      display: block;
+    }
+    nav ul li a:hover {
+      background-color: #005bb5;
+      border-radius: 4px;
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #004080;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .card img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #004080;
+    }
+    .card p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #003b4f;
+      color: white;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.3rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
-    <img src="img/logo_fucina.png" alt="Logo Fucina delle Idee" />
-    <h1>La Fucina delle Idee</h1>
-    <p><em>Quando la tecnologia incontra la fantasia nasce la creatività</em></p>
-  </header>
+<header>
+  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <h1>La Fucina delle Idee</h1>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#progetti">Progetti</a></li>
-      <li><a href="#contatti">Contatti</a></li>
-      <li><a href="login.html">👤 Login</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#progetti">Progetti</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+    <li><a href="login.html">👤 Login</a></li>
+  </ul>
+</nav>
 
-  <main>
-    <section id="progetti">
-      <h2>I Miei Progetti</h2>
-      <div class="cards">
-
-        <!-- Fantateam -->
-        <div class="card blue">
-          <a href="fantateam.html">
-            <img src="img/fantateam_logo.png" alt="Logo FantaTeam" width="160" style="margin-bottom: 1em;">
-            <h3>Fantateam</h3>
-            <p>Mini‑app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-          </a>
-        </div>
-
-        <!-- Storygen -->
-        <div class="card green">
-          <a href="storygen.html">
-            <img src="img/storygen_logo.png" alt="Logo Storygen" width="160" style="margin-bottom: 1em;" />
-            <h3>Storygen</h3>
-            <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-          </a>
-        </div>
-
-        <!-- Castello Kids -->
-        <div class="card yellow">
-          <a href="castello_kids.html">
-            <img src="img/castello_kids.png" alt="Castello Kids" width="160" style="margin-bottom: 1em;" />
-            <h3>Castello Kids</h3>
-            <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-          </a>
-        </div>
-
+<main>
+  <section id="progetti">
+    <h2>I Miei Progetti</h2>
+    <div class="cards">
+      <div class="card">
+        <a href="fantateam.html">
+          <img src="img/fantateam_logo.png" alt="Fantateam" />
+          <h3>Fantateam</h3>
+          <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
+        </a>
       </div>
-    </section>
-  </main>
 
-  <footer id="contatti">
-    <p>Contatti: info@fucinadelleidee.it | © 2025 La Fucina delle Idee</p>
-  </footer>
+      <div class="card">
+        <a href="storygen.html">
+          <img src="img/storygen_logo.png" alt="Storygen" />
+          <h3>Storygen</h3>
+          <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <a href="castello_kids.html">
+          <img src="img/castello_kids.png" alt="Castello Kids" />
+          <h3>Castello Kids</h3>
+          <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contatti">
+  <p>Contatti: info@fucinadelleidee.it | © 2025 La Fucina delle Idee</p>
+</footer>
 
 </body>
 </html>
