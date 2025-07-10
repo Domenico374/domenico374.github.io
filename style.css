@@ -110,17 +110,13 @@ main h2 {
   padding: 1.5rem;
   text-align: center;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  
-  /* Inizialmente nascoste per animazione */
   opacity: 0;
   transform: translateY(20px);
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* Classe visibile per effetto animato */
 .card.visible {
   opacity: 1;
   transform: translateY(0);
