@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
   <title>La Fucina delle Idee – Progetti digitali creativi e innovativi in fantacalcio, AI e app educative</title>
+  
+  <!-- Meta description -->
   <meta name="description" content="Scopri La Fucina delle Idee: progetti innovativi di fantacalcio, intelligenza artificiale e app educative. Fantateam, Storygen e Castello Kids ti aspettano!" />
+  
+  <!-- Keywords -->
   <meta name="keywords" content="fantacalcio, intelligenza artificiale, app educative, storie illustrate, Sardegna, progetti digitali" />
+  
   <meta name="author" content="Domenico Cocco" />
   <meta name="robots" content="index, follow" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
@@ -19,6 +26,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -30,32 +38,15 @@
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="#progetti">Progetti</a></li>
+    <li><a href="chi-sono.html">Chi Sono</a></li>
     <li><a href="contatti.html">Contatti</a></li>
   </ul>
 </nav>
 
 <main>
-
-  <!-- Hero Section -->
-  <section class="hero-section" aria-label="Benvenuto">
-    <h2>Ciao, sono Domenico Cocco</h2>
-    <p>Realizzo progetti digitali innovativi nel fantacalcio, intelligenza artificiale e app educative per bambini.</p>
-    <a href="#progetti" class="btn-primary" aria-label="Scopri i miei progetti">Scopri i miei progetti</a>
-    <br/><br/>
-    <img src="img/domenico_cocco.jpg" alt="Foto di Domenico Cocco" width="180" height="180" style="border-radius: 50%; box-shadow: 0 6px 12px rgba(0,0,0,0.2);" />
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section" aria-label="Chi sono">
-    <h2>Chi sono</h2>
-    <p>Sono un appassionato sviluppatore e designer, con esperienza nella creazione di soluzioni tecnologiche innovative. Amo trasformare idee in progetti concreti e di valore.</p>
-  </section>
-
-  <!-- Progetti Section -->
   <section id="progetti" aria-label="I Miei Progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
-
       <article class="card">
         <a href="fantateam.html" aria-label="Vai al progetto Fantateam">
           <img src="img/fantateam_logo.png" alt="Logo Fantateam" loading="lazy" />
@@ -100,10 +91,8 @@
         </div>
         <a href="castello_kids.html" class="btn-discover" aria-label="Scopri di più su Castello Kids">Scopri di più</a>
       </article>
-
     </div>
   </section>
-
 </main>
 
 <footer>
@@ -124,14 +113,6 @@
         link.classList.remove('active');
         link.removeAttribute('aria-current');
       }
-    });
-
-    // Animazione fade-in delle card
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add('visible');
-      }, 150 * index);
     });
   });
 </script>
