@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chi Sono - Domenico Cocco | La Fucina delle Idee</title>
+<meta name="description" content="Scopri il percorso di Domenico Cocco, autodidatta appassionato di Python, AI e sviluppo di progetti digitali." />
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  /* Solo piccole personalizzazioni per questa pagina */
+  .about-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  .about-header h1 {
+    font-size: 2.8rem;
+    color: #004080;
+    margin-bottom: 0.5rem;
+  }
+  .about-header p.subtitle {
+    font-size: 1.3rem;
+    color: #1976d2;
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+  .about-text p {
+    margin-bottom: 1.4rem;
+    font-size: 1.1rem;
+    color: #2a4b6d;
+    line-height: 1.6;
+  }
+  .skills-section {
+    margin-top: 3rem;
+  }
+  .skills-section h2 {
+    color: #004080;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  .skill-group {
+    margin-bottom: 1.8rem;
+  }
+  .skill-group h3 {
+    color: #1976d2;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+  .skill-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .skill-list li {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+  }
+  .cta-section {
+    margin-top: 3rem;
+    text-align: center;
+  }
+  .cta-section a {
+    background-color: #0073e6;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  .cta-section a:hover {
+    background-color: #005bb5;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <h1>La Fucina delle Idee</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="chi-sono.html" class="active">Chi Sono</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
+
+<main class="about-container">
+  <section class="about-header">
+    <h1>Ciao, sono Domenico</h1>
+    <p class="subtitle">Autodidatta in crescita • Trasformo idee in progetti digitali, un passo alla volta</p>
+  </section>
+  
+  <section class="about-text">
+    <p>Sono un autodidatta appassionato che sta imparando a programmare e a sviluppare progetti digitali, un passo alla volta.</p>
+    <p>La <strong>Fucina delle Idee</strong> è il mio spazio creativo, dove sperimento e metto in pratica nuove competenze, specializzandomi in Python e integrando tecnologie innovative.</p>
+    <p>Non sono un esperto sviluppatore né un designer professionista, ma sono motivato dalla curiosità e dalla voglia di crescere giorno dopo giorno, affrontando ogni sfida come un’opportunità di apprendimento.</p>
+    <p>Se vuoi scoprire i miei progetti o contattarmi, qui troverai tutto ciò che ti serve!</p>
+  </section>
+
+  <section class="skills-section" aria-label="Competenze di Domenico">
+    <h2>Le mie competenze</h2>
+    <div class="skill-group">
+      <h3>🐍 Python & Sviluppo</h3>
+      <ul class="skill-list">
+        <li>Python</li>
+        <li>Flask</li>
+        <li>MySQL</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>🚀 Progetti in Sviluppo</h3>
+      <ul class="skill-list">
+        <li>React</li>
+        <li>Flutter</li>
+        <li>Firebase</li>
+        <li>APIs</li>
+        <li>Git/GitHub</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>🤖 Sperimentazione AI</h3>
+      <ul class="skill-list">
+        <li>OpenAI API</li>
+        <li>Generazione Contenuti</li>
+        <li>Storytelling AI</li>
+        <li>SVG Generation</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>💡 Soft Skills</h3>
+      <ul class="skill-list">
+        <li>Autodidatta</li>
+        <li>Problem Solving</li>
+        <li>Curiosità</li>
+        <li>Perseveranza</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <a href="index.html" aria-label="Torna alla homepage">Scopri i miei progetti</a>
+    <a href="contatti.html" aria-label="Vai alla pagina contatti">Contattami</a>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Mail: <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | 
+    LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">www.linkedin.com/in/domenico-cocco-577aab83</a>
+  </p>
+</footer>
+
+</body>
+</html>
