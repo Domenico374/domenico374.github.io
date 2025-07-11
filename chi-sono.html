@@ -4,7 +4,308 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chi Sono - Domenico Cocco</title>
-  <link rel="stylesheet" href="style-chi-sono.css" />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <style>
+    /* Reset base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: #f5f8fb;
+      color: #1a2e4a;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    /* Container principale */
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      padding: 3rem 3rem 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Intro */
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .intro h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #244977;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #5a86ff, #2d3a7d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .intro p {
+      font-size: 1.25rem;
+      color: #506680;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Timeline Section */
+    .timeline-section {
+      max-width: 700px;
+      margin: 0 auto 3rem auto;
+    }
+    .timeline-section h2 {
+      font-size: 2.5rem;
+      color: #244977;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .timeline {
+      position: relative;
+      margin-left: 20px;
+      padding-left: 20px;
+      border-left: 3px solid #5277f0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 40px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-icon {
+      position: absolute;
+      left: -33px;
+      top: 0;
+      background: #5277f0;
+      color: white;
+      font-size: 1.5rem;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(82, 119, 240, 0.6);
+    }
+    .timeline-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+      color: #345d9a;
+    }
+    .timeline-content p {
+      color: #506680;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    /* Foto e Quick Facts */
+    .profile-wrapper {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .profile-photo {
+      flex-shrink: 0;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #5277f0;
+      box-shadow: 0 10px 20px rgba(82, 119, 240, 0.3);
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .profile-photo:hover {
+      transform: scale(1.05);
+    }
+    .quick-facts {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 1.1rem;
+      color: #425e85;
+      max-width: 260px;
+    }
+    .quick-fact {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #e6f0ff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 500;
+      user-select: none;
+      box-shadow: inset 0 0 10px #d7e3fc;
+      transition: background-color 0.3s ease;
+    }
+    .quick-fact:hover {
+      background-color: #c1d3ff;
+    }
+    .description {
+      flex: 1 1 500px;
+      font-size: 1.1rem;
+      color: #344a72;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+    .description p {
+      margin-bottom: 1.5rem;
+    }
+    .description em {
+      color: #5277f0;
+      font-weight: 600;
+    }
+
+    /* Competenze */
+    .skills-section {
+      text-align: center;
+    }
+    .skills-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #244977;
+      margin-bottom: 2rem;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .skill-category {
+      background: #eaf2ff;
+      border-left: 5px solid #5277f0;
+      padding: 20px 30px;
+      border-radius: 15px;
+      min-width: 240px;
+      max-width: 280px;
+      box-shadow: 0 4px 12px rgba(82, 119, 240, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .skill-category:hover {
+      transform: translateY(-5px);
+    }
+    .skill-category h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #345d9a;
+    }
+    .skill-tag {
+      display: inline-block;
+      background: #5277f0;
+      color: white;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin: 5px 8px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+    .skill-tag:hover {
+      background-color: #3251b2;
+    }
+
+    /* Call to Action */
+    .cta-section {
+      background: linear-gradient(135deg, #5277f0 0%, #244977 100%);
+      padding: 40px 30px;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      margin-top: 3rem;
+      box-shadow: 0 10px 25px rgba(37, 65, 123, 0.6);
+    }
+    .cta-section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .cta-section p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.5;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .cta-button {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 15px 40px;
+      border-radius: 50px;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      user-select: none;
+    }
+    .cta-button:hover {
+      background: rgba(255, 255, 255, 0.5);
+      border-color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .description {
+        max-width: 100%;
+      }
+      .skills-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .skill-category {
+        max-width: 400px;
+        min-width: auto;
+      }
+    }
+    @media (max-width: 600px) {
+      .profile-photo {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+
 </head>
 <body>
 
@@ -23,15 +324,54 @@
 
   <main>
     <div class="container">
-      
+
       <section class="intro">
         <h1>Da quando ho scritto la mia prima riga di codice...</h1>
         <p>Ho capito che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone.</p>
       </section>
-      
+
+      <section class="timeline-section">
+        <h2>Il mio percorso</h2>
+        <div class="timeline">
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-icon">🚀</div>
+            <div class="timeline-content">
+              <h3>Prima riga di codice</h3>
+              <p>Il momento in cui tutto è iniziato, scoprendo la passione per la programmazione.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-icon">🤖</div>
+            <div class="timeline-content">
+              <h3>Scoperta dell'AI</h3>
+              <p>Un mondo affascinante da esplorare, iniziando a sperimentare con l'Intelligenza Artificiale.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-icon">🛠️</div>
+            <div class="timeline-content">
+              <h3>Nascita de La Fucina delle Idee</h3>
+              <p>Il laboratorio dove trasformo le idee in progetti digitali creativi e innovativi.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="timeline-icon">📱</div>
+            <div class="timeline-content">
+              <h3>Primo progetto live</h3>
+              <p>Il primo traguardo concreto raggiunto, pubblicando il primo progetto funzionale.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
       <div class="profile-wrapper">
         <img src="https://github.com/Domenico374/domenico374.github.io/blob/main/Foto%20di%20Domenico%20Cocco.png?raw=true" alt="Foto di Domenico Cocco" class="profile-photo" />
-        
+
         <div>
           <div class="quick-facts">
             <div class="quick-fact"><span>📍</span> Cagliari, Italia</div>
@@ -48,7 +388,7 @@
           </div>
         </div>
       </div>
-      
+
       <section class="skills-section">
         <h2>Le mie competenze</h2>
         <div class="skills-grid">
@@ -84,7 +424,7 @@
           </div>
         </div>
       </section>
-      
+
       <section class="cta-section">
         <h2>Collaboriamo insieme!</h2>
         <p>Hai un progetto interessante o vuoi condividere idee? Sono sempre curioso di scoprire nuove sfide e opportunità di apprendimento.</p>
@@ -93,12 +433,23 @@
           <a href="contatti.html" class="cta-button">Contattami</a>
         </div>
       </section>
+
     </div>
   </main>
 
   <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
     <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
 
 </body>
 </html>
