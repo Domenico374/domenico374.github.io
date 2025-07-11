@@ -37,7 +37,6 @@
 <nav>
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="#progetti">Progetti</a></li>
     <li><a href="chi-sono.html">Chi Sono</a></li>
     <li><a href="contatti.html">Contatti</a></li>
   </ul>
@@ -47,6 +46,7 @@
   <section id="progetti" aria-label="I Miei Progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
+      
       <article class="card">
         <a href="fantateam.html" aria-label="Vai al progetto Fantateam">
           <img src="img/fantateam_logo.png" alt="Logo Fantateam" loading="lazy" />
@@ -91,6 +91,7 @@
         </div>
         <a href="castello_kids.html" class="btn-discover" aria-label="Scopri di più su Castello Kids">Scopri di più</a>
       </article>
+
     </div>
   </section>
 </main>
@@ -113,6 +114,14 @@
         link.classList.remove('active');
         link.removeAttribute('aria-current');
       }
+    });
+
+    // Animazione fade-in delle card
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add('visible');
+      }, 150 * index);
     });
   });
 </script>
