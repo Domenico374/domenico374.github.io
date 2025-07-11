@@ -64,6 +64,70 @@
       line-height: 1.5;
     }
 
+    /* Timeline */
+    .timeline {
+      max-width: 700px;
+      margin: 2rem auto 4rem;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .timeline h2 {
+      font-size: 2.5rem;
+      color: #244977;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+
+    .timeline-container {
+      position: relative;
+      padding-left: 40px;
+      border-left: 4px solid #5277f0;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: all 0.6s ease-out;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .timeline-item.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline-icon {
+      background: #5277f0;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(82, 119, 240, 0.6);
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 0.3rem 0;
+      color: #345d9a;
+      font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      color: #566d8a;
+      font-size: 1rem;
+    }
+
     /* Sezione Foto + Quick Facts e Descrizione */
     .profile-wrapper {
       display: flex;
@@ -270,6 +334,41 @@
         <h1>Da quando ho scritto la mia prima riga di codice...</h1>
         <p>Ho capito che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone.</p>
       </section>
+
+      <!-- Timeline animata -->
+      <section class="timeline">
+        <h2>Il mio percorso</h2>
+        <div class="timeline-container">
+          <div class="timeline-item">
+            <div class="timeline-icon">🚀</div>
+            <div class="timeline-content">
+              <h3>Prima riga di codice</h3>
+              <p>Il momento in cui tutto è iniziato.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🤖</div>
+            <div class="timeline-content">
+              <h3>Scoperta dell'AI</h3>
+              <p>Un mondo affascinante da esplorare.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">🛠️</div>
+            <div class="timeline-content">
+              <h3>Nascita de La Fucina delle Idee</h3>
+              <p>Il laboratorio dove trasformo le idee in progetti digitali.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">📱</div>
+            <div class="timeline-content">
+              <h3>Primo progetto live</h3>
+              <p>Il primo traguardo concreto raggiunto.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <div class="profile-wrapper">
         <img src="https://github.com/Domenico374/domenico374.github.io/blob/main/Foto%20di%20Domenico%20Cocco.png?raw=true" alt="Foto di Domenico Cocco" class="profile-photo" />
@@ -342,5 +441,23 @@
     <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
   </footer>
 
+  <script>
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85;
+    }
+
+    function animateTimeline() {
+      const items = document.querySelectorAll('.timeline-item');
+      items.forEach(item => {
+        if (isInViewport(item)) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateTimeline);
+    window.addEventListener('load', animateTimeline);
+  </script>
 </body>
 </html>
