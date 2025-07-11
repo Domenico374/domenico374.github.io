@@ -227,3 +227,119 @@
       border-color: white;
       transform: translateY(-3px);
     }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .description {
+        max-width: 100%;
+      }
+      .skills-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .skill-category {
+        max-width: 400px;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" style="width: 70px; height: auto; border-radius: 6px;" />
+    <h1>La Fucina delle Idee</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-sono.html" class="active">Chi Sono</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="container">
+      
+      <section class="intro">
+        <h1>Da quando ho scritto la mia prima riga di codice...</h1>
+        <p>Ho capito che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone.</p>
+      </section>
+      
+      <div class="profile-wrapper">
+        <img src="https://github.com/Domenico374/domenico374.github.io/blob/main/Foto%20di%20Domenico%20Cocco.png?raw=true" alt="Foto di Domenico Cocco" class="profile-photo" />
+        
+        <div>
+          <div class="quick-facts">
+            <div class="quick-fact"><span>📍</span> Cagliari, Italia</div>
+            <div class="quick-fact"><span>🎓</span> Autodidatta in crescita</div>
+            <div class="quick-fact"><span>🚀</span> Specializzato in Python</div>
+            <div class="quick-fact"><span>🌱</span> Sempre in apprendimento</div>
+          </div>
+
+          <div class="description">
+            <p>Ho scoperto che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone. Questo concetto mi ha spinto a muovere i primi passi nel mondo della programmazione, un percorso che sto costruendo con curiosità e determinazione.</p>
+            <p><em>La Fucina delle Idee</em> è il mio spazio creativo, un laboratorio dove trasformo intuizioni in progetti digitali creativi e innovativi in ambiti come l'intelligenza artificiale, il fantacalcio e le app educative. Il mio obiettivo è chiaro: creare strumenti digitali efficaci e facili da usare, pensati per rispondere a bisogni reali e migliorare l'esperienza degli utenti.</p>
+            <p>Non mi definisco un esperto sviluppatore né un designer professionista, ma un appassionato autodidatta. Ogni progetto è un'opportunità per imparare qualcosa di nuovo, esplorare nuove competenze in Python e sperimentare costantemente.</p>
+            <p>Sono un convinto sostenitore del potere della tecnologia e condivido il mio cammino con entusiasmo, imparando giorno dopo giorno e trasformando ogni sfida in un'occasione di crescita.</p>
+          </div>
+        </div>
+      </div>
+      
+      <section class="skills-section">
+        <h2>Le mie competenze</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>🐍 Python & Sviluppo</h3>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+          <div class="skill-category">
+            <h3>🚀 Progetti in Sviluppo</h3>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">APIs</span>
+            <span class="skill-tag">Git/GitHub</span>
+          </div>
+          <div class="skill-category">
+            <h3>🤖 Sperimentazione AI</h3>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Generazione Contenuti</span>
+            <span class="skill-tag">Storytelling AI</span>
+            <span class="skill-tag">SVG Generation</span>
+          </div>
+          <div class="skill-category">
+            <h3>💡 Soft Skills</h3>
+            <span class="skill-tag">Autodidatta</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Curiosità</span>
+            <span class="skill-tag">Perseveranza</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="cta-section">
+        <h2>Collaboriamo insieme!</h2>
+        <p>Hai un progetto interessante o vuoi condividere idee? Sono sempre curioso di scoprire nuove sfide e opportunità di apprendimento.</p>
+        <div class="cta-buttons">
+          <a href="index.html#progetti" class="cta-button">Scopri i miei progetti</a>
+          <a href="contatti.html" class="cta-button">Contattami</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
+    <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
+  </footer>
+</body>
+</html>
