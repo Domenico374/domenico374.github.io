@@ -4,313 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chi Sono - Domenico Cocco</title>
-  <style>
-    /* Reset base */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Rubik', sans-serif;
-      background: #f5f8fb;
-      color: #1a2e4a;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
-    }
-
-    /* Container principale */
-    .container {
-      max-width: 1000px;
-      width: 100%;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      padding: 3rem 3rem 4rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    /* Sezione Intro */
-    .intro {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .intro h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #244977;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, #5a86ff, #2d3a7d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .intro p {
-      font-size: 1.25rem;
-      color: #506680;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-
-    /* Timeline */
-    .timeline {
-      max-width: 700px;
-      margin: 2rem auto 4rem;
-      padding: 0 1rem;
-      text-align: center;
-    }
-
-    .timeline h2 {
-      font-size: 2.5rem;
-      color: #244977;
-      margin-bottom: 2rem;
-      font-weight: 700;
-    }
-
-    .timeline-container {
-      position: relative;
-      padding-left: 40px;
-      border-left: 4px solid #5277f0;
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-      opacity: 0;
-      transform: translateX(-30px);
-      transition: all 0.6s ease-out;
-      text-align: left;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .timeline-item.active {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .timeline-icon {
-      background: #5277f0;
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-      box-shadow: 0 0 10px rgba(82, 119, 240, 0.6);
-    }
-
-    .timeline-content h3 {
-      margin: 0 0 0.3rem 0;
-      color: #345d9a;
-      font-size: 1.3rem;
-    }
-
-    .timeline-content p {
-      margin: 0;
-      color: #566d8a;
-      font-size: 1rem;
-    }
-
-    /* Sezione Foto + Quick Facts e Descrizione */
-    .profile-wrapper {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-    }
-
-    /* Foto profilo */
-    .profile-photo {
-      flex-shrink: 0;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      border: 5px solid #5277f0;
-      box-shadow: 0 10px 20px rgba(82, 119, 240, 0.3);
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      cursor: default;
-    }
-    .profile-photo:hover {
-      transform: scale(1.05);
-    }
-
-    /* Quick Facts */
-    .quick-facts {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      font-size: 1.1rem;
-      color: #425e85;
-      max-width: 260px;
-    }
-    .quick-fact {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: #e6f0ff;
-      padding: 12px 18px;
-      border-radius: 10px;
-      font-weight: 500;
-      user-select: none;
-      box-shadow: inset 0 0 10px #d7e3fc;
-      transition: background-color 0.3s ease;
-    }
-    .quick-fact:hover {
-      background-color: #c1d3ff;
-    }
-
-    /* Descrizione */
-    .description {
-      flex: 1 1 500px;
-      font-size: 1.1rem;
-      color: #344a72;
-      line-height: 1.7;
-      max-width: 600px;
-    }
-    .description p {
-      margin-bottom: 1.5rem;
-    }
-    .description em {
-      color: #5277f0;
-      font-weight: 600;
-    }
-
-    /* Competenze */
-    .skills-section {
-      text-align: center;
-    }
-    .skills-section h2 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #244977;
-      margin-bottom: 2rem;
-    }
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .skill-category {
-      background: #eaf2ff;
-      border-left: 5px solid #5277f0;
-      padding: 20px 30px;
-      border-radius: 15px;
-      min-width: 240px;
-      max-width: 280px;
-      box-shadow: 0 4px 12px rgba(82, 119, 240, 0.15);
-      transition: transform 0.3s ease;
-    }
-    .skill-category:hover {
-      transform: translateY(-5px);
-    }
-    .skill-category h3 {
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: #345d9a;
-    }
-    .skill-tag {
-      display: inline-block;
-      background: #5277f0;
-      color: white;
-      padding: 6px 15px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      margin: 5px 8px 5px 0;
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s ease;
-    }
-    .skill-tag:hover {
-      background-color: #3251b2;
-    }
-
-    /* Call to Action */
-    .cta-section {
-      background: linear-gradient(135deg, #5277f0 0%, #244977 100%);
-      padding: 40px 30px;
-      border-radius: 15px;
-      color: white;
-      text-align: center;
-      margin-top: 3rem;
-      box-shadow: 0 10px 25px rgba(37, 65, 123, 0.6);
-    }
-    .cta-section h2 {
-      font-size: 2.3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .cta-section p {
-      font-size: 1.15rem;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-      line-height: 1.5;
-    }
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-    .cta-button {
-      background: rgba(255, 255, 255, 0.3);
-      padding: 15px 40px;
-      border-radius: 50px;
-      color: white;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border: 2px solid rgba(255,255,255,0.3);
-      cursor: pointer;
-      user-select: none;
-    }
-    .cta-button:hover {
-      background: rgba(255, 255, 255, 0.5);
-      border-color: white;
-      transform: translateY(-3px);
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .profile-wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
-      .description {
-        max-width: 100%;
-      }
-      .skills-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-      .skill-category {
-        max-width: 400px;
-        min-width: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -334,41 +28,6 @@
         <h1>Da quando ho scritto la mia prima riga di codice...</h1>
         <p>Ho capito che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone.</p>
       </section>
-
-      <!-- Timeline animata -->
-      <section class="timeline">
-        <h2>Il mio percorso</h2>
-        <div class="timeline-container">
-          <div class="timeline-item">
-            <div class="timeline-icon">🚀</div>
-            <div class="timeline-content">
-              <h3>Prima riga di codice</h3>
-              <p>Il momento in cui tutto è iniziato.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🤖</div>
-            <div class="timeline-content">
-              <h3>Scoperta dell'AI</h3>
-              <p>Un mondo affascinante da esplorare.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">🛠️</div>
-            <div class="timeline-content">
-              <h3>Nascita de La Fucina delle Idee</h3>
-              <p>Il laboratorio dove trasformo le idee in progetti digitali.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-icon">📱</div>
-            <div class="timeline-content">
-              <h3>Primo progetto live</h3>
-              <p>Il primo traguardo concreto raggiunto.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       
       <div class="profile-wrapper">
         <img src="https://github.com/Domenico374/domenico374.github.io/blob/main/Foto%20di%20Domenico%20Cocco.png?raw=true" alt="Foto di Domenico Cocco" class="profile-photo" />
@@ -389,6 +48,41 @@
           </div>
         </div>
       </div>
+
+      <!-- Timeline animata -->
+      <section class="timeline-section">
+        <h2>Il mio percorso</h2>
+        <div class="timeline">
+          <div class="timeline-item" data-delay="0">
+            <div class="timeline-icon">🚀</div>
+            <div class="timeline-content">
+              <h3>Prima riga di codice</h3>
+              <p>Ho iniziato a scrivere codice e ho scoperto il potere della programmazione.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-delay="200">
+            <div class="timeline-icon">🤖</div>
+            <div class="timeline-content">
+              <h3>Scoperta dell'AI</h3>
+              <p>Ho esplorato il mondo dell’intelligenza artificiale e le sue potenzialità.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-delay="400">
+            <div class="timeline-icon">🛠️</div>
+            <div class="timeline-content">
+              <h3>Nascita de La Fucina delle Idee</h3>
+              <p>Ho creato il mio spazio creativo per sviluppare progetti digitali innovativi.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-delay="600">
+            <div class="timeline-icon">📱</div>
+            <div class="timeline-content">
+              <h3>Primo progetto live</h3>
+              <p>Ho pubblicato la prima applicazione, mettendo in pratica le mie competenze.</p>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section class="skills-section">
         <h2>Le mie competenze</h2>
@@ -442,22 +136,30 @@
   </footer>
 
   <script>
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85;
-    }
-
-    function animateTimeline() {
+    document.addEventListener('DOMContentLoaded', () => {
       const items = document.querySelectorAll('.timeline-item');
-      items.forEach(item => {
-        if (isInViewport(item)) {
-          item.classList.add('active');
-        }
-      });
-    }
 
-    window.addEventListener('scroll', animateTimeline);
-    window.addEventListener('load', animateTimeline);
+      const showItem = (item, delay) => {
+        setTimeout(() => {
+          item.classList.add('visible');
+        }, delay);
+      };
+
+      const onScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        items.forEach(item => {
+          const itemTop = item.getBoundingClientRect().top;
+          if (itemTop < triggerBottom) {
+            const delay = parseInt(item.getAttribute('data-delay')) || 0;
+            showItem(item, delay);
+          }
+        });
+      };
+
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    });
   </script>
+
 </body>
 </html>
