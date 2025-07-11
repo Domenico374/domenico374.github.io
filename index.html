@@ -24,6 +24,14 @@
       padding: 0.25rem 0.5rem;
       color: white !important;
     }
+    /* Stile immagine profilo */
+    .profile-photo {
+      display: block;
+      margin: 2rem auto;
+      max-width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 
@@ -37,12 +45,17 @@
 <nav>
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="chi-sono.html">Chi Sono</a></li>
+    <li><a href="chi-sono.html">Chi sono</a></li>
+    <li><a href="#progetti">Progetti</a></li>
     <li><a href="contatti.html">Contatti</a></li>
   </ul>
 </nav>
 
 <main>
+
+  <!-- Foto profilo -->
+  <img src="storygen/Foto di Domenico Cocco.png" alt="Foto di Domenico Cocco" class="profile-photo" />
+
   <section id="progetti" aria-label="I Miei Progetti">
     <h2>I Miei Progetti</h2>
     <div class="cards">
