@@ -3,140 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <title>La Fucina delle Idee – Progetti digitali creativi e innovativi in fantacalcio, AI e app educative</title>
-  
-  <!-- Meta description -->
-  <meta name="description" content="Scopri La Fucina delle Idee: progetti innovativi di fantacalcio, intelligenza artificiale e app educative. Fantateam, Storygen e Castello Kids ti aspettano!" />
-  
-  <!-- Keywords -->
-  <meta name="keywords" content="fantacalcio, intelligenza artificiale, app educative, storie illustrate, Sardegna, progetti digitali" />
-  
-  <meta name="author" content="Domenico Cocco" />
-  <meta name="robots" content="index, follow" />
-  
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <title>La Fucina delle Idee - Homepage</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    nav ul li a.active {
-      background-color: #005bb5;
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      color: white !important;
+    /* Stile aggiuntivo per la sezione progetti */
+    .projects-preview {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
-    /* Stile immagine profilo */
-    .profile-photo {
-      display: block;
-      margin: 2rem auto;
-      max-width: 180px;
-      border-radius: 50%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    .projects-preview h2 {
+      font-size: 2.4rem;
+      color: #244977;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(36, 73, 119, 0.15);
+      width: 280px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(36, 73, 119, 0.3);
+    }
+    .project-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #5277f0;
+      text-align: center;
+    }
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #244977;
+      text-align: center;
+    }
+    .project-desc {
+      flex-grow: 1;
+      font-size: 1rem;
+      color: #506680;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .project-status {
+      text-align: center;
+      font-weight: 600;
+      color: #5277f0;
+      margin-bottom: 1rem;
+    }
+    .project-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .btn {
+      background: #5277f0;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .btn:hover {
+      background: #3251b2;
+    }
+    /* Responsive */
+    @media (max-width: 700px) {
+      .projects-list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project-card {
+        width: 90%;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
-  <h1>La Fucina delle Idee</h1>
-</header>
+  <header>
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" style="width: 70px; height: auto; border-radius: 6px;" />
+    <h1>La Fucina delle Idee</h1>
+  </header>
 
-<nav>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="chi-sono.html">Chi sono</a></li>
-    <li><a href="#progetti">Progetti</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
-</nav>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="progetti.html">Progetti</a></li>
+      <li><a href="chi-sono.html">Chi Sono</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </nav>
 
-<main>
+  <main>
+    <section class="welcome-section" style="max-width: 1000px; margin: 3rem auto; padding: 0 1rem; text-align: center;">
+      <h2>Benvenuto a La Fucina delle Idee</h2>
+      <p>Scopri i miei progetti digitali, le sperimentazioni e le idee che sto trasformando in realtà.</p>
+    </section>
 
-
-
-  <section id="progetti" aria-label="I Miei Progetti">
-    <h2>I Miei Progetti</h2>
-    <div class="cards">
-      
-      <article class="card">
-        <a href="fantateam.html" aria-label="Vai al progetto Fantateam">
-          <img src="img/fantateam_logo.png" alt="Logo Fantateam" loading="lazy" />
-          <h3>Fantateam</h3>
-          <p>Mini-app per il fantacalcio: login, rose personalizzate, punteggi e mercato.</p>
-        </a>
-        <div class="tech-tags" aria-label="Tecnologie usate in Fantateam">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">MySQL</span>
+    <section class="projects-preview">
+      <h2>I miei progetti</h2>
+      <div class="projects-list">
+        <div class="project-card" onclick="location.href='progetti.html#fantateam';">
+          <div class="project-icon">⚽</div>
+          <div class="project-title">Fantateam</div>
+          <div class="project-desc">App per gestione fantacalcio con AI e interfaccia intuitiva.</div>
+          <div class="project-status">In sviluppo</div>
+          <div class="project-buttons">
+            <a href="progetti.html#fantateam" class="btn">Scopri di più</a>
+            <a href="#" class="btn">Demo</a>
+          </div>
         </div>
-        <a href="fantateam.html" class="btn-discover" aria-label="Scopri di più su Fantateam">Scopri di più</a>
-      </article>
-
-      <article class="card">
-        <a href="storygen.html" aria-label="Vai al progetto Storygen">
-          <img src="img/storygen_logo.png" alt="Logo Storygen" loading="lazy" />
-          <h3>Storygen</h3>
-          <p>Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.</p>
-        </a>
-        <div class="tech-tags" aria-label="Tecnologie usate in Storygen">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">OpenAI API</span>
-          <span class="tech-tag">SVG</span>
-          <span class="tech-tag">JavaScript</span>
+        <div class="project-card" onclick="location.href='progetti.html#storygen';">
+          <div class="project-icon">📚</div>
+          <div class="project-title">Storygen</div>
+          <div class="project-desc">Generatore di storie illustrate con AI e grafica personalizzata.</div>
+          <div class="project-status">Beta</div>
+          <div class="project-buttons">
+            <a href="progetti.html#storygen" class="btn">Scopri di più</a>
+            <a href="#" class="btn">Demo</a>
+          </div>
         </div>
-        <a href="storygen.html" class="btn-discover" aria-label="Scopri di più su Storygen">Scopri di più</a>
-      </article>
-
-      <article class="card">
-        <a href="castello_kids.html" aria-label="Vai al progetto Castello Kids">
-          <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" loading="lazy" />
-          <h3>Castello Kids</h3>
-          <p>App educativa e turistica per bambini sul quartiere di Castello a Cagliari.</p>
-        </a>
-        <div class="tech-tags" aria-label="Tecnologie usate in Castello Kids">
-          <span class="tech-tag">Flutter</span>
-          <span class="tech-tag">Dart</span>
-          <span class="tech-tag">Firebase</span>
-          <span class="tech-tag">Google Maps API</span>
+        <div class="project-card" onclick="location.href='progetti.html#ferrue-linna';">
+          <div class="project-icon">🛠️</div>
+          <div class="project-title">Ferru e Linna</div>
+          <div class="project-desc">Negozio online per artigianato digitale e artigianale.</div>
+          <div class="project-status">Concept</div>
+          <div class="project-buttons">
+            <a href="progetti.html#ferrue-linna" class="btn">Scopri di più</a>
+            <a href="#" class="btn">Demo</a>
+          </div>
         </div>
-        <a href="castello_kids.html" class="btn-discover" aria-label="Scopri di più su Castello Kids">Scopri di più</a>
-      </article>
+      </div>
+    </section>
 
-    </div>
-  </section>
-</main>
+  </main>
 
-<footer>
-  <p>
-    Mail: <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | 
-    LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">www.linkedin.com/in/domenico-cocco-577aab83</a>
-  </p>
-</footer>
-
-<script>
-  // Evidenzia automaticamente il link attivo nel menu
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('nav ul li a').forEach(link => {
-      if(link.href === window.location.href || link.href === window.location.href.split('#')[0]) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
-      } else {
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
-      }
-    });
-
-    // Animazione fade-in delle card
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add('visible');
-      }, 150 * index);
-    });
-  });
-</script>
+  <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
+    <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
+  </footer>
 
 </body>
 </html>
