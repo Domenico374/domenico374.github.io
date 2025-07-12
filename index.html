@@ -35,33 +35,31 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: center;
     }
     .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 24px rgba(36, 73, 119, 0.3);
     }
-    .project-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #5277f0;
-      text-align: center;
+    .project-logo img {
+      display: block;
+      margin: 0 auto 10px;
+      max-width: 80px;
+      height: auto;
     }
     .project-title {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
       color: #244977;
-      text-align: center;
     }
     .project-desc {
       flex-grow: 1;
       font-size: 1rem;
       color: #506680;
       margin-bottom: 1rem;
-      text-align: center;
     }
     .project-status {
-      text-align: center;
       font-weight: 600;
       color: #5277f0;
       margin-bottom: 1rem;
@@ -123,8 +121,11 @@
     <section class="projects-preview">
       <h2>I miei progetti</h2>
       <div class="projects-list">
-        <div class="project-card" onclick="location.href='progetti.html#fantateam';">
-          <div class="project-icon">⚽</div>
+
+        <div class="project-card" onclick="location.href='progetti.html#fantateam';" role="button" tabindex="0">
+          <div class="project-logo">
+            <img src="img/fantateam_logo.png" alt="Logo Fantateam" />
+          </div>
           <div class="project-title">Fantateam</div>
           <div class="project-desc">App per gestione fantacalcio con AI e interfaccia intuitiva.</div>
           <div class="project-status">In sviluppo</div>
@@ -133,8 +134,11 @@
             <a href="#" class="btn">Demo</a>
           </div>
         </div>
-        <div class="project-card" onclick="location.href='progetti.html#storygen';">
-          <div class="project-icon">📚</div>
+
+        <div class="project-card" onclick="location.href='progetti.html#storygen';" role="button" tabindex="0">
+          <div class="project-logo">
+            <img src="img/storygen_logo.png" alt="Logo Storygen" />
+          </div>
           <div class="project-title">Storygen</div>
           <div class="project-desc">Generatore di storie illustrate con AI e grafica personalizzata.</div>
           <div class="project-status">Beta</div>
@@ -143,16 +147,20 @@
             <a href="#" class="btn">Demo</a>
           </div>
         </div>
-        <div class="project-card" onclick="location.href='progetti.html#castellokids';">
-          <div class="project-icon">🧸</div>
+
+        <div class="project-card" onclick="location.href='progetti.html#castello_kids';" role="button" tabindex="0">
+          <div class="project-logo">
+            <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" />
+          </div>
           <div class="project-title">Castello Kids</div>
-          <div class="project-desc">App educativa e ludica per bambini, con giochi e storie interattive.</div>
+          <div class="project-desc">App educativa per bambini dedicata alla storia e ai giochi didattici.</div>
           <div class="project-status">Concept</div>
           <div class="project-buttons">
-            <a href="progetti.html#castellokids" class="btn">Scopri di più</a>
+            <a href="progetti.html#castello_kids" class="btn">Scopri di più</a>
             <a href="#" class="btn">Demo</a>
           </div>
         </div>
+
       </div>
     </section>
 
