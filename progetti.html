@@ -122,20 +122,22 @@
     box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
   }
 
-  /* Project logo */
-  .project-logo img {
-    display: block;
-    margin: 0 auto 15px;
-    max-width: 120px;
+  /* Card Title and Description */
+  .project-logo {
+    width: 100px;
     height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(82, 119, 240, 0.3);
   }
 
-  /* Card Title and Description */
   .project-title {
     font-size: 1.8rem;
     font-weight: 700;
     color: #244977;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
   .project-status {
     font-weight: 600;
@@ -146,17 +148,33 @@
     background-color: #5277f0;
     display: inline-block;
     margin-bottom: 1rem;
+    text-align: center;
   }
   .project-description {
     flex-grow: 1;
     font-size: 1rem;
     color: #344a72;
     margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .project-metrics {
+    font-size: 0.95rem;
+    color: #5277f0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .project-metrics span {
+    margin: 0 5px;
   }
 
   /* Badges */
   .badges {
     margin-bottom: 1rem;
+    text-align: center;
   }
   .badge {
     display: inline-block;
@@ -178,6 +196,7 @@
   .project-buttons {
     display: flex;
     gap: 1rem;
+    justify-content: center;
   }
   .project-btn {
     flex: 1;
@@ -189,6 +208,7 @@
     font-weight: 700;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    max-width: 140px;
   }
   .project-btn:hover {
     background-color: #5277f0;
@@ -262,12 +282,14 @@
   <div class="cards-container">
 
     <article class="project-card" tabindex="0">
-      <div class="project-logo">
-        <img src="img/fantateam_logo.png" alt="Logo Fantateam" />
-      </div>
       <div class="project-status" style="background:#f39c12;">In sviluppo</div>
+      <img src="https://domenico374.github.io/img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
       <h2 class="project-title">Fantateam</h2>
-      <p class="project-description">Mini-app per gestione fantacalcio con login, leghe, mercato e statistiche. Progetto in continuo sviluppo e miglioramento.</p>
+      <p class="project-description">Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
+      <div class="project-metrics">
+        <span>⚽ 50+ giocatori gestiti</span> |
+        <span>⏱️ Aggiornamenti in tempo reale</span>
+      </div>
       <div class="badges">
         <span class="badge">Python</span>
         <span class="badge">Flask</span>
@@ -277,14 +299,11 @@
       </div>
       <div class="project-buttons">
         <a href="https://github.com/Domenico374/fantateam" target="_blank" class="project-btn" rel="noopener">GitHub</a>
-        <a href="https://domenico374.github.io/fantateam" target="_blank" class="project-btn" rel="noopener">Demo</a>
+        <a href="https://domenico374.github.io/fantateam" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
 
     <article class="project-card" tabindex="0">
-      <div class="project-logo">
-        <img src="img/storygen_logo.png" alt="Logo Storygen" />
-      </div>
       <div class="project-status" style="background:#2980b9;">Beta</div>
       <h2 class="project-title">Storygen</h2>
       <p class="project-description">Generatore di storie illustrate con AI, per creare racconti unici e visivamente accattivanti.</p>
@@ -294,4 +313,40 @@
         <span class="badge">SVG Generation</span>
       </div>
       <div class="project-buttons">
-        <a href="
+        <a href="https://github.com/Domenico374/storygen" target="_blank" class="project-btn" rel="noopener">GitHub</a>
+        <a href="https://domenico374.github.io/storygen" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+      </div>
+    </article>
+
+    <article class="project-card" tabindex="0">
+      <div class="project-status" style="background:#95a5a6;">Concept</div>
+      <h2 class="project-title">Ferru e Linna</h2>
+      <p class="project-description">Progetto e-commerce per vendita di prodotti artigianali unici, con design pulito e navigazione semplice.</p>
+      <div class="badges">
+        <span class="badge">HTML/CSS</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Wix</span>
+      </div>
+      <div class="project-buttons">
+        <a href="https://ferruelinna.wixsite.com/ferruelinna" target="_blank" class="project-btn" rel="noopener">Sito Web</a>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="stats-section" aria-label="Statistiche personali">
+    <h2>Il mio percorso in numeri</h2>
+    <div class="stats-grid">
+      <div class="stat" tabindex="0">7<span class="stat-label">Progetti completati</span></div>
+      <div class="stat" tabindex="0">3<span class="stat-label">Lingue di programmazione</span></div>
+      <div class="stat" tabindex="0">1500<span class="stat-label">Ore di coding</span></div>
+      <div class="stat" tabindex="0">450<span class="stat-label">Tazze di caffè</span></div>
+    </div>
+  </section>
+</main>
+
+<footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
+  <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
+</footer>
+</body>
+</html>
