@@ -1,89 +1,329 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Fucina delle Idee - Homepage</title>
-  <style>
-    body {
-      font-family: 'Rubik', sans-serif;
-      background: #ffffff;
-      background-image: radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.05) 2px, transparent 2px);
-      background-size: 50px 50px;
-      color: #1a2e4a;
-      min-height: 100vh;
-      display: flex;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Progetti - La Fucina delle Idee</title>
+<style>
+  /* Reset base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Rubik', sans-serif;
+    background: #ffffff;
+    background-image: radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.05) 2px, transparent 2px);
+    background-size: 50px 50px;
+    color: #1a2e4a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: #244977;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  nav {
+    background: #5277f0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  nav ul li {
+    margin: 0 1rem;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem 0;
+    display: inline-block;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    border-bottom: 3px solid white;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 60vh;
+    background: linear-gradient(135deg, #5277f0, #244977);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-cta {
+    background: white;
+    color: #244977;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(82, 119, 240, 0.5);
+  }
+  .btn-cta:hover {
+    background-color: #3251b2;
+    color: white;
+    box-shadow: 0 8px 25px rgba(50, 81, 178, 0.8);
+    transform: translateY(-3px);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 3rem auto 6rem;
+    padding: 0 1rem;
+  }
+
+  /* Cards Container */
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Card Glassmorphism */
+  .project-card {
+    backdrop-filter: blur(15px);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(82, 119, 240, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+  }
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
+  }
+
+  /* Background gradients for each project */
+  .fantateam {
+    background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);
+  }
+  .storygen {
+    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+  }
+  .castello-kids {
+    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+  }
+
+  .project-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 1rem;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .project-description {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .badges {
+    margin-bottom: 1rem;
+  }
+  .badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 0 8px 8px 0;
+    user-select: none;
+    cursor: default;
+    transition: background-color 0.3s ease;
+  }
+  .badge:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .project-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .project-btn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    max-width: 140px;
+  }
+  .project-btn:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  /* Stats Section */
+  .stats-section {
+    margin-top: 4rem;
+    background: linear-gradient(135deg, #244977, #5277f0);
+    color: white;
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(37, 65, 123, 0.7);
+  }
+  .stats-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  .stat {
+    flex: 1 1 150px;
+    font-size: 3rem;
+    font-weight: 700;
+    user-select: none;
+  }
+  .stat-label {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* Responsive */
+  @media (max-width: 720px) {
+    .project-buttons {
       flex-direction: column;
-      margin: 0;
-      padding: 0;
     }
-    header {
-      background: #244977;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+    .stat {
+      font-size: 2.5rem;
     }
-    nav {
-      background: #5277f0;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li {
-      margin: 0 1rem;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      padding: 1rem 0;
-      display: inline-block;
-    }
-    nav ul li a.active,
-    nav ul li a:hover {
-      border-bottom: 3px solid white;
-    }
-    main {
-      max-width: 1200px;
-      margin: 3rem auto 6rem;
-      padding: 0 1rem;
-      flex-grow: 1;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #003b4f;
-      color: white;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>La Fucina delle Idee</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="progetti.html">Progetti</a></li>
-        <li><a href="chi-sono.html">Chi Sono</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1 style="text-align:center; padding: 2rem 1rem; color:#244977;">La Fucina delle Idee - Progetti</h1>
+  <nav style="background:#5277f0; padding:0.5rem 0;">
+    <ul style="display:flex; justify-content:center; list-style:none; margin:0; padding:0;">
+      <li><a href="index.html" style="color:white; text-decoration:none; padding:0 15px; font-weight:600;">Home</a></li>
+      <li><a href="chi-sono.html" style="color:white; text-decoration:none; padding:0 15px; font-weight:600;">Chi Sono</a></li>
+      <li><a href="progetti.html" style="color:white; text-decoration:none; padding:0 15px; font-weight:600; border-bottom:3px solid white;">Progetti</a></li>
+      <li><a href="contatti.html" style="color:white; text-decoration:none; padding:0 15px; font-weight:600;">Contatti</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section class="welcome-section" style="text-align:center;">
-      <h2>Benvenuto a La Fucina delle Idee</h2>
-      <p>Scopri i miei progetti digitali, le sperimentazioni e le idee che sto trasformando in realtà.</p>
-    </section>
-    <!-- Qui puoi aggiungere contenuti principali -->
-  </main>
+<section class="hero">
+  <div class="hero-content">
+    <h1>Benvenuto nella Fucina delle Idee</h1>
+    <p>Progetti digitali creativi, innovativi e fatti con passione.</p>
+    <a href="#progetti" class="btn-cta">Scopri i Progetti</a>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
-  </footer>
+<main id="progetti">
+  <div class="cards-container">
+
+    <article class="project-card fantateam" tabindex="0">
+      <img src="https://domenico374.github.io/img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
+      <h2 class="project-title">Fantateam</h2>
+      <p class="project-description">Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
+      <div class="badges">
+        <span class="badge">Python</span>
+        <span class="badge">Flask</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">HTML/CSS</span>
+        <span class="badge">MySQL</span>
+      </div>
+      <div class="project-buttons">
+        <a href="https://github.com/Domenico374/fantateam" target="_blank" class="project-btn" rel="noopener">GitHub</a>
+        <a href="https://domenico374.github.io/fantateam" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+      </div>
+    </article>
+
+    <article class="project-card storygen" tabindex="0">
+      <img src="https://domenico374.github.io/img/storygen_logo.png" alt="Logo Storygen" class="project-logo" />
+      <h2 class="project-title">Storygen</h2>
+      <p class="project-description">Generatore di storie illustrate con AI, per creare racconti unici e visivamente accattivanti.</p>
+      <div class="badges">
+        <span class="badge">React</span>
+        <span class="badge">OpenAI API</span>
+        <span class="badge">SVG Generation</span>
+      </div>
+      <div class="project-buttons">
+        <a href="https://github.com/Domenico374/storygen" target="_blank" class="project-btn" rel="noopener">GitHub</a>
+        <a href="https://domenico374.github.io/storygen" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+      </div>
+    </article>
+
+    <article class="project-card castello-kids" tabindex="0">
+      <img src="https://domenico374.github.io/img/castello_kids_logo.png" alt="Logo Castello Kids" class="project-logo" />
+      <h2 class="project-title">Castello Kids</h2>
+      <p class="project-description">App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
+      <div class="badges">
+        <span class="badge">React Native</span>
+        <span class="badge">JavaScript</span>
+        <span class="badge">Storytelling</span>
+      </div>
+      <div class="project-buttons">
+        <a href="progetti.html#castello_kids" class="project-btn">Scopri di più</a>
+        <a href="castello_kids/index.html" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+      </div>
+    </article>
+
+  </div>
+
+  <section class="stats-section" aria-label="Statistiche personali">
+    <h2>Il mio percorso in numeri</h2>
+    <div class="stats-grid">
+      <div class="stat" tabindex="0">3<span class="stat-label">Lingue di programmazione</span></div>
+      <div class="stat" tabindex="0">1500<span class="stat-label">Ore di coding</span></div>
+      <div class="stat" tabindex="0">450<span class="stat-label">Tazze di caffè</span></div>
+    </div>
+  </section>
+</main>
+
+<footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
+  <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
+</footer>
 </body>
 </html>
