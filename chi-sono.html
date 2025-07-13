@@ -3,115 +3,342 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chi Sono - La Fucina delle Idee</title>
+  <title>Chi Sono - Domenico Cocco</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* Reset base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Rubik', sans-serif;
       background: #f5f8fb;
       color: #1a2e4a;
-      margin: 0;
-      padding: 2rem;
+      line-height: 1.6;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
+      padding: 2rem 1rem;
     }
-    .container {
-      max-width: 700px;
-      background: white;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 6px 18px rgba(36, 73, 119, 0.1);
+    header {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    header img {
+      width: 70px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-weight: 700;
+      color: #244977;
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      padding-left: 0;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #244977;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      border-color: #5277f0;
+    }
+
+    main {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    /* Intro */
+    .intro {
       text-align: center;
+      font-size: 1.25rem;
+      color: #506680;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    img.profile {
-      width: 160px;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(82, 119, 240, 0.3);
+    .intro strong {
+      color: #244977;
+    }
+
+    /* Stats / Percorso */
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .stat {
+      background: #eaf2ff;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(82, 119, 240, 0.2);
+      min-width: 140px;
+      text-align: center;
+      font-weight: 700;
+      color: #244977;
+      cursor: default;
+      user-select: none;
+      position: relative;
+      font-size: 1.3rem;
+    }
+    .stat .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+    .stat-label {
+      font-weight: 400;
+      font-size: 1rem;
+      margin-top: 0.3rem;
+      color: #5277f0;
+      user-select: none;
+      display: block;
+    }
+
+    /* Progetti principali */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      box-shadow: 0 12px 32px rgba(82, 119, 240, 0.25);
+    }
+    .project-logo {
+      width: 80px;
       margin-bottom: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(82, 119, 240, 0.3);
     }
-    h1 {
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 700;
       color: #244977;
       margin-bottom: 0.5rem;
     }
-    p.intro {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-    ul.skills {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 1.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    ul.skills li {
-      background: #5277f0;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      font-weight: 600;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.95rem;
-    }
-    .philosophy {
+    .project-desc {
       font-size: 1rem;
-      color: #344a72;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      text-align: justify;
+      color: #506680;
+      margin-bottom: 1rem;
+      min-height: 60px;
     }
-    .social-links a {
-      display: inline-block;
-      margin: 0 0.75rem;
-      padding: 0.6rem 1.2rem;
+    .project-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: auto;
+    }
+    .btn {
       background: #5277f0;
       color: white;
-      font-weight: 700;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
       text-decoration: none;
-      border-radius: 50px;
-      transition: background-color 0.3s ease;
+      transition: background 0.3s ease;
+      user-select: none;
     }
-    .social-links a:hover {
+    .btn:hover {
       background: #3251b2;
     }
-    @media (max-width: 500px) {
-      ul.skills {
+
+    /* Skills */
+    .skills {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .skills h2 {
+      color: #244977;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .skill-tag {
+      background: #5277f0;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      user-select: none;
+      cursor: default;
+      transition: background-color 0.3s ease;
+    }
+    .skill-tag:hover {
+      background-color: #3251b2;
+    }
+
+    /* Call to action */
+    .cta-section {
+      background: linear-gradient(135deg, #5277f0, #244977);
+      border-radius: 16px;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(37, 65, 123, 0.8);
+    }
+    .cta-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .cta-section a {
+      background: white;
+      color: #244977;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      user-select: none;
+    }
+    .cta-section a:hover {
+      background-color: #3251b2;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+      .stats-grid {
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 1.5rem;
+      }
+      .skills-list {
+        justify-content: center;
+      }
+      .project-card {
+        min-height: 200px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="img/Foto di Domenico Cocco.png" alt="Domenico Cocco" class="profile" />
-    <h1>Domenico Cocco</h1>
-    <p class="intro">Sviluppatore appassionato di AI, UI/UX design e sviluppo web. Dedico oltre 1500 ore di coding per migliorare continuamente le mie competenze e creare soluzioni digitali innovative e funzionali.</p>
 
-    <ul class="skills">
-      <li>📍 Cagliari, Italia</li>
-      <li>🎓 Autodidatta in crescita</li>
-      <li>🚀 Specializzato in Python</li>
-      <li>🌱 Sempre in apprendimento</li>
-    </ul>
+<header>
+  <img src="img/domenico_cocco_avatar.png" alt="Foto di Domenico Cocco" />
+  <h1>Domenico Cocco</h1>
+</header>
 
-    <div class="philosophy">
-      <p>Ho scoperto che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone. Questo concetto mi ha spinto a muovere i primi passi nel mondo della programmazione, un percorso che sto costruendo con curiosità e determinazione.</p>
-      <p><strong>La Fucina delle Idee</strong> è il mio spazio creativo, un laboratorio dove trasformo intuizioni in progetti digitali innovativi in ambiti come l'intelligenza artificiale, il fantacalcio e le app educative.</p>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="progetti.html">Progetti</a></li>
+    <li><a href="chi-sono.html" class="active">Chi Sono</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="intro">
+    <p><strong>Sono Domenico</strong>, uno sviluppatore appassionato di AI, UX/UI design e sviluppo di applicazioni digitali. Amo trasformare idee in soluzioni efficaci e creative che migliorano la vita delle persone.</p>
+  </section>
+
+  <section class="stats-grid" aria-label="Statistiche personali">
+    <div class="stat" tabindex="0">
+      <span class="icon">🚀</span>
+      3<span class="stat-label">Progetti attivi</span>
     </div>
-
-    <div class="social-links">
-      <a href="https://github.com/Domenico374" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener">LinkedIn</a>
+    <div class="stat" tabindex="0">
+      <span class="icon">⌛</span>
+      1500<span class="stat-label">Ore di coding</span>
     </div>
-  </div>
+    <div class="stat" tabindex="0">
+      <span class="icon">🎓</span>
+      3<span class="stat-label">Lingue di programmazione</span>
+    </div>
+  </section>
+
+  <section class="projects">
+    <article class="project-card" tabindex="0">
+      <img src="img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
+      <h2 class="project-title">Fantateam</h2>
+      <p class="project-desc">Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto ciò che i fantallenatori odiano fare manualmente.</p>
+      <a href="progetti.html#fantateam" class="btn" tabindex="0">Scopri di più</a>
+    </article>
+    <article class="project-card" tabindex="0">
+      <img src="img/storygen_logo.png" alt="Logo Storygen" class="project-logo" />
+      <h2 class="project-title">Storygen</h2>
+      <p class="project-desc">Generatore di storie illustrate con AI, per creare racconti unici e visivamente accattivanti.</p>
+      <a href="progetti.html#storygen" class="btn" tabindex="0">Scopri di più</a>
+    </article>
+    <article class="project-card" tabindex="0">
+      <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" class="project-logo" />
+      <h2 class="project-title">Castello Kids</h2>
+      <p class="project-desc">App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
+      <a href="progetti.html#castello_kids" class="btn" tabindex="0">Scopri di più</a>
+    </article>
+  </section>
+
+  <section class="skills">
+    <h2>Le mie competenze</h2>
+    <div class="skills-list">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Flask</span>
+      <span class="skill-tag">OpenAI API</span>
+      <span class="skill-tag">Storytelling</span>
+      <span class="skill-tag">UX/UI Design</span>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Collaboriamo insieme!</h2>
+    <a href="contatti.html" tabindex="0">Contattami</a>
+  </section>
+</main>
+
+<footer style="text-align:center; padding: 1rem; background:#003b4f; color:white; margin-top: 4rem;">
+  <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
+</footer>
+
 </body>
 </html>
