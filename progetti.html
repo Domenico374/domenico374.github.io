@@ -233,92 +233,26 @@
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
-    padding: 1rem;
   }
   .stat {
+    flex: 1 1 150px;
     font-size: 3rem;
     font-weight: 700;
-    color: white;
     user-select: none;
     text-align: center;
-    position: relative;
   }
   .stat-label {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-top: 0.5rem;
     font-weight: 500;
     display: block;
   }
-  .coding-icon, .languages-icon, .coffee-cup {
-    font-size: 2.5rem;
+  .icon {
+    font-size: 3rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
-  /* Animazione vapore caffè */
-  .coffee {
-    position: relative;
-    color: white;
-  }
-  .steam {
-    position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 5px;
-  }
-  .steam span {
-    width: 6px;
-    height: 18px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 3px;
-    opacity: 0.7;
-    animation: steamUp 2s ease-in-out infinite;
-  }
-  .steam span:nth-child(1) {
-    animation-delay: 0s;
-    height: 20px;
-  }
-  .steam span:nth-child(2) {
-    animation-delay: 0.3s;
-    height: 16px;
-  }
-  .steam span:nth-child(3) {
-    animation-delay: 0.6s;
-    height: 22px;
-  }
-  @keyframes steamUp {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 0.7;
-    }
-    50% {
-      transform: translateY(-20px);
-      opacity: 0.3;
-    }
-  }
-  /* Animazione icona coding: lampeggio */
-  .coding-icon {
-    animation: pulse 2s infinite;
-  }
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-      text-shadow: 0 0 8px #fff;
-    }
-    50% {
-      opacity: 0.7;
-      text-shadow: 0 0 20px #44aaff;
-    }
-  }
-  /* Animazione icona lingue: rotazione lenta */
-  .languages-icon {
-    animation: rotate 10s linear infinite;
-  }
-  @keyframes rotate {
-    from { transform: rotate(0deg);}
-    to { transform: rotate(360deg);}
-  }
+
   /* Responsive */
   @media (max-width: 720px) {
     .project-buttons {
@@ -342,6 +276,7 @@
     </ul>
   </nav>
 </header>
+
 <section class="hero">
   <div class="hero-content">
     <h1>Benvenuto nella Fucina delle Idee</h1>
@@ -349,9 +284,11 @@
     <a href="#progetti" class="btn-cta">Scopri i Progetti</a>
   </div>
 </section>
+
 <main id="progetti">
   <div class="cards-container">
-    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);">
+
+    <article class="project-card" tabindex="0">
       <div class="project-status" style="background:#f39c12;">In sviluppo</div>
       <img src="https://domenico374.github.io/img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
       <h2 class="project-title">Fantateam</h2>
@@ -372,7 +309,8 @@
         <a href="https://domenico374.github.io/fantateam" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
-    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);">
+
+    <article class="project-card" tabindex="0">
       <div class="project-status" style="background:#2980b9;">Beta</div>
       <img src="https://domenico374.github.io/img/storygen_logo.png" alt="Logo Storygen" class="project-logo" />
       <h2 class="project-title">Storygen</h2>
@@ -387,7 +325,8 @@
         <a href="https://domenico374.github.io/storygen" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
-    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);">
+
+    <article class="project-card" tabindex="0">
       <div class="project-status" style="background:#95a5a6;">Concept</div>
       <img src="https://domenico374.github.io/img/castello_kids_logo.png" alt="Logo Castello Kids" class="project-logo" />
       <h2 class="project-title">Castello Kids</h2>
@@ -399,35 +338,57 @@
       </div>
       <div class="project-buttons">
         <a href="progetti.html#castello_kids" class="project-btn">Scopri di più</a>
-        <a href="castello_kids.html" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+        <a href="castello_kids/index.html" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
+
   </div>
+
   <section class="stats-section" aria-label="Statistiche personali">
     <h2>Il mio percorso in numeri</h2>
     <div class="stats-grid">
-      <div class="stat coding" tabindex="0">
-        <span class="coding-icon">💻</span>
-        1500<span class="stat-label">Ore di coding</span>
+      <div class="stat" tabindex="0">
+        <span class="icon">🚀</span>
+        <span id="projectsLaunched" class="count">0</span>
+        <span class="stat-label">Progetti lanciati con successo</span>
       </div>
-      <div class="stat languages" tabindex="0">
-        <span class="languages-icon">🌐</span>
-        3<span class="stat-label">Lingue di programmazione</span>
+      <div class="stat" tabindex="0">
+        <span class="icon">👥</span>
+        <span id="clientsSatisfied" class="count">0</span>
+        <span class="stat-label">Clienti soddisfatti</span>
       </div>
-      <div class="stat coffee" tabindex="0" style="position: relative;">
-        <span class="coffee-cup">☕</span>
-        450<span class="stat-label">Tazze di caffè</span>
-        <div class="steam">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div class="stat" tabindex="0">
+        <span class="icon">📈</span>
+        <span id="skillsGrowth" class="count">0</span>
+        <span class="stat-label">Ore di coding</span>
+      </div>
+      <div class="stat" tabindex="0">
+        <span class="icon">💡</span>
+        <span id="innovations" class="count">0</span>
+        <span class="stat-label">Soluzioni innovative create</span>
       </div>
     </div>
   </section>
 </main>
+
 <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
   <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.8/dist/countUp.min.js"></script>
+<script>
+  window.onload = function () {
+    const options = { duration: 2.5, separator: ',' };
+    const projectsLaunched = new CountUp('projectsLaunched', 7, options);
+    const clientsSatisfied = new CountUp('clientsSatisfied', 15, options);
+    const skillsGrowth = new CountUp('skillsGrowth', 1500, options);
+    const innovations = new CountUp('innovations', 20, options);
+
+    if (!projectsLaunched.error) projectsLaunched.start();
+    if (!clientsSatisfied.error) clientsSatisfied.start();
+    if (!skillsGrowth.error) skillsGrowth.start();
+    if (!innovations.error) innovations.start();
+  }
+</script>
 </body>
 </html>
