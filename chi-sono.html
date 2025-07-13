@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chi Sono - Domenico Cocco</title>
+  <meta name="description" content="Pagina personale di Domenico Cocco, sviluppatore appassionato di AI, UI/UX e sviluppo web. Scopri i suoi progetti e competenze." />
   <style>
     /* Reset base */
     * {
@@ -63,16 +64,18 @@
       display: inline-block;
       background: #5277f0;
       color: white;
-      padding: 12px 30px;
+      padding: 14px 36px;
       border-radius: 50px;
       font-weight: 600;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
       user-select: none;
+      box-shadow: 0 4px 10px rgba(82,119,240,0.4);
     }
     .cta-button:hover {
       background-color: #3251b2;
+      box-shadow: 0 6px 15px rgba(50,81,178,0.7);
     }
     .profile-wrapper {
       display: flex;
@@ -193,10 +196,11 @@
       text-decoration: none;
       font-size: 2rem;
       color: #5277f0;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
     .social-links a:hover {
       color: #3251b2;
+      transform: scale(1.1);
     }
     footer {
       text-align: center;
@@ -204,6 +208,23 @@
       background:#003b4f;
       color:white;
       margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      .profile-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .quick-facts {
+        max-width: 100%;
+      }
+      .skills-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .skill-category {
+        max-width: 100%;
+        min-width: auto;
+      }
     }
   </style>
 </head>
@@ -218,7 +239,7 @@
     </section>
     
     <div class="profile-wrapper">
-      <img src="img/Foto_di_Domenico_Cocco.png" alt="Foto di Domenico Cocco" class="profile-photo" />
+      <img src="img/Foto%20di%20Domenico%20Cocco.png" alt="Foto di Domenico Cocco, sviluppatore web e appassionato di AI" class="profile-photo" />
       
       <div>
         <div class="quick-facts">
