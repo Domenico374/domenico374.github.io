@@ -13,9 +13,7 @@
   }
   body {
     font-family: 'Rubik', sans-serif;
-    background: #ffffff;
-    background-image: radial-gradient(circle at 25px 25px, rgba(59, 130, 246, 0.05) 2px, transparent 2px);
-    background-size: 50px 50px;
+    background: #f5f8fb;
     color: #1a2e4a;
     min-height: 100vh;
     display: flex;
@@ -107,6 +105,7 @@
 
   /* Card Glassmorphism */
   .project-card {
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     border-radius: 16px;
     padding: 2rem;
@@ -117,51 +116,69 @@
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    color: white;
-    text-align: center;
   }
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
   }
 
-  /* Background gradients for each project */
-  .fantateam {
-    background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);
-  }
-  .storygen {
-    background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
-  }
-  .castello-kids {
-    background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
-  }
-
+  /* Card Title and Description */
   .project-logo {
     width: 100px;
     height: auto;
     margin: 0 auto 1rem;
     display: block;
     border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(82, 119, 240, 0.3);
   }
 
   .project-title {
     font-size: 1.8rem;
     font-weight: 700;
+    color: #244977;
     margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .project-status {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background-color: #5277f0;
+    display: inline-block;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   .project-description {
     flex-grow: 1;
     font-size: 1rem;
+    color: #344a72;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
+  .project-metrics {
+    font-size: 0.95rem;
+    color: #5277f0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .project-metrics span {
+    margin: 0 5px;
+  }
+
+  /* Badges */
   .badges {
     margin-bottom: 1rem;
+    text-align: center;
   }
   .badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.3);
+    background: #5277f0;
     color: white;
     padding: 6px 12px;
     border-radius: 20px;
@@ -172,9 +189,10 @@
     transition: background-color 0.3s ease;
   }
   .badge:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #3251b2;
   }
 
+  /* Buttons */
   .project-buttons {
     display: flex;
     gap: 1rem;
@@ -182,7 +200,7 @@
   }
   .project-btn {
     flex: 1;
-    background: rgba(255, 255, 255, 0.3);
+    background: #244977;
     color: white;
     text-align: center;
     padding: 12px 0;
@@ -193,7 +211,7 @@
     max-width: 140px;
   }
   .project-btn:hover {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #5277f0;
   }
 
   /* Stats Section */
@@ -215,19 +233,92 @@
     justify-content: center;
     gap: 3rem;
     flex-wrap: wrap;
+    padding: 1rem;
   }
   .stat {
-    flex: 1 1 150px;
     font-size: 3rem;
     font-weight: 700;
+    color: white;
     user-select: none;
+    text-align: center;
+    position: relative;
   }
   .stat-label {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: 500;
+    display: block;
   }
-
+  .coding-icon, .languages-icon, .coffee-cup {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  /* Animazione vapore caffè */
+  .coffee {
+    position: relative;
+    color: white;
+  }
+  .steam {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+  .steam span {
+    width: 6px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    opacity: 0.7;
+    animation: steamUp 2s ease-in-out infinite;
+  }
+  .steam span:nth-child(1) {
+    animation-delay: 0s;
+    height: 20px;
+  }
+  .steam span:nth-child(2) {
+    animation-delay: 0.3s;
+    height: 16px;
+  }
+  .steam span:nth-child(3) {
+    animation-delay: 0.6s;
+    height: 22px;
+  }
+  @keyframes steamUp {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-20px);
+      opacity: 0.3;
+    }
+  }
+  /* Animazione icona coding: lampeggio */
+  .coding-icon {
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+      text-shadow: 0 0 8px #fff;
+    }
+    50% {
+      opacity: 0.7;
+      text-shadow: 0 0 20px #44aaff;
+    }
+  }
+  /* Animazione icona lingue: rotazione lenta */
+  .languages-icon {
+    animation: rotate 10s linear infinite;
+  }
+  @keyframes rotate {
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+  }
   /* Responsive */
   @media (max-width: 720px) {
     .project-buttons {
@@ -251,7 +342,6 @@
     </ul>
   </nav>
 </header>
-
 <section class="hero">
   <div class="hero-content">
     <h1>Benvenuto nella Fucina delle Idee</h1>
@@ -259,14 +349,17 @@
     <a href="#progetti" class="btn-cta">Scopri i Progetti</a>
   </div>
 </section>
-
 <main id="progetti">
   <div class="cards-container">
-
-    <article class="project-card fantateam" tabindex="0">
+    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);">
+      <div class="project-status" style="background:#f39c12;">In sviluppo</div>
       <img src="https://domenico374.github.io/img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
       <h2 class="project-title">Fantateam</h2>
       <p class="project-description">Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
+      <div class="project-metrics">
+        <span>⚽ 50+ giocatori gestiti</span> |
+        <span>⏱️ Aggiornamenti in tempo reale</span>
+      </div>
       <div class="badges">
         <span class="badge">Python</span>
         <span class="badge">Flask</span>
@@ -279,8 +372,8 @@
         <a href="https://domenico374.github.io/fantateam" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
-
-    <article class="project-card storygen" tabindex="0">
+    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);">
+      <div class="project-status" style="background:#2980b9;">Beta</div>
       <img src="https://domenico374.github.io/img/storygen_logo.png" alt="Logo Storygen" class="project-logo" />
       <h2 class="project-title">Storygen</h2>
       <p class="project-description">Generatore di storie illustrate con AI, per creare racconti unici e visivamente accattivanti.</p>
@@ -294,8 +387,8 @@
         <a href="https://domenico374.github.io/storygen" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
-
-    <article class="project-card castello-kids" tabindex="0">
+    <article class="project-card" tabindex="0" style="background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);">
+      <div class="project-status" style="background:#95a5a6;">Concept</div>
       <img src="https://domenico374.github.io/img/castello_kids_logo.png" alt="Logo Castello Kids" class="project-logo" />
       <h2 class="project-title">Castello Kids</h2>
       <p class="project-description">App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
@@ -306,22 +399,33 @@
       </div>
       <div class="project-buttons">
         <a href="progetti.html#castello_kids" class="project-btn">Scopri di più</a>
-        <a href="castello_kids/index.html" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
+        <a href="castello_kids.html" target="_blank" class="project-btn" rel="noopener">Prova la Demo</a>
       </div>
     </article>
-
   </div>
-
   <section class="stats-section" aria-label="Statistiche personali">
     <h2>Il mio percorso in numeri</h2>
     <div class="stats-grid">
-      <div class="stat" tabindex="0">3<span class="stat-label">Lingue di programmazione</span></div>
-      <div class="stat" tabindex="0">1500<span class="stat-label">Ore di coding</span></div>
-      <div class="stat" tabindex="0">450<span class="stat-label">Tazze di caffè</span></div>
+      <div class="stat coding" tabindex="0">
+        <span class="coding-icon">💻</span>
+        1500<span class="stat-label">Ore di coding</span>
+      </div>
+      <div class="stat languages" tabindex="0">
+        <span class="languages-icon">🌐</span>
+        3<span class="stat-label">Lingue di programmazione</span>
+      </div>
+      <div class="stat coffee" tabindex="0" style="position: relative;">
+        <span class="coffee-cup">☕</span>
+        450<span class="stat-label">Tazze di caffè</span>
+        <div class="steam">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </div>
   </section>
 </main>
-
 <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
   <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
 </footer>
