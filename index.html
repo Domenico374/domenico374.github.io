@@ -25,43 +25,54 @@
       justify-content: center;
     }
     .project-card {
-      background: rgba(255, 255, 255, 0.85);
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(36, 73, 119, 0.15);
-      width: 280px;
-      padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(82, 119, 240, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      color: white;
       text-align: center;
+      width: 280px;
     }
     .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(36, 73, 119, 0.3);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
     }
-    .project-logo img {
-      display: block;
-      margin: 0 auto 10px;
-      max-width: 80px;
+    .fantateam {
+      background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);
+    }
+    .storygen {
+      background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+    }
+    .castello-kids {
+      background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    }
+    .project-logo {
+      width: 80px;
       height: auto;
+      margin: 0 auto 1rem;
+      display: block;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
     }
     .project-title {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      color: #244977;
     }
     .project-desc {
       flex-grow: 1;
       font-size: 1rem;
-      color: #506680;
       margin-bottom: 1rem;
     }
     .project-status {
       font-weight: 600;
-      color: #5277f0;
+      color: white;
       margin-bottom: 1rem;
     }
     .project-buttons {
@@ -70,7 +81,7 @@
       gap: 15px;
     }
     .btn {
-      background: #5277f0;
+      background: rgba(255, 255, 255, 0.3);
       color: white;
       border: none;
       border-radius: 25px;
@@ -82,7 +93,7 @@
       user-select: none;
     }
     .btn:hover {
-      background: #3251b2;
+      background: rgba(255, 255, 255, 0.6);
     }
     /* Responsive */
     @media (max-width: 700px) {
@@ -122,42 +133,36 @@
       <h2>I miei progetti</h2>
       <div class="projects-list">
 
-        <div class="project-card" onclick="location.href='progetti.html#fantateam';" role="button" tabindex="0">
-          <div class="project-logo">
-            <img src="img/fantateam_logo.png" alt="Logo Fantateam" />
-          </div>
+        <div class="project-card fantateam" onclick="location.href='progetti.html#fantateam';" role="button" tabindex="0">
+          <img src="img/fantateam_logo.png" alt="Logo Fantateam" class="project-logo" />
           <div class="project-title">Fantateam</div>
           <div class="project-desc">App per gestione fantacalcio con AI e interfaccia intuitiva.</div>
           <div class="project-status">In sviluppo</div>
           <div class="project-buttons">
             <a href="progetti.html#fantateam" class="btn">Scopri di più</a>
-            <a href="#" class="btn">Demo</a>
+            <a href="https://domenico374.github.io/fantateam" target="_blank" class="btn">Prova la Demo</a>
           </div>
         </div>
 
-        <div class="project-card" onclick="location.href='progetti.html#storygen';" role="button" tabindex="0">
-          <div class="project-logo">
-            <img src="img/storygen_logo.png" alt="Logo Storygen" />
-          </div>
+        <div class="project-card storygen" onclick="location.href='progetti.html#storygen';" role="button" tabindex="0">
+          <img src="img/storygen_logo.png" alt="Logo Storygen" class="project-logo" />
           <div class="project-title">Storygen</div>
           <div class="project-desc">Generatore di storie illustrate con AI e grafica personalizzata.</div>
           <div class="project-status">Beta</div>
           <div class="project-buttons">
             <a href="progetti.html#storygen" class="btn">Scopri di più</a>
-            <a href="#" class="btn">Demo</a>
+            <a href="https://domenico374.github.io/storygen" target="_blank" class="btn">Prova la Demo</a>
           </div>
         </div>
 
-        <div class="project-card" onclick="location.href='progetti.html#castello_kids';" role="button" tabindex="0">
-          <div class="project-logo">
-            <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" />
-          </div>
+        <div class="project-card castello-kids" onclick="location.href='progetti.html#castello_kids';" role="button" tabindex="0">
+          <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" class="project-logo" />
           <div class="project-title">Castello Kids</div>
           <div class="project-desc">App educativa per bambini dedicata alla storia e ai giochi didattici.</div>
           <div class="project-status">Concept</div>
           <div class="project-buttons">
             <a href="progetti.html#castello_kids" class="btn">Scopri di più</a>
-            <a href="#" class="btn">Demo</a>
+            <a href="castello_kids/index.html" target="_blank" class="btn" rel="noopener">Prova la Demo</a>
           </div>
         </div>
 
