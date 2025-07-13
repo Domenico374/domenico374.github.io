@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chi Sono - Domenico Cocco</title>
   <style>
+    /* Reset base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: 'Rubik', sans-serif;
       background: #f5f8fb;
@@ -16,142 +22,73 @@
       align-items: center;
       padding: 2rem 1rem;
     }
-
-    header {
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      padding: 3rem 3rem 4rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 3rem;
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
     }
-
-    header img {
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    .intro h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #244977;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #5a86ff, #2d3a7d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .intro p {
+      font-size: 1.25rem;
+      color: #506680;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #5277f0;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .cta-button:hover {
+      background-color: #3251b2;
+    }
+    .profile-wrapper {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .profile-photo {
+      flex-shrink: 0;
       width: 140px;
       height: 140px;
       border-radius: 50%;
       border: 5px solid #5277f0;
       box-shadow: 0 10px 20px rgba(82, 119, 240, 0.3);
       object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: default;
     }
-
-    header h1 a {
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: #244977;
-      text-decoration: none;
-      background: linear-gradient(45deg, #5a86ff, #2d3a7d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: color 0.3s ease;
-    }
-    header h1 a:hover {
-      color: #5277f0;
-    }
-
-    main {
-      max-width: 700px;
-      width: 100%;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #506680;
-      font-weight: 400;
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-
-    .cta-intro {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .btn {
-      background: #5277f0;
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 25px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      user-select: none;
-      display: inline-block;
-    }
-    .btn:hover {
-      background-color: #3251b2;
-    }
-
-    .skills {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-      justify-content: center;
-    }
-    .skill-tag {
-      background: #5277f0;
-      color: white;
-      padding: 6px 15px;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      user-select: none;
-    }
-
-    footer {
-      margin-top: 4rem;
-      padding: 1rem;
-      background:#003b4f;
-      color:white;
-      text-align: center;
-      width: 100%;
-    }
-    footer a {
-      color: #a8d0ff;
-      transition: color 0.3s ease;
-      text-decoration: none;
-    }
-    footer a:hover {
-      color: #82aaff;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="img/domenico_cocco_avatar.png" alt="Foto di Domenico Cocco" />
-    <h1><a href="progetti.html">La Fucina delle Idee</a></h1>
-  </header>
-
-  <main>
-    <p>Ho scoperto che la tecnologia può trasformare idee semplici in soluzioni che cambiano la vita delle persone. Questo concetto mi ha spinto a muovere i primi passi nel mondo della programmazione, un percorso che sto costruendo con curiosità e determinazione.</p>
-
-    <section class="cta-intro">
-      <a href="progetti.html" class="btn">Scopri i miei progetti</a>
-    </section>
-
-    <p><em>La Fucina delle Idee</em> è il mio spazio creativo, un laboratorio dove trasformo intuizioni in progetti digitali creativi e innovativi in ambiti come l'intelligenza artificiale, il fantacalcio e le app educative. Il mio obiettivo è chiaro: creare strumenti digitali efficaci e facili da usare, pensati per rispondere a bisogni reali e migliorare l'esperienza degli utenti.</p>
-
-    <p>Non mi definisco un esperto sviluppatore né un designer professionista, ma un appassionato autodidatta. Ogni progetto è un'opportunità per imparare qualcosa di nuovo, esplorare nuove competenze in Python e sperimentare costantemente.</p>
-
-    <p>Sono un convinto sostenitore del potere della tecnologia e condivido il mio cammino con entusiasmo, imparando giorno dopo giorno e trasformando ogni sfida in un'occasione di crescita.</p>
-
-    <div class="skills">
-      <span class="skill-tag">Python</span>
-      <span class="skill-tag">JavaScript</span>
-      <span class="skill-tag">Flask</span>
-      <span class="skill-tag">React</span>
-      <span class="skill-tag">OpenAI API</span>
-      <span class="skill-tag">HTML/CSS</span>
-      <span class="skill-tag">MySQL</span>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2025 La Fucina delle Idee | 
-      <a href="mailto:domenico.cocco@gmail.com">domenico.cocco@gmail.com</a> | 
-      <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
-  </footer>
-
-</body>
-</html>
