@@ -340,13 +340,42 @@
 
   <section class="stats-section" aria-label="Statistiche personali">
     <h2>Il mio percorso in numeri</h2>
-    <div class="stats-grid">
-            <div class="stat" tabindex="0">3<span class="stat-label">Lingue di programmazione</span></div>
-      <div class="stat" tabindex="0">1500<span class="stat-label">Ore di coding</span></div>
-      <div class="stat" tabindex="0">450<span class="stat-label">Tazze di caffè</span></div>
-    </div>
-  </section>
-</main>
+  <div class="stat" tabindex="0">
+  <span class="coffee-emoji">☕</span>
+  450<span class="stat-label">Tazze di caffè</span>
+</div>
+
+<style>
+  .coffee-emoji {
+    display: inline-block;
+    font-size: 2.5rem;
+    position: relative;
+    margin-right: 8px;
+  }
+
+  /* Animazione del vapore */
+  .coffee-emoji::after {
+    content: "☁️";
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    animation: steamMove 2s ease-in-out infinite;
+  }
+
+  @keyframes steamMove {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-10px) scale(1.1);
+      opacity: 0.3;
+    }
+  }
+</style>
+
 
 <footer style="text-align:center; padding: 1rem; background:#003b4f; color:white;">
   <p>© 2025 La Fucina delle Idee | <a href="mailto:domenico.cocco@gmail.com" style="color:#a8d0ff;">domenico.cocco@gmail.com</a> | <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer" style="color:#a8d0ff;">LinkedIn</a></p>
