@@ -4,22 +4,46 @@ Benvenuti nel mio progetto digitale! ✨ Qui nascono mini-app creative dove la f
 
 ---
 
-## 🚀 Fantateam  
-Mini‑app per il fantacalcio: login, rose personalizzate, punteggi e simulazione delle prestazioni.  
+## 🚀 Fantateam
 
-🔗 [Vai alla demo](https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/)
+Mini-app per il fantacalcio: login, rose personalizzate, punteggi e simulazione delle prestazioni.
 
-<p align="center">
-  <img src="image.png" alt="Screenshot Fantateam" width="300">
-</p>
+🔗 [Vai alla demo](https://domenico374.github.io/fantateam)
+
+![Screenshot Fantateam](img/fantateam_screenshot.png)
 
 ---
 
-## 🧠 Storygen  
+## 🧠 Storygen
+
 Generatore di storie illustrate con AI: testo + immagini in stile fiaba o fumetto.
 
+🔗 [Vai alla demo](https://domenico374.github.io/storygen)
+
+![Screenshot Storygen](img/storygen_screenshot.png)
+
 ---
 
-## 🏰 Castello Kids  
+## 🏰 Castello Kids
+
 App educativa per bambini sul quartiere di Castello a Cagliari.
+
+🔗 [Vai alla demo](https://domenico374.github.io/castello_kids.html)
+
+![Screenshot Castello Kids](img/castello_kids_screenshot.png)
+
+---
+
+### Come contribuire
+
+Se vuoi collaborare o proporre idee, contattami via GitHub o LinkedIn!
+
+---
+
+### Contatti
+
+- GitHub: [Domenico374](https://github.com/Domenico374)
+- LinkedIn: [Domenico Cocco](https://www.linkedin.com/in/domenico-cocco-577aab83)
+- Email: domenico.cocco@gmail.com
+
 
