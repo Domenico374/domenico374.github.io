@@ -9,8 +9,7 @@
     body {
       background-color: #dbeeff;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       color: #1a2a48;
       text-align: center;
     }
@@ -71,61 +70,77 @@
       flex-wrap: wrap;
     }
     .project-card {
-      background: white;
       border-radius: 16px;
       padding: 2rem 1.5rem;
       width: 280px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: #1a2a48;
+      color: white;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 450px;
+      cursor: pointer;
     }
     .project-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 40px rgba(82, 119, 240, 0.25);
     }
+    /* Colori sfondo con sfumatura */
+    .fantateam {
+      background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);
+    }
+    .storygen {
+      background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+    }
+    .castello-kids {
+      background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
+    }
     .project-logo {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       margin-bottom: 1rem;
       border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(82, 119, 240, 0.25);
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
       object-fit: contain;
       background: white;
-      padding: 8px;
+      padding: 10px;
     }
     .project-title {
       font-weight: 700;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
     }
     .project-desc {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+      text-shadow: 0 0 4px rgba(0,0,0,0.2);
     }
     .project-status {
       font-weight: 700;
       margin-bottom: 1rem;
-      color: #572ea4;
+      font-size: 1.1rem;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
     }
     .btn {
-      background-color: #572ea4;
+      background-color: rgba(255, 255, 255, 0.25);
       color: white;
       border: none;
       border-radius: 25px;
-      padding: 10px 25px;
+      padding: 12px 28px;
       font-weight: 600;
       font-size: 1rem;
-      margin: 0 0.3rem 0.5rem 0.3rem;
+      margin: 0 0.5rem 0.5rem 0.5rem;
       cursor: pointer;
       text-decoration: none;
-      display: inline-block;
       transition: background-color 0.3s ease;
+      min-width: 120px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.3);
     }
     .btn:hover {
-      background-color: #430d83;
+      background-color: rgba(255, 255, 255, 0.5);
     }
     @media (max-width: 720px) {
       .projects-list {
