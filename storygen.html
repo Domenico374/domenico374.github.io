@@ -29,15 +29,19 @@
     .content img {
       width: 220px;
       margin-bottom: 1em;
+      border-radius: 12px; /* leggero arrotondamento */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .content h1 {
       font-size: 2em;
       margin-bottom: 0.5em;
+      color: #244977;
     }
     .content p {
       font-size: 1.1em;
       max-width: 600px;
       margin: 0 auto 2em;
+      color: #344a72;
     }
     a.button {
       background: #003b4f;
@@ -46,6 +50,10 @@
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    a.button:hover {
+      background: #244977;
     }
     footer {
       background-color: #003b4f;
@@ -62,7 +70,8 @@
   </header>
 
   <div class="content">
-   <img src="https://github.com/Domenico374/domenico374.github.io/blob/main/img/storygen_collage.png?raw=true" alt="Storygen Collage" class="project-logo" />
+   <!-- Usa il percorso relativo se possibile -->
+   <img src="img/storygen_collage.png" alt="Storygen Collage" class="project-logo" />
 
     <h1>Storygen</h1>
     <p>Generatore di storie illustrate con AI: crea racconti con testo e immagini in stile fiaba o fumetto. Uno strumento educativo e creativo per scuole, famiglie e scrittori!</p>
