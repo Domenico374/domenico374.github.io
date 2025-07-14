@@ -105,6 +105,58 @@
         width: 90%;
       }
     }
+
+    /* Custom style for StoryGen card */
+    .storygen-card {
+      background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+      width: 280px;
+      box-shadow: 0 8px 32px rgba(82, 119, 240, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .storygen-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
+    }
+    .storygen-card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    }
+    .storygen-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .storygen-card p {
+      flex-grow: 1;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .storygen-card .btn {
+      margin-top: auto;
+      background: rgba(255, 255, 255, 0.3);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .storygen-card .btn:hover {
+      background: rgba(255, 255, 255, 0.6);
+    }
   </style>
 </head>
 <body>
@@ -144,15 +196,11 @@
           </div>
         </div>
 
-        <div class="project-card storygen" onclick="location.href='progetti.html#storygen';" role="button" tabindex="0">
-          https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png
-          <div class="project-title">StoryGen</div>
-          <div class="project-desc">
-            Generatore di storie illustrate con AI: crea racconti con testo e immagini in stile fiaba o fumetto. Uno strumento educativo e creativo per scuole, famiglie e scrittori!
-          </div>
-          <div class="project-buttons">
-            <a href="progetti.html#storygen" class="btn">Scopri di più</a>
-          </div>
+        <div class="storygen-card" onclick="location.href='storygen.html';" role="button" tabindex="0">
+          <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Collage Storygen" />
+          <h3>StoryGen</h3>
+          <p>Generatore di storie illustrate con AI: crea racconti con testo e immagini in stile fiaba o fumetto. Uno strumento educativo e creativo per scuole, famiglie e scrittori!</p>
+          <a href="storygen.html" class="btn">Scopri di più</a>
         </div>
 
         <div class="project-card castello-kids" onclick="location.href='progetti.html#castello_kids';" role="button" tabindex="0">
