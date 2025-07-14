@@ -24,7 +24,8 @@
       gap: 20px;
       justify-content: center;
     }
-    .project-card {
+    .project-card, .storygen-card {
+      min-height: 420px; /* altezza uniforme */
       backdrop-filter: blur(15px);
       border-radius: 16px;
       padding: 2rem;
@@ -39,20 +40,20 @@
       text-align: center;
       width: 280px;
     }
-    .project-card:hover {
+    .project-card:hover, .storygen-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
     }
     .fantateam {
       background: linear-gradient(135deg, #2d5016 0%, #4caf50 100%);
     }
-    .storygen {
+    .storygen-card {
       background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
     }
     .castello-kids {
       background: linear-gradient(135deg, #ff9800 0%, #ffb74d 100%);
     }
-    .project-logo {
+    .project-logo, .storygen-card img {
       width: 80px;
       height: auto;
       margin: 0 auto 1rem;
@@ -60,12 +61,12 @@
       border-radius: 15px;
       box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
     }
-    .project-title {
+    .project-title, .storygen-card h3 {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
     }
-    .project-desc {
+    .project-desc, .storygen-card p {
       flex-grow: 1;
       font-size: 1rem;
       margin-bottom: 1rem;
@@ -80,7 +81,7 @@
       justify-content: center;
       gap: 15px;
     }
-    .btn {
+    .btn, .storygen-card .btn {
       background: rgba(255, 255, 255, 0.3);
       color: white;
       border: none;
@@ -92,7 +93,7 @@
       transition: background 0.3s ease;
       user-select: none;
     }
-    .btn:hover {
+    .btn:hover, .storygen-card .btn:hover {
       background: rgba(255, 255, 255, 0.6);
     }
     /* Responsive */
@@ -101,61 +102,9 @@
         flex-direction: column;
         align-items: center;
       }
-      .project-card {
+      .project-card, .storygen-card {
         width: 90%;
       }
-    }
-
-    /* Custom style for StoryGen card */
-    .storygen-card {
-      background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
-      border-radius: 16px;
-      padding: 2rem;
-      color: white;
-      text-align: center;
-      width: 280px;
-      box-shadow: 0 8px 32px rgba(82, 119, 240, 0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .storygen-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(50, 81, 178, 0.5);
-    }
-    .storygen-card img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
-    }
-    .storygen-card h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    .storygen-card p {
-      flex-grow: 1;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-    .storygen-card .btn {
-      margin-top: auto;
-      background: rgba(255, 255, 255, 0.3);
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 8px 20px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: background 0.3s ease;
-      user-select: none;
-    }
-    .storygen-card .btn:hover {
-      background: rgba(255, 255, 255, 0.6);
     }
   </style>
 </head>
