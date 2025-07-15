@@ -9,8 +9,13 @@ Ciao! Sono Domenico, un'appassionato di tecnologia e intelligenza artificiale. S
 **Stato:** In sviluppo  
 **Descrizione:** App per fantacalcio potenziata da AI con interfaccia intuitiva, che permette di riscoprire il fascino del fantacalcio con funzionalità innovative.  
 **Tecnologie:** Python, Flask, JavaScript  
-**Screenshot:**  
-![Screenshot Fantateam](./path_to_screenshot_fantateam.png)  
+## Fantateam
+
+### Screenshot
+
+![Registrazione Fantateam](./img/screenshot_registrazione_fantateam.png)
+
+![Creazione rosa Fantateam](./img/screenshot_creazione_rosa_fantateam.png) 
 **Demo:** [Vai alla Demo](https://domenico374.github.io/fantateam)  
 **Pagina progetto:** [Fantateam su La Fucina delle Idee](https://domenico374.github.io/progetti.html#fantateam)
 
