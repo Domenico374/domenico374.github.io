@@ -95,6 +95,8 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 ## Statistiche GitHub
 
 ![Domenico's GitHub stats](https://github-readme-stats.vercel.app/api?username=Domenico374\&show_icons=true\&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Domenico374\&layout=compact\&theme=radical)
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Domenico374\&theme=radical)
 
 ---
 
@@ -110,9 +112,5 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ```
 
----
-
-Se vuoi ti aiuto anche a personalizzare ulteriormente il widget GitHub (ad esempio per lingue più usate, streaks, ecc.) o aggiungere badge personalizzati per altre info.
-
-Fammi sapere!
+Se vuoi posso anche aiutarti a integrare questo README nel repo o a personalizzare i badge. Vuoi?
 ```
