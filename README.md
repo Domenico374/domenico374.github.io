@@ -126,5 +126,5 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ```
 
-Se vuoi, ti preparo anche un file README.md pronto da caricare. Vuoi?
+
 ```
