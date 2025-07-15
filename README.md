@@ -47,7 +47,18 @@ Generatore di storie illustrate con AI: trasforma idee in racconti visivi con te
 **Tecnologie pianificate:**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)  
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)  
-![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)  
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+
+**Caratteristiche principali:**
+- 🎨 Generazione automatica di illustrazioni AI
+- 📖 Editor visuale per storie interattive
+- 🎭 Stili multipli: fumetto, fiaba, fotoromanzo
+- 🏫 Modalità educativa per scuole
+- 💾 Esportazione in PDF e formati digitali
+- 🎯 Interfaccia intuitiva per tutte le età
+
+**Target:** Aspiranti scrittori, educatori, famiglie e creativi
 
 ---
 ## Castello Kids 🏰
