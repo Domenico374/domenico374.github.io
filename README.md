@@ -4,9 +4,20 @@ Ciao! Sono Domenico, appassionato di tecnologia e intelligenza artificiale. Qui 
 
 ---
 
+## Sommario
+- [Fantateam](#fantateam)
+- [StoryGen](#storygen)
+- [Castello Kids](#castello-kids)
+- [Roadmap e progressi](#roadmap-e-progressi)
+- [Competenze Tecniche](#competenze-tecniche)
+- [Statistiche GitHub](#statistiche-github)
+- [Contatti](#contatti)
+
+---
+
 ## Fantateam
 
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+![Stato](https://img.shields.io/badge/Stato-In%20Sviluppo-yellow)
 
 **Stato:** In sviluppo  
 **Descrizione:**  
@@ -33,7 +44,7 @@ cd fantateam
 
 ## StoryGen
 
-![Status](https://img.shields.io/badge/Status-Concept-blue)
+![Stato](https://img.shields.io/badge/Stato-Concetto-blue)
 
 **Stato:** Concept / In sviluppo iniziale
 **Descrizione:**
@@ -55,7 +66,7 @@ Sviluppo della logica AI per generazione immagini e testo, progettazione UI e in
 
 ## Castello Kids
 
-![Status](https://img.shields.io/badge/Status-Concept-orange)
+![Stato](https://img.shields.io/badge/Stato-Concetto-orange)
 
 **Stato:** Concept
 **Descrizione:**
@@ -94,9 +105,9 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ## Statistiche GitHub
 
-![Domenico's GitHub stats](https://github-readme-stats.vercel.app/api?username=Domenico374\&show_icons=true\&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Domenico374\&layout=compact\&theme=radical)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Domenico374\&theme=radical)
+![Statistiche GitHub di Domenico](https://github-readme-stats.vercel.app/api?username=Domenico374\&show_icons=true\&theme=radical)
+![Linguaggi principali](https://github-readme-stats.vercel.app/api/top-langs/?username=Domenico374\&layout=compact\&theme=radical)
+![Streak GitHub](https://github-readme-streak-stats.herokuapp.com/?user=Domenico374\&theme=radical)
 
 ---
 
@@ -112,5 +123,5 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ```
 
-Se vuoi posso anche aiutarti a integrare questo README nel repo o a personalizzare i badge. Vuoi?
+Se vuoi, posso anche fornirti il codice pronto da inserire nel README.md. Vuoi?
 ```
