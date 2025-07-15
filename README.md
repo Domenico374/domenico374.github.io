@@ -6,6 +6,8 @@ Ciao! Sono Domenico, appassionato di tecnologia e intelligenza artificiale. Qui 
 
 ## Fantateam
 
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
+
 **Stato:** In sviluppo  
 **Descrizione:**  
 App web che rivoluziona il fantacalcio con analisi predittive AI, consigli personalizzati per la formazione e statistiche avanzate per massimizzare le performance della tua squadra.
@@ -31,6 +33,8 @@ cd fantateam
 
 ## StoryGen
 
+![Status](https://img.shields.io/badge/Status-Concept-blue)
+
 **Stato:** Concept / In sviluppo iniziale
 **Descrizione:**
 Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.
@@ -50,6 +54,8 @@ Sviluppo della logica AI per generazione immagini e testo, progettazione UI e in
 ---
 
 ## Castello Kids
+
+![Status](https://img.shields.io/badge/Status-Concept-orange)
 
 **Stato:** Concept
 **Descrizione:**
@@ -77,6 +83,21 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ---
 
+## Competenze Tecniche
+
+* Python, Flask, React, Flutter
+* AI & Machine Learning (OpenAI API, TensorFlow)
+* Database (PostgreSQL, Firebase)
+* UI/UX Design & Prototyping
+
+---
+
+## Statistiche GitHub
+
+![Domenico's GitHub stats](https://github-readme-stats.vercel.app/api?username=Domenico374\&show_icons=true\&theme=radical)
+
+---
+
 ## Contatti
 
 * 📧 [domenico.cocco@gmail.com](mailto:domenico.cocco@gmail.com)
@@ -89,7 +110,9 @@ Storyboard, definizione contenuti educativi e prime bozze UI.
 
 ```
 
-Così hai tutto ben organizzato, con la corretta sintassi, link, sezioni e codice. Vuoi che ti aggiunga anche qualche badge o altro?
+---
+
+Se vuoi ti aiuto anche a personalizzare ulteriormente il widget GitHub (ad esempio per lingue più usate, streaks, ecc.) o aggiungere badge personalizzati per altre info.
+
+Fammi sapere!
 ```
-
-
