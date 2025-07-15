@@ -18,7 +18,6 @@ Qui trovi una raccolta dei miei progetti digitali innovativi, frutto di creativi
 - [Contatti 📫](#contatti-)
 
 ---
-
 ## Fantateam ⚽
 
 ![Stato](https://img.shields.io/badge/Stato-In%20Sviluppo-yellow)  
@@ -26,7 +25,9 @@ Qui trovi una raccolta dei miei progetti digitali innovativi, frutto di creativi
 **Descrizione:**  
 App web che rivoluziona il fantacalcio con analisi predittive AI, consigli personalizzati per la formazione e statistiche avanzate per massimizzare le performance della tua squadra.
 
-![Screenshot Fantateam](./screenshot_fantateam.png)
+![Screenshot Creazione Rosa Fantateam](https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_creazione_rosa_fantateam.png)
+
+![Screenshot Registrazione Fantateam](https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_registrazione_fantateam.png)
 
 **Tecnologie principali:**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)  
@@ -34,6 +35,7 @@ App web che rivoluziona il fantacalcio con analisi predittive AI, consigli perso
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)  
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)  
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
+
 
 ---
 
