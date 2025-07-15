@@ -18,6 +18,7 @@ Qui trovi una raccolta dei miei progetti digitali innovativi, frutto di creativi
 - [Contatti 📫](#contatti-)
 
 ---
+
 ## Fantateam ⚽
 
 ![Stato](https://img.shields.io/badge/Stato-In%20Sviluppo-yellow)  
@@ -36,11 +37,12 @@ App web che rivoluziona il fantacalcio con analisi predittive AI, consigli perso
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)  
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
 
-
 ---
 
 ## StoryGen 📚
+
 ![Stato](https://img.shields.io/badge/Stato-Concept-blue)  
+
 **Descrizione:**  
 Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo.
 
@@ -61,8 +63,11 @@ Generatore di storie illustrate con AI: trasforma idee in racconti visivi con te
 **Target:** Aspiranti scrittori, educatori, famiglie e creativi
 
 ---
+
 ## Castello Kids 🏰
+
 ![Stato](https://img.shields.io/badge/Stato-Concept-orange)  
+
 **Descrizione:**  
 App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari tramite un'avventura didattica interattiva guidata da AI.
 
@@ -82,11 +87,11 @@ App educativa per scuole elementari che porta i bambini alla scoperta della stor
 
 ---
 
-
 ## Roadmap e progressi 🛤️
-- 🎯 **Fantateam** (Q4 2025): Completamento modulo aste + integrazione API calcistiche
-- 🎨 **StoryGen** (Q1 2026): Prima beta con editor visuale
-- 🏰 **Castello Kids** (metà 2026): Prototipo funzionante completo
+
+- 🎯 **Fantateam** (Q4 2025): Completamento modulo aste + integrazione API calcistiche  
+- 🎨 **StoryGen** (Q1 2026): Prima beta con editor visuale  
+- 🏰 **Castello Kids** (metà 2026): Prototipo funzionante completo  
 
 ---
 
@@ -122,7 +127,7 @@ Se ti interessa contribuire a uno dei miei progetti, ecco come fare:
 
 ## Contatti 📫
 
-- 📧 Email: domenico.cocco@gmail.com 
+- 📧 Email: domenico.cocco@gmail.com  
 - 🔗 LinkedIn: [linkedin.com/in/domenico374](https://linkedin.com/in/domenico374)  
 - 🐙 GitHub: [github.com/domenico374](https://github.com/domenico374)
 
