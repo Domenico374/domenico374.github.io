@@ -34,8 +34,9 @@ Ciao! Sono Domenico, un'appassionato di tecnologia e intelligenza artificiale. s
 **Descrizione:** App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un’AI in un’avventura didattica interattiva.  
 **Tecnologie:** Flutter, Firebase, AI integrata  
 **Screenshot:**  
-![Castello Kids Screenshot](./path_to_screenshot_castello_kids.png)  
-**Demo:** [Vai alla Demo](https://domenico374.github.io/castello_kids)  
+![Screenshot Castello Kids](img/screenshot_castello_kids.png)
+
+[Demo](https://domenico374.github.io/castello_kids)
 **Pagina progetto:** [Castello Kids su La Fucina delle Idee](https://domenico374.github.io/progetti.html#castello_kids)
 
 ---
