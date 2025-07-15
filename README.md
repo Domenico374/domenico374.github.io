@@ -50,14 +50,27 @@ Generatore di storie illustrate con AI: trasforma idee in racconti visivi con te
 ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 
 ---
-
 ## Castello Kids 🏰
+![Stato](https://img.shields.io/badge/Stato-Concept-orange)  
+**Descrizione:**  
+App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari tramite un'avventura didattica interattiva guidata da AI.
 
-*Descrizione sintetica progetto Castello Kids...*
+**Tecnologie pianificate:**  
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)  
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)  
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)
+
+**Caratteristiche principali:**
+- 🗺️ Percorsi interattivi nel quartiere storico
+- 🎮 Gamification dell'apprendimento storico
+- 👑 bambini come guide
+- 🏆 Sistema di achievement educativi
+- 📱 Compatibilità mobile per visite sul campo
+
+**Target:** Scuole elementari e famiglie in visita a Cagliari
 
 ---
 
-## Roadmap e progressi 🛤️
 
 ## Roadmap e progressi 🛤️
 - 🎯 **Fantateam** (Q4 2025): Completamento modulo aste + integrazione API calcistiche
