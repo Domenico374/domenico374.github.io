@@ -1,7 +1,7 @@
 # La Fucina delle Idee - Progetti
 
 ## Chi sono  
-Ciao! Sono Domenico, uno sviluppatore appassionato di tecnologia e intelligenza artificiale. Creo progetti digitali innovativi con un occhio particolare all’usabilità e alla creatività. Questo repository raccoglie i miei principali lavori e sperimentazioni.
+Ciao! Sono Domenico, un'appassionato di tecnologia e intelligenza artificiale. sto creando progetti digitali innovativi con un occhio particolare all’usabilità e alla creatività. Questo repository raccoglie i miei principali lavori e sperimentazioni.
 
 ---
 
