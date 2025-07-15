@@ -40,8 +40,14 @@ App web che rivoluziona il fantacalcio con analisi predittive AI, consigli perso
 ---
 
 ## StoryGen 📚
+![Stato](https://img.shields.io/badge/Stato-Concept-blue)  
+**Descrizione:**  
+Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo.
 
-*Descrizione sintetica progetto StoryGen...*
+**Tecnologie pianificate:**  
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)  
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)  
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
 
 ---
 
@@ -53,7 +59,10 @@ App web che rivoluziona il fantacalcio con analisi predittive AI, consigli perso
 
 ## Roadmap e progressi 🛤️
 
-Qui puoi seguire lo stato di avanzamento dei progetti principali e le milestone raggiunte.
+## Roadmap e progressi 🛤️
+- 🎯 **Fantateam** (Q4 2025): Completamento modulo aste + integrazione API calcistiche
+- 🎨 **StoryGen** (Q1 2026): Prima beta con editor visuale
+- 🏰 **Castello Kids** (metà 2026): Prototipo funzionante completo
 
 ---
 
@@ -89,7 +98,7 @@ Se ti interessa contribuire a uno dei miei progetti, ecco come fare:
 
 ## Contatti 📫
 
-- 📧 Email: domenico@example.com  
+- 📧 Email: domenico.cocco@gmail.com 
 - 🔗 LinkedIn: [linkedin.com/in/domenico374](https://linkedin.com/in/domenico374)  
 - 🐙 GitHub: [github.com/domenico374](https://github.com/domenico374)
 
