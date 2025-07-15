@@ -26,6 +26,8 @@ Qui trovi una raccolta dei miei progetti digitali innovativi, frutto di creativi
 **Descrizione:**  
 App web che rivoluziona il fantacalcio con analisi predittive AI, consigli personalizzati per la formazione e statistiche avanzate per massimizzare le performance della tua squadra.
 
+![Screenshot Fantateam](./screenshot_fantateam.png)
+
 **Tecnologie principali:**  
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)  
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)  
