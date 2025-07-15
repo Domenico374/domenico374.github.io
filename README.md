@@ -1,6 +1,3 @@
-Certo\! Ecco il contenuto del tuo `README.md` pronto da copiare e incollare.
-
-````markdown
 # La Fucina delle Idee - Progetti
 
 Ciao! Sono Domenico, appassionato di tecnologia e intelligenza artificiale. Qui trovi una raccolta dei miei progetti digitali innovativi, frutto di creatività e sviluppo tecnico.
