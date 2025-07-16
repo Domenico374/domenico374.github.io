@@ -7,20 +7,21 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #e6f7f4;
       color: #344a72;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
     header {
-      background: #b3e5fc;
-      text-align: center;
+      background: #003b4f;
       padding: 1em;
-    }
-    header img {
-      width: 80px;
+      text-align: center;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1.2px;
     }
     main {
       flex: 1;
@@ -28,11 +29,10 @@
       margin: 2em auto;
       padding: 0 1em;
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5em;
     }
     .card {
-      background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1.5em;
@@ -41,6 +41,8 @@
       align-items: center;
       text-align: center;
       transition: transform 0.3s ease;
+      color: white;
+      min-height: 400px;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -53,74 +55,163 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .card h2 {
-      color: #244977;
-      margin: 0.5em 0 0.8em;
+      margin: 0.5em 0 0.3em;
+      font-weight: 700;
       font-size: 1.6em;
     }
     .card p {
       font-size: 1em;
-      margin-bottom: 1.2em;
+      line-height: 1.3em;
       flex-grow: 1;
+      margin-bottom: 1.5em;
     }
-    .card a.button {
+    .tags {
+      margin-bottom: 1.2em;
+    }
+    .tag {
+      background: rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 0.3em 0.9em;
+      margin: 0 0.3em 0.3em 0;
+      font-size: 0.85em;
+      display: inline-block;
+    }
+    .buttons {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    a.button {
       background: #003b4f;
       color: white;
-      padding: 0.5em 1.2em;
+      padding: 0.6em 1.2em;
       border-radius: 5px;
       text-decoration: none;
       font-weight: 600;
       transition: background-color 0.3s ease;
+      flex-grow: 1;
+      max-width: 150px;
+      text-align: center;
     }
-    .card a.button:hover {
+    a.button:hover {
       background: #244977;
     }
+
+    /* Fantateam */
+    .fantateam {
+      background: #2a6e2a;
+    }
+    .fantateam a.button {
+      background: #003b8a;
+    }
+    .fantateam a.button:hover {
+      background: #0050cc;
+    }
+
+    /* Storygen */
+    .storygen {
+      background: #4b217a;
+    }
+    .storygen a.button {
+      background: #572d92;
+    }
+    .storygen a.button:hover {
+      background: #6e41b3;
+    }
+
+    /* Castello Kids */
+    .castellokids {
+      background: #e5790f;
+    }
+    .castellokids a.button {
+      background: #0a2e6a;
+    }
+    .castellokids a.button:hover {
+      background: #214c99;
+    }
+
     footer {
       background-color: #003b4f;
       color: white;
       text-align: center;
       padding: 1.2em;
       margin-top: auto;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      main {
+        grid-template-columns: 1fr;
+        margin: 1em;
+      }
+      a.button {
+        max-width: 100%;
+        flex-grow: unset;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+    La Fucina delle Idee - Progetti
   </header>
 
   <main>
-    <!-- Card Fantateam -->
-    <div class="card">
-      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/fantateam_logo.png" alt="Fantateam" />
-      <h2>Fantateam ⚽</h2>
-      <p>App web che rivoluziona il fantacalcio con analisi predittive AI, consigli personalizzati per la formazione e statistiche avanzate per massimizzare le performance della tua squadra.</p>
-      <a href="fantateam.html" class="button">Scopri Fantateam</a>
+    <!-- Fantateam -->
+    <div class="card fantateam">
+      <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
+      <h2>Fantateam</h2>
+      <p>Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Flask</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">MySQL</span>
+      </div>
+      <div class="buttons">
+        <a href="https://github.com/Domenico374/fantateam" target="_blank" rel="noopener" class="button">GitHub</a>
+        <a href="https://fantateam.example.com" target="_blank" rel="noopener" class="button">Prova la Demo</a>
+      </div>
     </div>
 
-    <!-- Card StoryGen -->
-    <div class="card">
-      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen" />
-      <h2>StoryGen 📚</h2>
+    <!-- Storygen -->
+    <div class="card storygen">
+      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Logo" />
+      <h2>Storygen</h2>
       <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
-      <a href="storygen.html" class="button">Guarda StoryGen</a>
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">OpenAI API</span>
+        <span class="tag">SVG Generation</span>
+      </div>
+      <div class="buttons">
+        <a href="https://github.com/Domenico374/storygen" target="_blank" rel="noopener" class="button">GitHub</a>
+        <a href="https://domenico374.github.io/storygen.html" target="_blank" rel="noopener" class="button">Prova la Demo</a>
+      </div>
     </div>
 
-    <!-- Card Castello Kids -->
-    <div class="card">
-      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/castello_kids_logo.png" alt="Castello Kids" />
-      <h2>Castello Kids 🏰</h2>
-      <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari tramite un'avventura didattica interattiva guidata da AI.</p>
-      <a href="castello_kids.html" class="button">Scopri Castello Kids</a>
+    <!-- Castello Kids -->
+    <div class="card castellokids">
+      <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
+      <h2>Castello Kids</h2>
+      <p>App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
+      <div class="tags">
+        <span class="tag">React Native</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Storytelling</span>
+      </div>
+      <div class="buttons">
+        <a href="https://github.com/Domenico374/castellokids" target="_blank" rel="noopener" class="button">Scopri di più</a>
+        <a href="https://castellokids.example.com" target="_blank" rel="noopener" class="button">Prova la Demo</a>
+      </div>
     </div>
-
-    <!-- Puoi aggiungere qui altre card per altri progetti -->
-
   </main>
 
   <footer>
-    <p>© 2025 La Fucina delle Idee</p>
+    © 2025 La Fucina delle Idee
   </footer>
-
 </body>
 </html>
