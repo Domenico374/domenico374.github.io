@@ -14,39 +14,53 @@
     }
     header {
       background-color: #003b4f;
-      padding: 1em 2em;
-      text-align: center;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1em;
+      padding: 0.75em 2em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
-    header img {
+    /* Riga 1: logo + scritta */
+    .header-top {
+      display: flex;
+      align-items: center;
+      gap: 0.75em;
+      padding-bottom: 0.4em;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+    .header-top img.logo {
       height: 50px;
+      display: block;
     }
+    .header-top .site-title {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5em;
+      user-select: none;
+      white-space: nowrap;
+    }
+    /* Riga 2: navigazione */
     nav {
-      margin-left: auto;
+      margin-top: 0.4em;
+      display: flex;
+      justify-content: flex-start;
+      gap: 2em;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 1.5em;
       font-weight: 600;
-      font-size: 1em;
+      font-size: 1.1em;
       transition: color 0.3s ease;
+      user-select: none;
     }
     nav a:hover {
       color: #90caf9;
     }
     main {
       max-width: 1100px;
-      margin: 120px auto 2em; /* margine top per compensare header fisso */
+      margin: 120px auto 2em; /* spazio in alto per header fisso */
       padding: 0 1em;
     }
     section {
@@ -58,6 +72,7 @@
       margin-bottom: 1em;
       color: #003b4f;
     }
+    /* Resto stile come prima */
     .about {
       display: flex;
       align-items: center;
@@ -183,6 +198,7 @@
         margin-left: 0;
         text-align: center;
         margin-top: 0.5em;
+        justify-content: center;
       }
       nav a {
         margin-left: 1em;
@@ -194,7 +210,10 @@
 <body>
 
 <header>
-  <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <div class="header-top">
+    <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/logo_fucina.png" alt="Logo La Fucina delle Idee" class="logo" />
+    <div class="site-title">La Fucina delle Idee</div>
+  </div>
   <nav>
     <a href="#home">Home</a>
     <a href="#chi-sono">Chi Sono</a>
@@ -212,7 +231,7 @@
 
   <section class="about" id="chi-sono">
     <h2>Chi Sono</h2>
-    <img src="img/foto_domenico.png" alt="Foto Domenico" />
+    <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/foto_domenico.png" alt="Foto Domenico" />
     <div class="about-text">
       <p>Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.</p>
       <p>Mi piace trasformare idee semplici in applicazioni efficaci che migliorano la vita delle persone, con un focus su usabilità e design.</p>
@@ -223,8 +242,8 @@
     <h2>Progetti</h2>
     <div class="cards">
 
-      <div class="card" style="background-color:#dce8f9;">
-        <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
+      <div class="card" style="background-color:#3c763d; color:white;">
+        <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/fantateam_logo.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
         <div class="tech-tags">
@@ -240,7 +259,7 @@
         </div>
       </div>
 
-      <div class="card" style="background-color:#def9e5;">
+      <div class="card" style="background-color:#5e2f87; color:white;">
         <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
@@ -255,8 +274,8 @@
         </div>
       </div>
 
-      <div class="card" style="background-color:#fdebd1;">
-        <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
+      <div class="card" style="background-color:#f5921f; color:#003b4f;">
+        <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/castellokids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
         <div class="tech-tags">
