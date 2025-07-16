@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Fucina delle Idee - Home</title>
+  <title>La Fucina delle Idee</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,14 +13,19 @@
     }
     header {
       background-color: #003b4f;
-      color: white;
       padding: 1em 2em;
       text-align: center;
-      font-size: 1.8em;
-      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+    }
+    header img {
+      height: 50px;
     }
     main {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 2em auto;
       padding: 0 1em;
     }
@@ -33,7 +38,6 @@
       margin-bottom: 1em;
       color: #003b4f;
     }
-    /* Chi Sono - immagine + testo affiancati */
     .about {
       display: flex;
       align-items: center;
@@ -54,8 +58,6 @@
       font-size: 1.1em;
       line-height: 1.5em;
     }
-
-    /* Cards progetto */
     .cards {
       display: flex;
       gap: 1.5em;
@@ -67,15 +69,16 @@
       padding: 1.5em;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      color: white;
+      background-color: white;
+      color: #344a72;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: box-shadow 0.3s ease;
     }
     .card:hover {
-      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
     }
     .card img {
       max-width: 160px;
@@ -87,6 +90,7 @@
     .card h3 {
       margin-top: 0;
       margin-bottom: 0.6em;
+      color: #003b4f;
     }
     .card p {
       font-size: 1em;
@@ -98,8 +102,8 @@
     }
     .tech-tag {
       display: inline-block;
-      background: rgba(255,255,255,0.3);
-      color: white;
+      background: #dde9f0;
+      color: #344a72;
       padding: 0.3em 0.7em;
       margin: 0.2em 0.2em 0.5em 0;
       border-radius: 15px;
@@ -113,8 +117,8 @@
       flex-wrap: wrap;
     }
     .buttons a {
-      background-color: rgba(255,255,255,0.9);
-      color: #003b4f;
+      background-color: #003b4f;
+      color: white;
       padding: 0.7em 1.5em;
       text-decoration: none;
       border-radius: 8px;
@@ -122,20 +126,8 @@
       transition: background-color 0.3s ease;
     }
     .buttons a:hover {
-      background-color: white;
+      background-color: #005f88;
     }
-    /* Card colors */
-    .fantateam {
-      background: #c62828; /* Rosso scuro */
-    }
-    .storygen {
-      background: #00695c; /* Verde petrolio scuro */
-    }
-    .castellokids {
-      background: #ef6c00; /* Arancio scuro */
-    }
-
-    /* Contatti */
     .contacts {
       max-width: 700px;
       margin: 0 auto 3em;
@@ -157,8 +149,6 @@
       padding: 1em 0;
       font-size: 0.9em;
     }
-
-    /* Responsive: su schermi piccoli */
     @media (max-width: 700px) {
       .about {
         flex-direction: column;
@@ -169,20 +159,14 @@
         margin-left: auto;
         margin-right: auto;
       }
-      .cards {
-        flex-direction: column;
-        align-items: center;
-      }
-      .card {
-        width: 90%;
-      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  La Fucina delle Idee
+  <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  <span>La Fucina delle Idee</span>
 </header>
 
 <main>
@@ -196,12 +180,8 @@
     <h2>Chi Sono</h2>
     <img src="img/foto_domenico.png" alt="Foto Domenico" />
     <div class="about-text">
-      <p>
-        Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.
-      </p>
-      <p>
-        Mi piace trasformare idee semplici in applicazioni efficaci che migliorano la vita delle persone, con un focus su usabilità e design.
-      </p>
+      <p>Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.</p>
+      <p>Mi piace trasformare idee semplici in applicazioni efficaci che migliorano la vita delle persone, con un focus su usabilità e design.</p>
     </div>
   </section>
 
@@ -209,7 +189,7 @@
     <h2>Progetti</h2>
     <div class="cards">
 
-      <div class="card fantateam">
+      <div class="card" style="background-color:#dce8f9;">
         <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
         <h3>Fantateam</h3>
         <p>Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
@@ -226,8 +206,8 @@
         </div>
       </div>
 
-      <div class="card storygen">
-        <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/storygen_logo.png" alt="Storygen Logo" />
+      <div class="card" style="background-color:#def9e5;">
+        <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
         <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
         <div class="tech-tags">
@@ -241,7 +221,7 @@
         </div>
       </div>
 
-      <div class="card castellokids">
+      <div class="card" style="background-color:#fdebd1;">
         <img src="img/castellokids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
@@ -261,7 +241,7 @@
 
   <section class="contacts" id="contatti">
     <h2>Contatti</h2>
-    <p>Puoi contattarmi a: <a href="mailto:domenico@example.com">domenico@gmail.com</a></p>
+    <p>Puoi contattarmi a: <a href="mailto:domenico@example.com">domenico@example.com</a></p>
     <p>Seguimi su <a href="https://linkedin.com/in/domenico374" target="_blank" rel="noopener">LinkedIn</a> e <a href="https://github.com/Domenico374" target="_blank" rel="noopener">GitHub</a></p>
   </section>
 
