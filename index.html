@@ -6,203 +6,221 @@
   <title>La Fucina delle Idee</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #e6f7f4;
       color: #344a72;
-      scroll-behavior: smooth;
+      line-height: 1.6;
     }
     header {
       background-color: #003b4f;
-      padding: 0.75em 2em;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    /* Riga 1: logo + scritta */
-    .header-top {
-      display: flex;
-      align-items: center;
-      gap: 0.75em;
-      padding-bottom: 0.4em;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-    }
-    .header-top img.logo {
-      height: 50px;
-      display: block;
-    }
-    .header-top .site-title {
       color: white;
-      font-weight: 700;
-      font-size: 1.5em;
-      user-select: none;
-      white-space: nowrap;
+      text-align: center;
+      padding: 1.5em 1em;
     }
-    /* Riga 2: navigazione */
-    nav {
-      margin-top: 0.4em;
-      display: flex;
-      justify-content: flex-start;
-      gap: 2em;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1em;
-      transition: color 0.3s ease;
-      user-select: none;
-    }
-    nav a:hover {
-      color: #90caf9;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
     main {
-      max-width: 1100px;
-      margin: 120px auto 2em; /* spazio in alto per header fisso */
+      max-width: 1000px;
+      margin: 2em auto;
       padding: 0 1em;
     }
     section {
-      margin-bottom: 3em;
+      margin-bottom: 4em;
     }
     h2 {
-      border-bottom: 2px solid #003b4f;
-      padding-bottom: 0.5em;
-      margin-bottom: 1em;
-      color: #003b4f;
+      color: #244977;
+      margin-bottom: 0.6em;
+      font-size: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #244977;
+      padding-bottom: 0.3em;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    /* Resto stile come prima */
-    .about {
+    /* HOME */
+    #home h2 {
+      margin-top: 0;
+    }
+    #home p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      text-align: center;
+    }
+    /* CHI SONO */
+    #chi-sono {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: 1.5em;
-      max-width: 900px;
-      margin: 0 auto 3em;
+      justify-content: center;
+      gap: 2em;
     }
-    .about img {
-      width: 160px;
-      height: 160px;
+    #chi-sono img {
       border-radius: 50%;
-      border: 3px solid #003b4f;
-      object-fit: cover;
+      border: 4px solid #4979c6;
+      max-width: 200px;
+      height: auto;
       flex-shrink: 0;
     }
-    .about-text {
-      flex: 1;
-      font-size: 1.1em;
-      line-height: 1.5em;
+    #chi-sono .bio-text {
+      max-width: 600px;
+      font-size: 1.1rem;
+      text-align: left;
     }
-    .cards {
+    #chi-sono .bio-text h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #244977;
+    }
+    #chi-sono .bio-text p {
+      margin-bottom: 1em;
+    }
+    #chi-sono .location {
+      background-color: #b4d7f5;
+      padding: 0.4em 0.8em;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      margin-top: 1em;
+      color: #244977;
+    }
+    /* PROGETTI */
+    #progetti .cards-container {
       display: flex;
-      gap: 1.5em;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 1.5em;
     }
     .card {
-      flex: 1 1 280px;
-      padding: 1.5em;
       border-radius: 12px;
+      padding: 1.5em 1.2em;
       box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
-      background-color: white;
-      color: #344a72;
+      width: 300px;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
+      background: white;
+      color: #344a72;
       transition: box-shadow 0.3s ease;
     }
     .card:hover {
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
     }
     .card img {
-      max-width: 160px;
-      border-radius: 8px;
+      max-width: 150px;
+      border-radius: 12px;
       margin-bottom: 1em;
-      background: #f0f0f0;
+      background: white;
       padding: 0.4em;
+      border: 1px solid #ddd;
     }
     .card h3 {
-      margin-top: 0;
-      margin-bottom: 0.6em;
+      margin: 0.6em 0;
+      font-size: 1.5rem;
       color: #003b4f;
     }
     .card p {
-      font-size: 1em;
-      margin-bottom: 1em;
-      line-height: 1.4;
-    }
-    .tech-tags {
-      margin-bottom: 1em;
-    }
-    .tech-tag {
-      display: inline-block;
-      background: #dde9f0;
+      font-size: 1rem;
+      margin-bottom: 1.2em;
+      line-height: 1.3;
       color: #344a72;
-      padding: 0.3em 0.7em;
-      margin: 0.2em 0.2em 0.5em 0;
-      border-radius: 15px;
-      font-size: 0.9em;
-      user-select: none;
     }
-    .buttons {
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      justify-content: center;
+      margin-bottom: 1.5em;
+    }
+    .tag {
+      background: #dde7f0;
+      border-radius: 20px;
+      padding: 0.25em 0.75em;
+      font-size: 0.85rem;
+      color: #244977;
+    }
+    .btn-group {
       display: flex;
       gap: 1em;
-      justify-content: center;
-      flex-wrap: wrap;
+      width: 100%;
     }
-    .buttons a {
+    .btn {
       background-color: #003b4f;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
       color: white;
-      padding: 0.7em 1.5em;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: 600;
       transition: background-color 0.3s ease;
-    }
-    .buttons a:hover {
-      background-color: #005f88;
-    }
-    .contacts {
-      max-width: 700px;
-      margin: 0 auto 3em;
-      font-size: 1.1em;
+      flex: 1;
       text-align: center;
     }
-    .contacts a {
+    .btn:hover {
+      background-color: #244977;
+    }
+    /* Colori Cards */
+    .fantateam {
+      background-color: #3d7d35; /* verde */
+      color: white;
+    }
+    .storygen {
+      background-color: #572e8c; /* viola */
+      color: white;
+    }
+    .castello-kids {
+      background-color: #ef7f1a; /* arancio */
+      color: white;
+    }
+    /* CONTATTI */
+    #contatti {
+      background-color: #d3e8f0;
+      padding: 2em 1em;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto 3em auto;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #244977;
+    }
+    #contatti h2 {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      color: #244977;
+    }
+    #contatti a {
       color: #003b4f;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
     }
-    .contacts a:hover {
+    #contatti a:hover {
       text-decoration: underline;
     }
-    footer {
-      background-color: #003b4f;
-      color: white;
-      text-align: center;
-      padding: 1em 0;
-      font-size: 0.9em;
-    }
-    @media (max-width: 700px) {
-      .about {
+    /* Responsive */
+    @media (max-width: 960px) {
+      #chi-sono {
         flex-direction: column;
         text-align: center;
       }
-      .about img {
-        margin-bottom: 1em;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      nav {
-        margin-left: 0;
+      #chi-sono .bio-text {
         text-align: center;
-        margin-top: 0.5em;
-        justify-content: center;
+        max-width: 100%;
       }
-      nav a {
-        margin-left: 1em;
-        font-size: 1.1em;
+      .card {
+        width: 100%;
+      }
+      .btn-group {
+        flex-direction: column;
+      }
+      .btn {
+        flex: none;
       }
     }
   </style>
@@ -210,87 +228,113 @@
 <body>
 
 <header>
-  <div class="header-top">
-    <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/logo_fucina.png" alt="Logo La Fucina delle Idee" class="logo" />
-    <div class="site-title">La Fucina delle Idee</div>
-  </div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#chi-sono">Chi Sono</a>
-    <a href="#progetti">Progetti</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
+  <h1>La Fucina delle Idee</h1>
 </header>
 
 <main>
+  <!-- HOME -->
+  <section id="home">
+    <h2>Benvenuti!</h2>
+    <p>Scopri i progetti digitali innovativi realizzati da Domenico. Passione per la tecnologia, l'AI e il design.</p>
+  </section>
 
-  <section class="home" id="home">
-  
+  <!-- CHI SONO -->
+  <section id="chi-sono">
+    <img src="img/domenico_avatar.png" alt="Foto Domenico" />
+    <div class="bio-text">
+      <h3>Ciao, sono Domenico</h3>
+      <p>
+        Sono un <strong>specialista in intelligenza artificiale</strong> e progettazione di soluzioni digitali innovative.
+        Il mio lavoro consiste nel trasformare esigenze complesse in strumenti digitali efficaci e facili da usare,
+        pensati per rispondere a bisogni reali.
+      </p>
+      <p>
+        Mi sto costruendo il mio percorso nel mondo della tecnologia, mettendomi alla prova con la programmazione in Python
+        e lo sviluppo di progetti digitali. <em>La Fucina delle Idee</em> è il mio spazio creativo, dove trasformo idee
+        e intuizioni in applicazioni semplici ma funzionali.
+      </p>
+      <p>
+        Non sono un esperto sviluppatore né un designer professionista, ma un autodidatta in crescita,
+        con tanta voglia di imparare e creare valore con la tecnologia.
+      </p>
+      <div class="location">📍 Cagliari, Italia</div>
+    </div>
+  </section>
 
-  <section class="projects" id="progetti">
-    <h2>Progetti</h2>
-    <div class="cards">
+  <!-- PROGETTI -->
+  <section id="progetti">
+    <h2>La Fucina delle Idee - Progetti</h2>
+    <div class="cards-container">
 
-      <div class="card" style="background-color:#3c763d; color:white;">
-        <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/fantateam_logo.png" alt="Fantateam Logo" />
+      <div class="card fantateam">
+        <img src="img/logo_fantateam.png" alt="Logo Fantateam" />
         <h3>Fantateam</h3>
-        <p>Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente. Gestisce più di 50 giocatori e offre statistiche in tempo reale.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">HTML/CSS</span>
-          <span class="tech-tag">MySQL</span>
+        <p>
+          Nato dalla frustrazione di gestire la mia lega su Excel, Fantateam automatizza tutto quello che i fantallenatori odiano fare manualmente.
+          Gestisce più di 50 giocatori e offre statistiche in tempo reale.
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">MySQL</span>
         </div>
-        <div class="buttons">
-          <a href="https://github.com/Domenico374/Fantateam" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://fantateam.example.com" target="_blank" rel="noopener">Prova la Demo</a>
+        <div class="btn-group">
+          <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn">GitHub</a>
+          <a href="https://fantateam.vercel.app" target="_blank" class="btn">Prova la Demo</a>
         </div>
       </div>
 
-      <div class="card" style="background-color:#5e2f87; color:white;">
-        <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Logo" />
+      <div class="card storygen">
+        <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
-        <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">OpenAI API</span>
-          <span class="tech-tag">SVG Generation</span>
+        <p>
+          Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo.
+          Ideale per aspiranti scrittori, scuole e famiglie.
+        </p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">SVG Generation</span>
         </div>
-        <div class="buttons">
-          <a href="https://github.com/Domenico374/storygen" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://storygen.example.com" target="_blank" rel="noopener">Prova la Demo</a>
+        <div class="btn-group">
+          <a href="https://github.com/Domenico374/storygen" target="_blank" class="btn">GitHub</a>
+          <a href="https://domenico374.github.io/storygen.html" target="_blank" class="btn">Prova la Demo</a>
         </div>
       </div>
 
-      <div class="card" style="background-color:#f5921f; color:#003b4f;">
-      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/castello_kids_logo.png" alt="Castello Kids Logo" />
+      <div class="card castello-kids">
+        <img src="img/logo_castello_kids.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
         <p>App educativa per bambini dedicata alla storia e ai giochi didattici.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">React Native</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">Storytelling</span>
+        <div class="tags">
+          <span class="tag">React Native</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Storytelling</span>
         </div>
-        <div class="buttons">
-          <a href="https://castellokids.example.com" target="_blank" rel="noopener">Scopri di più</a>
-          <a href="https://castellokids.example.com/demo" target="_blank" rel="noopener">Prova la Demo</a>
+        <div class="btn-group">
+          <a href="https://github.com/Domenico374/castello_kids" target="_blank" class="btn">Scopri di più</a>
+          <a href="https://castellokids.example.com" target="_blank" class="btn">Prova la Demo</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section class="contacts" id="contatti">
+  <!-- CONTATTI -->
+  <section id="contatti">
     <h2>Contatti</h2>
-    <p>Puoi contattarmi a: <a href="mailto:domenico@example.com">domenico@example.com</a></p>
-    <p>Seguimi su <a href="https://linkedin.com/in/domenico374" target="_blank" rel="noopener">LinkedIn</a> e <a href="https://github.com/Domenico374" target="_blank" rel="noopener">GitHub</a></p>
+    <p>Per informazioni e collaborazioni:</p>
+    <p>Email: <a href="mailto:domenico@example.com">domenico@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/domenicococco" target="_blank">linkedin.com/in/domenicococco</a></p>
   </section>
-
 </main>
 
 <footer>
-  © 2025 La Fucina delle Idee
+  <p style="text-align:center; padding:1em; background:#003b4f; color:white; margin:0;">
+    © 2025 La Fucina delle Idee
+  </p>
 </footer>
 
 </body>
