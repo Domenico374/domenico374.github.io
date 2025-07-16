@@ -33,6 +33,29 @@
       margin-bottom: 1em;
       color: #003b4f;
     }
+    /* Chi Sono - immagine + testo affiancati */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+      max-width: 900px;
+      margin: 0 auto 3em;
+    }
+    .about img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #003b4f;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .about-text {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+
+    /* Cards progetto */
     .cards {
       display: flex;
       gap: 1.5em;
@@ -98,22 +121,20 @@
     .buttons a:hover {
       background-color: #005f88;
     }
-    /* Sezioni chi sono, contatti */
-    .about, .contacts {
+    /* Contatti */
+    .contacts {
       max-width: 700px;
-      margin: 0 auto;
-    }
-    .about img {
-      width: 140px;
-      border-radius: 50%;
-      float: left;
-      margin-right: 1.5em;
-      margin-bottom: 1em;
-      border: 3px solid #003b4f;
-    }
-    .about p {
+      margin: 0 auto 3em;
       font-size: 1.1em;
-      line-height: 1.5em;
+      text-align: center;
+    }
+    .contacts a {
+      color: #003b4f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contacts a:hover {
+      text-decoration: underline;
     }
     footer {
       background-color: #003b4f;
@@ -121,6 +142,19 @@
       text-align: center;
       padding: 1em 0;
       font-size: 0.9em;
+    }
+
+    /* Responsive: su schermi piccoli */
+    @media (max-width: 700px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about img {
+        margin-bottom: 1em;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   </style>
 </head>
@@ -140,9 +174,14 @@
   <section class="about" id="chi-sono">
     <h2>Chi Sono</h2>
     <img src="img/foto_domenico.png" alt="Foto Domenico" />
-    <p>
-      Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.
-    </p>
+    <div class="about-text">
+      <p>
+        Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.
+      </p>
+      <p>
+        Mi piace trasformare idee semplici in applicazioni efficaci che migliorano la vita delle persone, con un focus su usabilità e design.
+      </p>
+    </div>
   </section>
 
   <section class="projects" id="progetti">
