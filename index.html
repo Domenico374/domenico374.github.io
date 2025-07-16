@@ -3,90 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Storygen – La Fucina delle Idee</title>
+  <title>La Fucina delle Idee - Progetti</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #e6f7f4;
+      color: #344a72;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      color: #344a72;
-      text-align: center;
     }
     header {
       background: #b3e5fc;
+      text-align: center;
       padding: 1em;
     }
     header img {
       width: 80px;
     }
-    .content {
+    main {
       flex: 1;
-      max-width: 900px;
+      max-width: 1200px;
       margin: 2em auto;
       padding: 0 1em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.5em;
     }
-    .content img.project-logo {
-      width: 220px;
-      margin-bottom: 1em;
+    .card {
+      background: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    h1 {
-      font-size: 2.4em;
-      margin-bottom: 0.3em;
-      color: #244977;
-    }
-    p.description {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 2em;
-    }
-    h2.video-title {
-      color: #003b4f;
-      margin-bottom: 0.2em;
-    }
-    p.video-invite {
-      font-style: italic;
-      color: #556677;
-      margin-bottom: 1em;
-    }
-    video {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      margin-bottom: 1em;
-    }
-    .buttons {
+      padding: 1.5em;
       display: flex;
-      justify-content: center;
-      gap: 1em;
-      flex-wrap: wrap;
-      margin-bottom: 2em;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease;
     }
-    a.button {
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 1em;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      color: #244977;
+      margin: 0.5em 0 0.8em;
+      font-size: 1.6em;
+    }
+    .card p {
+      font-size: 1em;
+      margin-bottom: 1.2em;
+      flex-grow: 1;
+    }
+    .card a.button {
       background: #003b4f;
       color: white;
-      padding: 0.6em 1.4em;
+      padding: 0.5em 1.2em;
       border-radius: 5px;
       text-decoration: none;
       font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4em;
       transition: background-color 0.3s ease;
     }
-    a.button:hover {
+    .card a.button:hover {
       background: #244977;
-    }
-    /* Feedback download */
-    #download-feedback {
-      display: none;
-      margin-top: 0.5em;
-      color: #0a5;
-      font-weight: bold;
     }
     footer {
       background-color: #003b4f;
@@ -94,16 +80,6 @@
       text-align: center;
       padding: 1.2em;
       margin-top: auto;
-    }
-    /* Responsive tweaks */
-    @media (max-width: 480px) {
-      .buttons {
-        flex-direction: column;
-        gap: 0.5em;
-      }
-      a.button {
-        justify-content: center;
-      }
     }
   </style>
 </head>
@@ -113,41 +89,38 @@
     <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
   </header>
 
-  <div class="content">
-    <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Collage" class="project-logo" />
-    <h1>Storygen</h1>
-    <p class="description">Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
-
-    <h2 class="video-title">Guarda Storygen in Azione!</h2>
-    <p class="video-invite">Scopri un esempio delle nostre storie illustrate generate con AI.</p>
-
-    <video controls preload="metadata" poster="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/video_poster.png" aria-label="Video dimostrativo di Storygen">
-      <source src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/videos/video_squadra_del_bosco_finale_compressed.mp4" type="video/mp4" />
-      Il tuo browser non supporta il video HTML5.
-    </video>
-
-    <div class="buttons">
-      <a href="../index.html" class="button" aria-label="Torna alla home"><span>←</span> Torna alla Home</a>
-      <a id="download-link" href="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/videos/video_squadra_del_bosco_finale_compressed.mp4" download class="button" aria-label="Scarica il video">
-        ⬇️ Scarica il Video
-      </a>
+  <main>
+    <!-- Card Fantateam -->
+    <div class="card">
+      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/fantateam_logo.png" alt="Fantateam" />
+      <h2>Fantateam ⚽</h2>
+      <p>App web che rivoluziona il fantacalcio con analisi predittive AI, consigli personalizzati per la formazione e statistiche avanzate per massimizzare le performance della tua squadra.</p>
+      <a href="fantateam.html" class="button">Scopri Fantateam</a>
     </div>
-    <div id="download-feedback" role="alert" aria-live="polite">Download avviato!</div>
-  </div>
+
+    <!-- Card StoryGen -->
+    <div class="card">
+      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen" />
+      <h2>StoryGen 📚</h2>
+      <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
+      <a href="storygen.html" class="button">Guarda StoryGen</a>
+    </div>
+
+    <!-- Card Castello Kids -->
+    <div class="card">
+      <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/castello_kids_logo.png" alt="Castello Kids" />
+      <h2>Castello Kids 🏰</h2>
+      <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari tramite un'avventura didattica interattiva guidata da AI.</p>
+      <a href="castello_kids.html" class="button">Scopri Castello Kids</a>
+    </div>
+
+    <!-- Puoi aggiungere qui altre card per altri progetti -->
+
+  </main>
 
   <footer>
     <p>© 2025 La Fucina delle Idee</p>
   </footer>
-
-  <script>
-    // Feedback download semplice
-    const downloadLink = document.getElementById('download-link');
-    const feedback = document.getElementById('download-feedback');
-    downloadLink.addEventListener('click', () => {
-      feedback.style.display = 'block';
-      setTimeout(() => feedback.style.display = 'none', 3000);
-    });
-  </script>
 
 </body>
 </html>
