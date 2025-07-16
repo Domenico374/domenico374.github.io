@@ -12,6 +12,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      color: #344a72;
     }
     header {
       background: #b3e5fc;
@@ -25,23 +26,30 @@
       flex: 1;
       text-align: center;
       padding: 2em;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .content img {
+    .content img.project-logo {
       width: 220px;
       margin-bottom: 1em;
       border-radius: 12px; /* leggero arrotondamento */
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .content h1 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
+      font-size: 2.4em;
+      margin-bottom: 0.3em;
       color: #244977;
     }
     .content p {
       font-size: 1.1em;
       max-width: 600px;
       margin: 0 auto 2em;
-      color: #344a72;
+    }
+    video {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      margin-bottom: 2em;
     }
     a.button {
       background: #003b4f;
@@ -51,6 +59,7 @@
       text-decoration: none;
       display: inline-block;
       transition: background-color 0.3s ease;
+      margin: 0 0.5em;
     }
     a.button:hover {
       background: #244977;
@@ -60,22 +69,31 @@
       color: white;
       text-align: center;
       padding: 1.2em;
+      margin-top: auto;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" width="100" />
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
   </header>
 
   <div class="content">
-   <!-- Percorso corretto all'immagine raw -->
-   <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Collage" class="project-logo" />
-
+    <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Collage" class="project-logo" />
     <h1>Storygen</h1>
-    <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie</p>
-    <a href="../index.html" class="button">← Torna alla Home</a>
+    <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
+
+    <!-- Video La Squadra del Bosco -->
+    <video controls preload="metadata" poster="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/video_poster.png">
+      <source src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/videos/video_squadra_del_bosco_finale.mp4" type="video/mp4" />
+      Il tuo browser non supporta il video HTML5.
+    </video>
+
+    <div>
+      <a href="../index.html" class="button">← Torna alla Home</a>
+      <a href="https://github.com/Domenico374/domenico374.github.io/raw/main/videos/video_squadra_del_bosco_finale.mp4" download class="button">Scarica il Video</a>
+    </div>
   </div>
 
   <footer>
