@@ -3,162 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Fucina delle Idee - Progetti</title>
+  <title>La Fucina delle Idee - Portfolio Domenico</title>
   <style>
-    body {
+    /* Reset base */
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #e6f7f4;
+      line-height: 1.6;
       color: #344a72;
+      background: #e6f7f4;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
     header {
       background: #003b4f;
-      padding: 1em;
-      text-align: center;
       color: white;
+      padding: 1em 2em;
+      text-align: center;
       font-size: 1.5em;
       font-weight: bold;
-      letter-spacing: 1.2px;
+    }
+    nav {
+      background: #005a87;
+      padding: 0.5em 2em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background: #244977;
     }
     main {
       flex: 1;
-      max-width: 1200px;
+      max-width: 960px;
       margin: 2em auto;
       padding: 0 1em;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      width: 100%;
+    }
+    section {
+      margin-bottom: 4em;
+    }
+    h1, h2, h3 {
+      color: #244977;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin-bottom: 1em;
+      font-size: 1.1em;
+    }
+
+    /* Home section */
+    #home {
+      text-align: center;
+    }
+    #home img {
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1em;
+    }
+    #home h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.2em;
+    }
+    #home p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #1f2d45;
+    }
+
+    /* Chi Sono */
+    #chi-sono img {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 1em;
+    }
+    #chi-sono p {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Progetti cards */
+    #progetti {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       gap: 1.5em;
     }
     .card {
+      flex: 1 1 280px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       padding: 1.5em;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       transition: transform 0.3s ease;
-      color: white;
-      min-height: 400px;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
     }
     .card img {
-      width: 150px;
-      border-radius: 8px;
+      width: 100px;
       margin-bottom: 1em;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      background: white;
+      padding: 10px;
+      object-fit: contain;
     }
     .card h2 {
-      margin: 0.5em 0 0.3em;
-      font-weight: 700;
-      font-size: 1.6em;
+      margin-bottom: 0.3em;
     }
     .card p {
-      font-size: 1em;
-      line-height: 1.3em;
       flex-grow: 1;
-      margin-bottom: 1.5em;
+      font-size: 1em;
+      margin-bottom: 1em;
+      color: white;
     }
     .tags {
-      margin-bottom: 1.2em;
+      margin-bottom: 1em;
     }
     .tag {
-      background: rgba(255,255,255,0.2);
-      border-radius: 12px;
-      padding: 0.3em 0.9em;
-      margin: 0 0.3em 0.3em 0;
-      font-size: 0.85em;
       display: inline-block;
+      background: rgba(255 255 255 / 0.2);
+      padding: 0.2em 0.6em;
+      margin: 0 0.2em 0.5em 0.2em;
+      border-radius: 12px;
+      font-size: 0.85em;
+      user-select: none;
     }
-    .buttons {
-      display: flex;
-      gap: 1em;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    a.button {
+    .buttons a {
       background: #003b4f;
       color: white;
-      padding: 0.6em 1.2em;
-      border-radius: 5px;
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      margin: 0 0.5em 0.5em 0.5em;
       text-decoration: none;
       font-weight: 600;
       transition: background-color 0.3s ease;
-      flex-grow: 1;
-      max-width: 150px;
-      text-align: center;
+      display: inline-block;
+      min-width: 100px;
     }
-    a.button:hover {
+    .buttons a:hover {
       background: #244977;
     }
 
-    /* Fantateam */
+    /* Colori cards specifici */
     .fantateam {
-      background: #2a6e2a;
+      background: linear-gradient(135deg, #4caf50, #81c784);
     }
-    .fantateam a.button {
-      background: #003b8a;
-    }
-    .fantateam a.button:hover {
-      background: #0050cc;
-    }
-
-    /* Storygen */
     .storygen {
-      background: #4b217a;
+      background: linear-gradient(135deg, #7b1fa2, #9c27b0);
     }
-    .storygen a.button {
-      background: #572d92;
-    }
-    .storygen a.button:hover {
-      background: #6e41b3;
-    }
-
-    /* Castello Kids */
     .castellokids {
-      background: #e5790f;
-    }
-    .castellokids a.button {
-      background: #0a2e6a;
-    }
-    .castellokids a.button:hover {
-      background: #214c99;
+      background: linear-gradient(135deg, #ff9800, #ffb74d);
     }
 
+    /* Contatti */
+    #contatti {
+      text-align: center;
+    }
+    #contatti p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1em;
+    }
+    #contatti a {
+      color: #244977;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease;
+    }
+    #contatti a:hover {
+      border-bottom-color: #244977;
+    }
+
+    /* Footer */
     footer {
       background-color: #003b4f;
       color: white;
       text-align: center;
       padding: 1.2em;
       margin-top: auto;
-      font-size: 0.9em;
     }
 
     /* Responsive */
-    @media (max-width: 480px) {
-      main {
-        grid-template-columns: 1fr;
-        margin: 1em;
+    @media (max-width: 720px) {
+      #progetti {
+        flex-direction: column;
+        align-items: center;
       }
-      a.button {
-        max-width: 100%;
-        flex-grow: unset;
+      .buttons a {
+        margin: 0.3em 0.3em 0.5em 0.3em;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    La Fucina delle Idee - Progetti
-  </header>
 
-  <main>
+<header>
+  La Fucina delle Idee
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#chi-sono">Chi Sono</a>
+  <a href="#progetti">Progetti</a>
+  <a href="#contatti">Contatti</a>
+</nav>
+
+<main>
+  <section id="home">
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+    <h1>Benvenuti!</h1>
+    <p>Scopri i progetti digitali innovativi realizzati da Domenico. Passione per la tecnologia, l'AI e il design.</p>
+  </section>
+
+  <section id="chi-sono">
+    <img src="img/domenico.jpg" alt="Foto Domenico" />
+    <h2>Chi Sono</h2>
+    <p>Sono Domenico, appassionato di tecnologia, AI e sviluppo software. Creo soluzioni innovative e progetti creativi per scuole, famiglie e aziende.</p>
+  </section>
+
+  <section id="progetti">
     <!-- Fantateam -->
     <div class="card fantateam">
       <img src="img/fantateam_logo.png" alt="Fantateam Logo" />
@@ -208,10 +297,19 @@
         <a href="https://castellokids.example.com" target="_blank" rel="noopener" class="button">Prova la Demo</a>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    © 2025 La Fucina delle Idee
-  </footer>
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p>Se vuoi saperne di più o collaborare, puoi contattarmi qui:</p>
+    <p>Email: <a href="mailto:domenico@example.com">domenico@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/domenicococco" target="_blank" rel="noopener">linkedin.com/in/domenicococco</a></p>
+  </section>
+</main>
+
+<footer>
+  © 2025 La Fucina delle Idee
+</footer>
+
 </body>
 </html>
