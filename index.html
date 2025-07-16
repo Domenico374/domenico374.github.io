@@ -10,6 +10,7 @@
       margin: 0;
       background-color: #e6f7f4;
       color: #344a72;
+      scroll-behavior: smooth;
     }
     header {
       background-color: #003b4f;
@@ -20,13 +21,32 @@
       align-items: center;
       justify-content: center;
       gap: 1em;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
     header img {
       height: 50px;
     }
+    nav {
+      margin-left: auto;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5em;
+      font-weight: 600;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #90caf9;
+    }
     main {
       max-width: 1100px;
-      margin: 2em auto;
+      margin: 120px auto 2em; /* margine top per compensare header fisso */
       padding: 0 1em;
     }
     section {
@@ -159,6 +179,15 @@
         margin-left: auto;
         margin-right: auto;
       }
+      nav {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 0.5em;
+      }
+      nav a {
+        margin-left: 1em;
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
@@ -166,7 +195,12 @@
 
 <header>
   <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
-  <span>La Fucina delle Idee</span>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#chi-sono">Chi Sono</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
 </header>
 
 <main>
