@@ -176,24 +176,28 @@
       user-select: none;
     }
     .btn-group {
-      display: flex;
-      gap: 1em;
-      width: 100%;
-      justify-content: center;
-      margin-top: auto;
-    }
-    .btn {
-      background-color: #003b4f;
-      padding: 0.6em 1.2em;
-      border-radius: 6px;
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      flex: 1;
-      text-align: center;
-      user-select: none;
-    }
+  display: flex;
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+  flex-wrap: wrap; /* permette ai bottoni di andare a capo se non c'è spazio */
+}
+
+.btn {
+  background-color: #003b4f;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  flex: 1 1 140px; /* i bottoni crescono, si restringono e hanno base di 140px */
+  max-width: 180px; /* per evitare bottoni troppo larghi */
+  text-align: center;
+  user-select: none;
+}
+
     .btn:hover,
     .btn:focus {
       background-color: #244977;
