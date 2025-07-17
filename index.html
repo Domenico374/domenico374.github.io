@@ -176,28 +176,26 @@
       user-select: none;
     }
     .btn-group {
-  display: flex;
-  gap: 1em;
-  width: 100%;
-  justify-content: center;
-  margin-top: auto;
-  flex-wrap: wrap; /* permette ai bottoni di andare a capo se non c'è spazio */
-}
-
-.btn {
-  background-color: #003b4f;
-  padding: 0.6em 1.2em;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  flex: 1 1 140px; /* i bottoni crescono, si restringono e hanno base di 140px */
-  max-width: 180px; /* per evitare bottoni troppo larghi */
-  text-align: center;
-  user-select: none;
-}
-
+      display: flex;
+      gap: 1em;
+      width: 100%;
+      justify-content: center;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background-color: #003b4f;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      flex: 1 1 140px;
+      max-width: 180px;
+      text-align: center;
+      user-select: none;
+    }
     .btn:hover,
     .btn:focus {
       background-color: #244977;
@@ -294,6 +292,32 @@
 
 <main>
 
+  <section id="home">
+    <h2>Benvenuti!</h2>
+    <p>Scopri i progetti digitali innovativi realizzati da Domenico. Passione per la tecnologia, l'AI e il design.</p>
+  </section>
+
+  <section id="chi-sono">
+    <img src="img/domenico_avatar.png" alt="Foto Domenico" />
+    <div class="bio-text">
+      <h3>Ciao, sono Domenico</h3>
+      <p>
+        Sono un <strong>specialista in intelligenza artificiale</strong> e progettazione di soluzioni digitali innovative.
+        Il mio lavoro consiste nel trasformare esigenze complesse in strumenti digitali efficaci e facili da usare,
+        pensati per rispondere a bisogni reali.
+      </p>
+      <p>
+        Mi sto costruendo il mio percorso nel mondo della tecnologia, mettendomi alla prova con la programmazione in Python
+        e lo sviluppo di progetti digitali. <em>La Fucina delle Idee</em> è il mio spazio creativo, dove trasformo idee
+        e intuizioni in applicazioni semplici ma funzionali.
+      </p>
+      <p>
+        Non sono un esperto sviluppatore né un designer professionista, ma un autodidatta in crescita,
+        con tanta voglia di imparare e creare valore con la tecnologia.
+      </p>
+      <div class="location">📍 Cagliari, Italia</div>
+    </div>
+  </section>
 
   <section id="progetti">
     <h2>La Fucina delle Idee - Progetti</h2>
@@ -311,13 +335,9 @@
           <span class="tag">HTML/CSS</span>
           <span class="tag">MySQL</span>
         </div>
-      <div class="btn-group">
-  <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn">GitHub</a>
-  <a href="https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/" target="_blank" class="btn">Prova la demo</a>
-</div>
+        <div class="btn-group">
           <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn">GitHub</a>
-         <a href="https://domenico374.github.io/fantateam.html" class="button" target="_blank" rel="noopener noreferrer">Prova la demo</a>
-
+          <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn" rel="noopener noreferrer">Prova la demo</a>
         </div>
       </div>
 
@@ -362,6 +382,7 @@
     <p>Email: <a href="mailto:domenico@example.com">domenico@example.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/domenicococco" target="_blank">linkedin.com/in/domenicococco</a></p>
   </section>
+
 </main>
 
 <footer>
