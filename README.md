@@ -1,12 +1,10 @@
 # 🏆 FantaTeam – La tua Lega, il tuo Fantacalcio
 
-![Python](https://img.shields.io/badge/python-3.10+-blue?logo=python)
-![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-ff4b4b?logo=streamlit)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Status](https://img.shields.io/badge/status-in%20development-orange)
+![Python](https://img.shields.io/badge/python-3.10+-blue?logo=python)  
+![Streamlit](https://img.shields.io/badge/built%20with-Streamlit-ff4b4b?logo=streamlit)  
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+![Status](https://img.shields.io/badge/status-in%20development-orange)  
 ![Made with Love](https://img.shields.io/badge/made%20with-%E2%9D%A4-red)
-
----
 
 ## 📅 Descrizione del progetto
 
@@ -15,58 +13,62 @@ Progettata in **Python** con **Streamlit**, nasce per riportare l’emozione di 
 
 L’app è pensata per leghe tra amici, tornei di quartiere o iniziative creative dove contano più **passione e condivisione** che automazione totale.
 
-### 💪 Perché questo progetto?
+---
 
-Il Fantacalcio è nato come gioco di comunità, e FantaTeam vuole recuperare quella dimensione umana:
+## 💪 Funzionalità Rivoluzionarie
 
-- ✅ meno piattaforme commerciali  
-- ✅ più flessibilità  
-- ✅ più divertimento genuino!
+| Icona | Funzionalità | Descrizione |
+|-|-|-|
+| 🤖 | **AI Coach Personale** | Un assistente virtuale che analizza migliaia di dati per suggerirti le formazioni ottimali e le strategie di mercato più efficaci. |
+| 📊 | **Analisi Predittive** | Algoritmi avanzati che prevedono le performance dei giocatori basandosi su forma, avversari, meteo e statistiche storiche. |
+| 💎 | **Scopri i Talenti** | Trova i giocatori sottovalutati prima degli altri. La nostra AI identifica le occasioni di mercato nascoste. |
+| ⚡ | **Aggiornamenti Real-Time** | Ricevi notifiche istantanee su infortuni, squalifiche e cambi di formazione per essere sempre un passo avanti. |
+| 🎯 | **Strategie Personalizzate** | Consigli su misura per il tuo stile di gioco, che tu sia conservativo, aggressivo o equilibrato. |
+| 🏆 | **Analisi Avversari** | Studia le mosse dei tuoi rivali e anticipa le loro strategie per mantenere il vantaggio competitivo. |
 
-### 🛠️ Tecnologie utilizzate
+---
+
+## 🚀 Come Funziona
+
+1. **Connetti la Tua Lega**  
+   Sincronizza Fantateam con la tua lega esistente in pochi secondi. Supportiamo tutte le principali piattaforme.
+
+2. **Analisi Automatica**  
+   La nostra AI analizza la tua rosa, le performance passate e gli avversari per creare strategie personalizzate.
+
+3. **Ricevi Consigli**  
+   Ottieni suggerimenti dettagliati su formazioni, sostituzioni e mosse di mercato direttamente nell'app.
+
+4. **Domina la Lega**  
+   Applica le strategie consigliate e guarda la tua classifica migliorare settimana dopo settimana.
+
+---
+
+## 🛠️ Tecnologie utilizzate
 
 - Python 3.10  
 - Streamlit  
 - Pandas  
 - Google Sheets (opzionale)  
-- EmailJS (opzionale)
+- EmailJS (opzionale)  
 
-### 💡 Cosa ho imparato
+---
+
+## 💡 Cosa ho imparato
 
 - Costruzione di interfacce web con Streamlit  
 - Gestione degli stati utente  
 - Collegamento a Google Sheets tramite Apps Script  
-- Ottimizzazione del flusso dati in app educative
+- Ottimizzazione del flusso dati in app educative  
 
-### 🌱 Funzionalità future
+---
+
+## 🌱 Funzionalità future
 
 - Integrazione con API calcistiche  
 - Calendario partite e risultati  
 - Mercato con crediti  
-- Campionato su più giornate
-
----
-
-## 🚀 Demo online
-
-Prova subito l'app in azione:  
-[https://domenico374.github.io/fantateam.html](https://domenico374.github.io/fantateam.html)
-
----
-
-## 📓 Indice
-
-- [Descrizione del progetto](#📅-descrizione-del-progetto)  
-- [Tecnologie utilizzate](#🛠️-tecnologie-utilizzate)  
-- [Cosa ho imparato](#💡-cosa-ho-imparato)  
-- [Funzionalità future](#🌱-funzionalità-future)  
-- [Installazione](#⚙️-installazione)  
-- [Come usare il progetto](#🚀-come-usare-il-progetto)  
-- [Screenshot](#📷-screenshot)  
-- [Come contribuire](#🤝-come-contribuire)  
-- [Ringraziamenti](#🙏-ringraziamenti)  
-- [Licenza](#📄-licenza)  
-- [Buone pratiche](#📏-buone-pratiche)
+- Campionato su più giornate  
 
 ---
 
