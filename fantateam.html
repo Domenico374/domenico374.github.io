@@ -6,84 +6,102 @@
   <title>Fantateam – La Fucina delle Idee</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f7f4;
+      color: #344a72;
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #e6f7f4;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding: 2em 1em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    header {
-      background: #b3e5fc;
+
+    h1, h2, h3 {
+      color: #003b4f;
       text-align: center;
-      padding: 1em;
-    }
-    header img {
-      width: 80px;
-    }
-    .content {
-      flex: 1;
-      text-align: center;
-      padding: 2em;
-    }
-    .content img {
-      width: 200px;
-      max-height: 160px;
-      object-fit: contain;
-      margin-bottom: 1em;
-    }
-    .content h1 {
-      font-size: 2em;
       margin-bottom: 0.5em;
     }
-    .content p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 2em;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 2em;
     }
-    a.button {
-      background: #0077cc;
-      color: white;
-      padding: 0.8em 1.5em;
-      border-radius: 5px;
-      text-decoration: none;
+
+    .button {
       display: inline-block;
-      font-size: 1.1em;
-      margin-top: 1em;
-      transition: background-color 0.3s ease;
-    }
-    a.button:hover {
-      background: #005fa3;
-    }
-    footer {
       background-color: #003b4f;
       color: white;
+      padding: 0.8em 2em;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin: 0 auto 2em auto;
+      cursor: pointer;
       text-align: center;
-      padding: 1.2em;
+      user-select: none;
+    }
+    .button:hover, .button:focus {
+      background-color: #244977;
+      outline: none;
+    }
+
+    section.screenshots {
+      margin-bottom: 3em;
+    }
+
+    figure {
+      margin: 2em 0;
+      text-align: center;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    figcaption {
+      margin-top: 0.6em;
+      font-style: italic;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #003b4f;
+      margin-top: 3em;
+      padding: 1em 0;
+      user-select: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" width="100" />
-  </header>
+  <h1>Fantateam</h1>
+  <p>App per fantacalcio potenziata da AI con interfaccia intuitiva, che permette di riscoprire il fascino del fantacalcio con funzionalità innovative.</p>
 
-  <div class="content">
-    <img src="img/fantateam_logo.png" alt="Logo Fantateam" width="160" style="margin: 1em auto;" />
+  <a href="https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/" class="button" target="_blank" rel="noopener noreferrer">🚀 Registrati ora</a>
 
-    <h1>Fantateam</h1>
-    <p>App per fantacalcio potenziata da AI con interfaccia intuitiva, che permette di riscoprire il fascino del fantacalcio con funzionalità innovative.</p>
+  <section class="screenshots">
+    <h2>I tuoi primi passi</h2>
 
-    <a href="https://1c562c03-2114-4157-847f-3e2e7f18b4e4-00-17y1rm3ow9sze.picard.replit.dev/" class="button" target="_blank" rel="noopener noreferrer">🚀 Prova la demo</a>
-    <div class="demo-images" style="text-align:center; margin-top: 2em;">
-  <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_registrazione_fantateam.png" alt="Modulo Registrazione" style="max-width: 100%; height: auto; margin-bottom: 1em;" />
-  <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_creazione_rosa_fantateam.png" alt="Schermata Squadra" style="max-width: 100%; height: auto;" />
-</div>
+    <figure>
+      <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_registrazione_fantateam.png" alt="Modulo Registrazione Fantateam" />
+      <figcaption>Registrazione Facile e Veloce</figcaption>
+    </figure>
 
-<br /><br />
-<a href="index.html" class="button" style="background: gray;">← Torna alla Home</a>
+    <figure>
+      <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/screenshot_creazione_rosa_fantateam.png" alt="Personalizza la Tua Squadra" />
+      <figcaption>Personalizza la Tua Squadra</figcaption>
+    </figure>
+  </section>
 
+  <a href="index.html" class="button" style="background: gray;">← Torna alla Home</a>
 
   <footer>
     <p>© 2025 La Fucina delle Idee</p>
