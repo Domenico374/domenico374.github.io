@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Fucina delle Idee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -69,56 +70,7 @@
       font-size: 2rem;
       user-select: none;
     }
-    #home p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.15rem;
-      text-align: center;
-    }
-    #chi-sono {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2em;
-      justify-content: center;
-    }
-    #chi-sono img {
-      border-radius: 50%;
-      border: 4px solid #4979c6;
-      max-width: 200px;
-      height: auto;
-      flex-shrink: 0;
-      user-select: none;
-    }
-    #chi-sono .bio-text {
-      max-width: 600px;
-      font-size: 1.1rem;
-      text-align: left;
-    }
-    #chi-sono .bio-text h3 {
-      margin-top: 0;
-      font-size: 1.6rem;
-      color: #244977;
-    }
-    #chi-sono .bio-text p {
-      margin-bottom: 1em;
-    }
-    #chi-sono .location {
-      background-color: #b4d7f5;
-      padding: 0.4em 0.8em;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5em;
-      margin-top: 1em;
-      color: #244977;
-      user-select: none;
-    }
-    #progetti h2 {
-      text-align: center;
-    }
-    #progetti .cards-container {
+    .cards-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2em;
@@ -201,78 +153,15 @@
       background-color: #244977;
       outline: none;
     }
-    /* Colori cards */
-    .fantateam {
-      background-color: #3d7d35; /* verde */
-    }
-    .storygen {
-      background-color: #572e8c; /* viola */
-    }
-    .castello-kids {
-      background-color: #ef7f1a; /* arancio */
-      color: #003b4f;
-    }
-    #contatti {
-      background-color: #d3e8f0;
-      padding: 3em 1em; /* aumento verticale */
-      border-radius: 10px;
-      max-width: 600px;
-      margin: 0 auto 3em auto;
-      font-size: 1.1rem;
-      text-align: center;
-      user-select: none;
-    }
-    #contatti h2 {
-      margin-top: 0;
-      margin-bottom: 0.5em;
-      color: #244977;
-    }
-    #contatti a {
-      color: #003b4f;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    #contatti a:hover,
-    #contatti a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
+    .fantateam { background-color: #3d7d35; }
+    .storygen { background-color: #572e8c; }
+    .castello-kids { background-color: #ef7f1a; color: #003b4f; }
     footer {
       text-align: center;
       padding: 1em;
       background: #003b4f;
       color: white;
       user-select: none;
-    }
-    @media (max-width: 960px) {
-      #chi-sono {
-        flex-direction: column;
-        text-align: center;
-      }
-      #chi-sono .bio-text {
-        text-align: center;
-        max-width: 100%;
-      }
-      #progetti .cards-container {
-        grid-template-columns: 1fr;
-        gap: 1.5em;
-      }
-      .card {
-        max-width: 100%;
-      }
-      .btn-group {
-        flex-direction: column;
-      }
-      .btn {
-        flex: none;
-      }
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav a {
-        margin: 0.3em 1em;
-      }
     }
   </style>
 </head>
@@ -297,16 +186,10 @@
       <div class="card fantateam">
         <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/fantateam_logo.png" alt="Logo Fantateam" />
         <h3>Fantateam</h3>
-        <p>
-          "Il Futuro del Fantacalcio
-Scopri la potenza dell'intelligenza artificiale nel fantacalcio. Analisi avanzate, consigli personalizzati e strategie vincenti per dominare la tua lega.".
-        </p>
+        <p>Fantateam è una mini-app per chi gioca al Fantacalcio. Attualmente in versione base, offre funzioni semplici per la gestione della propria squadra.</p>
         <div class="tags">
-          <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">JavaScript</span>
           <span class="tag">HTML/CSS</span>
-          <span class="tag">MySQL</span>
+          <span class="tag">JavaScript</span>
         </div>
         <div class="btn-group">
           <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn">GitHub</a>
@@ -317,17 +200,14 @@ Scopri la potenza dell'intelligenza artificiale nel fantacalcio. Analisi avanzat
       <div class="card storygen">
         <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/storygen_logo.png" alt="Storygen Logo" />
         <h3>Storygen</h3>
-        <p>
-          Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo.
-          Ideale per aspiranti scrittori, scuole e famiglie.
-        </p>
+        <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
         <div class="tags">
           <span class="tag">React</span>
           <span class="tag">OpenAI API</span>
           <span class="tag">SVG Generation</span>
         </div>
         <div class="btn-group">
-          <a href="https://github.com/Domenico374/storygen" target="_blank" class="btn">Github</a>
+          <a href="https://github.com/Domenico374/storygen" target="_blank" class="btn">GitHub</a>
           <a href="https://domenico374.github.io/storygen.html" target="_blank" class="btn">Prova la Demo</a>
         </div>
       </div>
@@ -335,9 +215,7 @@ Scopri la potenza dell'intelligenza artificiale nel fantacalcio. Analisi avanzat
       <div class="card castello-kids">
         <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/castello_kids_logo.png" alt="Castello Kids Logo" />
         <h3>Castello Kids</h3>
-        <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.
-
-.</p>
+        <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
         <div class="tags">
           <span class="tag">React Native</span>
           <span class="tag">JavaScript</span>
@@ -345,17 +223,10 @@ Scopri la potenza dell'intelligenza artificiale nel fantacalcio. Analisi avanzat
         </div>
         <div class="btn-group">
           <a href="https://github.com/domenico374/castello-kids" target="_blank" class="btn">GitHub</a>
-          <a href="https://domenico374.github.io/castello_kids.html" target="_blank" rel="noopener noreferrer" class="btn">Prova la Demo</a>
+          <a href="https://domenico374.github.io/castello_kids.html" target="_blank" class="btn" rel="noopener noreferrer">Prova la Demo</a>
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <p>Per informazioni e collaborazioni:</p>
-    <p>Email: <a href="mailto:domenico@gmail.com">domenico@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/domenico-cocco-577aab83</a></p>
   </section>
 </main>
 
