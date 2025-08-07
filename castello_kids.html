@@ -41,13 +41,11 @@
       max-width: 600px;
       margin: 0 auto 2em;
     }
-    .video-container {
-      max-width: 600px;
-      margin: 0 auto 2em;
-    }
-    .video-container video {
-      width: 100%;
+    video {
+      width: 80%;
+      max-width: 720px;
       border-radius: 8px;
+      margin-bottom: 2em;
     }
     a.button {
       background: #003b4f;
@@ -67,33 +65,32 @@
 </head>
 <body>
 
-<header>
-  <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" width="100" />
-</header>
+  <header>
+    <img src="img/logo_fucina.png" alt="Logo La Fucina delle Idee" />
+  </header>
 
-<div class="content">
-  <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" />
+  <div class="content">
+    <img src="img/castello_kids_logo.png" alt="Logo Castello Kids" />
 
-  <h1>Castello Kids</h1>
-  <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
-  
-  <!-- VIDEO -->
-  <div class="video-container">
-    <video controls>
-      <source src="Castello%20Kids.mp4" type="video/mp4">
-      Il tuo browser non supporta il tag video.
+    <h1>Castello Kids</h1>
+    <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
+
+    <!-- Video inserito da nuova posizione -->
+    <video controls preload="metadata" poster="img/castello_kids_logo.png">
+      <source src="https://domenico374.github.io/videos/Castello%20Kids.mp4" type="video/mp4">
+      Il tuo browser non supporta il video HTML5.
     </video>
+
+    <div>
+      <a href="../index.html" class="button">← Torna alla Home</a>
+    </div>
   </div>
 
-  <div>
-    <a href="../index.html" class="button">← Torna alla Home</a>
-  </div>
-</div>
-
-<footer>
-  <p>© 2025 La Fucina delle Idee</p>
-</footer>
+  <footer>
+    <p>© 2025 La Fucina delle Idee</p>
+  </footer>
 
 </body>
 </html>
+
 
