@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -5,8 +6,6 @@ body {
   color: #344a72;
   line-height: 1.6;
 }
-
-/* HEADER */
 header {
   background-color: #003b4f;
   color: white;
@@ -26,8 +25,6 @@ header h1 {
   font-weight: 700;
   user-select: none;
 }
-
-/* NAV */
 nav {
   background-color: #004b66;
   display: flex;
@@ -50,8 +47,6 @@ nav a:focus {
   border-bottom: 2px solid #ffd166;
   outline: none;
 }
-
-/* MAIN */
 main {
   max-width: 1200px;
   margin: 2em auto;
@@ -68,8 +63,6 @@ section h2 {
   font-size: 2rem;
   user-select: none;
 }
-
-/* CARDS */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -113,8 +106,6 @@ section h2 {
   color: white;
   flex-grow: 1;
 }
-
-/* TAGS */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -129,8 +120,6 @@ section h2 {
   font-size: 0.85rem;
   user-select: none;
 }
-
-/* BUTTONS */
 .btn-group {
   display: flex;
   gap: 1em;
@@ -157,13 +146,9 @@ section h2 {
   background-color: #244977;
   outline: none;
 }
-
-/* COLORI CARDS */
 .fantateam { background-color: #3d7d35; }
 .storygen { background-color: #572e8c; }
 .castello-kids { background-color: #ef7f1a; color: #003b4f; }
-
-/* FOOTER */
 footer {
   text-align: center;
   padding: 1em;
