@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background: #D6F1FF; /* nuovo azzurro chiaro */
+  background: #DFFFE0; /* oppure prova #B2F2BB o #D0F0C0 */
   color: #033f50;
   line-height: 1.6;
   display: flex;
