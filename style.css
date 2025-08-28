@@ -6,13 +6,14 @@
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background: #DFFFE0; /* oppure prova #B2F2BB o #D0F0C0 */
+  background: #DFFFE0; /* verde chiaro fresco */
   color: #033f50;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 a {
   color: #0073e6;
   text-decoration: none;
@@ -173,7 +174,7 @@ main h2 {
   color: #1976d2;
   padding: 4px 10px;
   border-radius: 16px;
-  font-size: 0.9rem; /* ridotto da 12px a 0.9rem */
+  font-size: 0.9rem;
   margin: 3px 5px 3px 0;
 }
 
@@ -207,7 +208,6 @@ main h2 {
   font-weight: 400;
 }
 
-/* Riduci dimensione emoji nei titoli categorie */
 .skill-category h3 {
   font-size: 1.2rem;
 }
@@ -393,7 +393,7 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .profile-section {
     max-width: 100%;
   }
