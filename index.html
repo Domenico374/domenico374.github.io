@@ -1,11 +1,169 @@
-<!DOCTYPE html>
+questo era il codice index  <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f7f4;
+      color: #344a72;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #003b4f;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0.5em 2em;
+      gap: 1em;
+    }
+    header img {
+      height: 50px;
+      width: auto;
+      user-select: none;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: 700;
+      user-select: none;
+    }
+    nav {
+      background-color: #004b66;
+      display: flex;
+      justify-content: center;
+      padding: 0.6em 0;
+    }
+    nav a {
+      color: white;
+      font-weight: 600;
+      margin: 0 1.2em;
+      font-size: 1rem;
+      padding: 0.3em 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      text-decoration: none;
+      user-select: none;
+    }
+    nav a:hover,
+    nav a:focus {
+      border-bottom: 2px solid #ffd166;
+      outline: none;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    section {
+      margin-bottom: 4em;
+    }
+    section h2 {
+      border-bottom: 2px solid #244977;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+      color: #244977;
+      font-size: 2rem;
+      user-select: none;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2em;
+      justify-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      border-radius: 12px;
+      padding: 1.5em 1.2em;
+      box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+      width: 100%;
+      max-width: 350px;
+      min-height: 480px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      user-select: none;
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      margin-bottom: 1em;
+      background: white;
+      padding: 0.8em;
+      object-fit: contain;
+    }
+    .card h3 {
+      margin: 0.6em 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1.2em;
+      line-height: 1.3;
+      color: white;
+      flex-grow: 1;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5em;
+      justify-content: center;
+      margin-bottom: 1.5em;
+    }
+    .tag {
+      background: rgba(255 255 255 / 0.2);
+      border-radius: 20px;
+      padding: 0.25em 0.75em;
+      font-size: 0.85rem;
+      user-select: none;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1em;
+      width: 100%;
+      justify-content: center;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background-color: #003b4f;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      flex: 1 1 140px;
+      max-width: 180px;
+      text-align: center;
+      user-select: none;
+    }
+    .btn:hover,
+    .btn:focus {
+      background-color: #244977;
+      outline: none;
+    }
+    .fantateam { background-color: #3d7d35; }
+    .storygen { background-color: #572e8c; }
+    .castello-kids { background-color: #ef7f1a; color: #003b4f; }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background: #003b4f;
+      color: white;
+      user-select: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -35,7 +193,7 @@
         </div>
         <div class="btn-group">
           <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn">GitHub</a>
-          <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn">Prova la demo</a>
+          <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn" rel="noopener noreferrer">Prova la demo</a>
         </div>
       </div>
 
@@ -65,7 +223,7 @@
         </div>
         <div class="btn-group">
           <a href="https://github.com/domenico374/castello-kids" target="_blank" class="btn">GitHub</a>
-          <a href="https://domenico374.github.io/castello_kids.html" target="_blank" class="btn">Prova la Demo</a>
+          <a href="https://domenico374.github.io/castello_kids.html" target="_blank" class="btn" rel="noopener noreferrer">Prova la Demo</a>
         </div>
       </div>
     </div>
@@ -78,5 +236,4 @@
 
 </body>
 </html>
-
 
