@@ -8,14 +8,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #e6f7f4;
+      background: #0a1a2f; /* blu scuro */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      color: #344a72;
+      color: #e6edf3; /* testo chiaro */
     }
     header {
-      background: #b3e5fc;
+      background: #122b45; /* blu intenso */
       text-align: center;
       padding: 1em;
     }
@@ -32,41 +32,43 @@
     .content img.project-logo {
       width: 220px;
       margin-bottom: 1em;
-      border-radius: 12px; /* leggero arrotondamento */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
     .content h1 {
       font-size: 2.4em;
       margin-bottom: 0.3em;
-      color: #244977;
+      color: #4cc38a; /* verde acqua accent */
     }
     .content p {
       font-size: 1.1em;
       max-width: 600px;
       margin: 0 auto 2em;
+      color: #c7d3e0; /* testo secondario */
     }
     video {
       max-width: 100%;
       border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.6);
       margin-bottom: 2em;
     }
     a.button {
-      background: #003b4f;
-      color: white;
+      background: #4cc38a;
+      color: #0a1a2f;
       padding: 0.6em 1.2em;
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
       transition: background-color 0.3s ease;
       margin: 0 0.5em;
+      font-weight: 600;
     }
     a.button:hover {
-      background: #244977;
+      background: #2f9e6f;
     }
     footer {
-      background-color: #003b4f;
-      color: white;
+      background-color: #122b45;
+      color: #e6edf3;
       text-align: center;
       padding: 1.2em;
       margin-top: auto;
@@ -83,18 +85,17 @@
     <img src="https://github.com/Domenico374/domenico374.github.io/raw/main/img/storygen_logo.png" alt="Storygen Collage" class="project-logo" />
     <h1>Storygen</h1>
     <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
-<p><strong>Guardate nel video sottostante un esempio di ciò che potete creare.</strong></p>
+    <p><strong>Guardate nel video sottostante un esempio di ciò che potete creare.</strong></p>
 
-<!-- Video La Squadra del Bosco -->
-<video controls preload="metadata" poster="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/video_poster.png">
-  <source src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/videos/video_squadra_del_bosco_finale_compressed.mp4" type="video/mp4" />
-  Il tuo browser non supporta il video HTML5.
-</video>
-
+    <!-- Video La Squadra del Bosco -->
+    <video controls preload="metadata" poster="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/video_poster.png">
+      <source src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/videos/video_squadra_del_bosco_finale_compressed.mp4" type="video/mp4" />
+      Il tuo browser non supporta il video HTML5.
+    </video>
 
     <div>
       <a href="../index.html" class="button">← Torna alla Home</a>
-     
+    </div>
   </div>
 
   <footer>
