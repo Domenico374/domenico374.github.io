@@ -8,13 +8,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #e6f7f4;
+      background: #2E8B57; /* verde intenso */
+      color: #e6edf3;       /* testo chiaro */
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
     header {
-      background: #b3e5fc;
+      background: #1e453e; /* verde più scuro */
       text-align: center;
       padding: 1em;
     }
@@ -35,29 +36,37 @@
     .content h1 {
       font-size: 2em;
       margin-bottom: 0.5em;
+      color: #d4ffb2; /* verde chiaro per contrasto */
     }
     .content p {
       font-size: 1.1em;
       max-width: 600px;
       margin: 0 auto 2em;
+      color: #f0f7f4; /* testo chiaro */
     }
     video {
       width: 80%;
       max-width: 720px;
       border-radius: 8px;
       margin-bottom: 2em;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
     }
     a.button {
-      background: #003b4f;
-      color: white;
+      background: #d4ffb2;
+      color: #2E8B57;
       padding: 0.6em 1.2em;
       border-radius: 5px;
       text-decoration: none;
       display: inline-block;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #b0e994;
     }
     footer {
-      background-color: #003b4f;
-      color: white;
+      background-color: #1e453e;
+      color: #e6edf3;
       text-align: center;
       padding: 1.2em;
     }
@@ -75,7 +84,7 @@
     <h1>Castello Kids</h1>
     <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
     <p><strong>Un esempio concreto di esperienza didattica creata con Castello Kids. Guardate il video!</strong></p>
-    <!-- Video inserito da nuova posizione -->
+
     <video controls preload="metadata" poster="img/castello_kids_logo.png">
       <source src="https://domenico374.github.io/videos/Castello%20Kids.mp4" type="video/mp4">
       Il tuo browser non supporta il video HTML5.
@@ -92,5 +101,3 @@
 
 </body>
 </html>
-
-
