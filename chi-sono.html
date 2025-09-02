@@ -1,87 +1,73 @@
-<!-- === CHI SONO (responsive, 2 colonne + 3 card) === -->
+<!-- === CHI SONO (avatar full-left, responsive, 3 card) === -->
 <section id="chi-sono" class="chi-container">
-  <div class="chi-grid">
-    <!-- Avatar -->
-    <img
-      src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/Foto%20di%20Domenico%20Cocco.png"
-      alt="Foto di Domenico Cocco"
-      class="chi-avatar"
-    />
+  <div class="chi-layout">
+    <!-- Avatar figura intera (sostituisci src quando carichi l’illustrazione definitiva) -->
+    <aside class="chi-avatar-full">
+      <img
+        src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/Domenico%20Cocco.png"
+        alt="Avatar di Domenico, figura intera"
+        loading="lazy"
+      />
+    </aside>
 
-    <!-- Bio -->
-    <div class="chi-bio">
-      <h3>Ciao, sono Domenico</h3>
-      <p>
-        Sono una <strong>persona creativa che si sta appassionando all'intelligenza artificiale</strong>, in quanto tramite essa posso esprimermi al meglio. Come risolutore di problemi creativo, affronto ogni sfida con curiosità e determinazione, trasformando ogni ostacolo in un'opportunità di crescita.
-      </p>
-      <p>
-        <em>La Fucina delle Idee</em> è il mio spazio creativo, un laboratorio dove trasformo intuizioni in progetti digitali innovativi. Qui sperimento con l'intelligenza artificiale, sviluppo applicazioni educative e creo soluzioni digitali che rispondono a bisogni reali.
-      </p>
-      <p>
-        Non mi definisco un esperto sviluppatore, ma un <strong>appassionato autodidatta</strong> che trova nella tecnologia il mezzo perfetto per dare forma alle proprie idee creative. Ogni progetto è un viaggio di scoperta che mi permette di esplorare nuove possibilità.
-      </p>
+    <!-- Contenuti -->
+    <div class="chi-content">
+      <!-- Bio -->
+      <header class="chi-bio">
+        <h3>Ciao, sono Domenico</h3>
+        <p>
+          Sono una <strong>persona creativa che si sta appassionando all'intelligenza artificiale</strong>, in quanto tramite essa posso esprimermi al meglio. Come risolutore di problemi creativo, affronto ogni sfida con curiosità e determinazione, trasformando ogni ostacolo in un'opportunità di crescita.
+        </p>
+        <p>
+          <em>La Fucina delle Idee</em> è il mio spazio creativo, un laboratorio dove trasformo intuizioni in progetti digitali innovativi. Qui sperimento con l'intelligenza artificiale, sviluppo applicazioni educative e creo soluzioni digitali che rispondono a bisogni reali.
+        </p>
+        <p>
+          Non mi definisco un esperto sviluppatore, ma un <strong>appassionato autodidatta</strong> che trova nella tecnologia il mezzo perfetto per dare forma alle proprie idee creative. Ogni progetto è un viaggio di scoperta che mi permette di esplorare nuove possibilità.
+        </p>
+      </header>
+
+      <!-- Card: Filosofia -->
+      <article class="chi-card chi-card--gradient" aria-labelledby="tit-filosofia">
+        <h4 id="tit-filosofia">🎯 La Mia Filosofia</h4>
+        <p class="chi-quote"><strong>"Imparare ogni giorno qualcosa di nuovo, ricordando quello che ho appreso ieri."</strong></p>
+        <p class="chi-muted">
+          Questa filosofia guida ogni mio passo nel mondo dello sviluppo, trasformando l'apprendimento continuo in una fonte costante di ispirazione e crescita.
+        </p>
+        <div class="chi-decor" aria-hidden="true">💡</div>
+      </article>
+
+      <!-- Card: Aree di Interesse -->
+      <article class="chi-card" aria-labelledby="tit-aree">
+        <h4 id="tit-aree">🚀 Le Mie Aree di Interesse</h4>
+        <p>"Sto iniziando a usare Python e mi sto appassionando all'intelligenza artificiale. Mi affascina esplorare nuove tecnologie e imparare continuamente per creare soluzioni utili e innovative."</p>
+        <div class="chi-chips">
+          <span>🐍 Python & AI</span>
+          <span>🌐 Web Development</span>
+          <span>📱 App Development</span>
+          <span>🤖 API Integration</span>
+          <span>🎨 Creative Coding</span>
+        </div>
+      </article>
+
+      <!-- Card: Visione -->
+      <article class="chi-card" aria-labelledby="tit-visione">
+        <h4 id="tit-visione">🧭 La Mia Visione</h4>
+        <p>"Il mio obiettivo è imparare a utilizzare l'intelligenza artificiale per sviluppare strumenti e applicazioni capaci di ispirare e coinvolgere gli utenti."</p>
+        <p>
+          Attraverso <em>La Fucina delle Idee</em>, aspiro a costruire un portfolio di progetti che dimostri come la tecnologia possa essere al servizio della creatività umana, creando ponti tra innovazione tecnica e impatto sociale positivo.
+        </p>
+      </article>
+
+      <!-- CTA -->
+      <div class="chi-home">
+        <a href="index.html" class="chi-btn">← Torna alla Home</a>
+      </div>
     </div>
-  </div>
-
-  <!-- Card: Filosofia -->
-  <article class="chi-card chi-card--gradient">
-    <h4>🎯 La Mia Filosofia</h4>
-    <p class="chi-quote"><strong>"Imparare ogni giorno qualcosa di nuovo, ricordando quello che ho appreso ieri."</strong></p>
-    <p class="chi-muted">Questa filosofia guida ogni mio passo nel mondo dello sviluppo, trasformando l'apprendimento continuo in una fonte costante di ispirazione e crescita.</p>
-    <div class="chi-decor">💡</div>
-  </article>
-
-  <!-- Card: Aree di Interesse -->
-  <article class="chi-card">
-    <h4>🚀 Le Mie Aree di Interesse</h4>
-    <p>"Sto iniziando a usare Python e mi sto appassionando all'intelligenza artificiale. Mi affascina esplorare nuove tecnologie e imparare continuamente per creare soluzioni utili e innovative."</p>
-    <div class="chi-chips">
-      <span>🐍 Python & AI</span>
-      <span>🌐 Web Development</span>
-      <span>📱 App Development</span>
-      <span>🤖 API Integration</span>
-      <span>🎨 Creative Coding</span>
-    </div>
-  </article>
-
-  <!-- Card: Visione -->
-  <article class="chi-card">
-    <h4>🧭 La Mia Visione</h4>
-    <p>"Il mio obiettivo è imparare a utilizzare l'intelligenza artificiale per sviluppare strumenti e applicazioni capaci di ispirare e coinvolgere gli utenti."</p>
-    <p>Attraverso <em>La Fucina delle Idee</em>, aspiro a costruire un portfolio di progetti che dimostri come la tecnologia possa essere al servizio della creatività umana, creando ponti tra innovazione tecnica e impatto sociale positivo.</p>
-  </article>
-
-  <div class="chi-home">
-    <a href="index.html" class="chi-btn">← Torna alla Home</a>
   </div>
 </section>
 
-<!-- Stili locali alla sezione (non interferiscono col resto) -->
+<!-- Stili locali -->
 <style>
-  .chi-container{max-width:1000px;margin:0 auto;padding:24px}
-  .chi-grid{display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:start}
-  .chi-avatar{width:160px;height:160px;border-radius:50%;border:4px solid #4979c6;object-fit:cover}
-  .chi-bio h3{margin:0 0 .4em 0;color:#0f172a}
-  .chi-bio p{margin:.6em 0;line-height:1.6}
-
-  .chi-card{background:#dbeef6;border-left:4px solid #4979c6;border-radius:12px;padding:18px 18px 16px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-  .chi-card h4{color:#244977;margin:0 0 .6em 0;font-size:1.15rem}
-  .chi-card .chi-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-  .chi-card .chi-chips span{background:#4979c6;color:#fff;padding:5px 12px;border-radius:16px;font-size:.85rem;font-weight:500}
-
-  .chi-card--gradient{position:relative;color:#fff;background:linear-gradient(135deg,#003b4f 0%,#244977 100%);border:none}
-  .chi-card--gradient h4{color:#fff;margin-bottom:8px}
-  .chi-quote{margin:.2em 0 .6em}
-  .chi-muted{opacity:.95;margin:0}
-  .chi-decor{position:absolute;top:-8px;right:-8px;font-size:2.6rem;opacity:.2;pointer-events:none}
-
-  .chi-home{text-align:center;margin:22px 0 6px}
-  .chi-btn{display:inline-block;background:#003b4f;color:#fff;padding:.6em 1.2em;border-radius:8px;text-decoration:none;font-weight:700;transition:background .25s}
-  .chi-btn:hover{background:#244977}
-
-  /* Responsive */
-  @media (max-width: 820px){
-    .chi-grid{grid-template-columns:1fr;justify-items:center;text-align:left}
-    .chi-avatar{width:132px;height:132px}
-  }
-</style>
+  .chi-container{max-width:1200px;margin:0 auto;padding:24px}
+  .chi-layout{
+    display:grid;grid-template-columns:320px 1fr;gap:28px;align-ite
