@@ -1,11 +1,11 @@
-<!-- === CHI SONO (avatar full-left, responsive, 3 card) === -->
+<!-- === CHI SONO (avatar full-left + bio + 3 card) === -->
 <section id="chi-sono" class="chi-container">
   <div class="chi-layout">
-    <!-- Avatar figura intera (sostituisci src quando carichi l’illustrazione definitiva) -->
+    <!-- Avatar figura intera -->
     <aside class="chi-avatar-full">
       <img
-        src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/Domenico%20Cocco.png"
-        alt="Avatar di Domenico, figura intera"
+        src="Domenico%20Cocco.png"
+        alt="Avatar Domenico a figura intera"
         loading="lazy"
       />
     </aside>
@@ -27,18 +27,16 @@
       </header>
 
       <!-- Card: Filosofia -->
-      <article class="chi-card chi-card--gradient" aria-labelledby="tit-filosofia">
-        <h4 id="tit-filosofia">🎯 La Mia Filosofia</h4>
+      <article class="chi-card chi-card--gradient">
+        <h4>🎯 La Mia Filosofia</h4>
         <p class="chi-quote"><strong>"Imparare ogni giorno qualcosa di nuovo, ricordando quello che ho appreso ieri."</strong></p>
-        <p class="chi-muted">
-          Questa filosofia guida ogni mio passo nel mondo dello sviluppo, trasformando l'apprendimento continuo in una fonte costante di ispirazione e crescita.
-        </p>
-        <div class="chi-decor" aria-hidden="true">💡</div>
+        <p class="chi-muted">Questa filosofia guida ogni mio passo nel mondo dello sviluppo, trasformando l'apprendimento continuo in una fonte costante di ispirazione e crescita.</p>
+        <div class="chi-decor">💡</div>
       </article>
 
       <!-- Card: Aree di Interesse -->
-      <article class="chi-card" aria-labelledby="tit-aree">
-        <h4 id="tit-aree">🚀 Le Mie Aree di Interesse</h4>
+      <article class="chi-card">
+        <h4>🚀 Le Mie Aree di Interesse</h4>
         <p>"Sto iniziando a usare Python e mi sto appassionando all'intelligenza artificiale. Mi affascina esplorare nuove tecnologie e imparare continuamente per creare soluzioni utili e innovative."</p>
         <div class="chi-chips">
           <span>🐍 Python & AI</span>
@@ -50,12 +48,10 @@
       </article>
 
       <!-- Card: Visione -->
-      <article class="chi-card" aria-labelledby="tit-visione">
-        <h4 id="tit-visione">🧭 La Mia Visione</h4>
+      <article class="chi-card">
+        <h4>🧭 La Mia Visione</h4>
         <p>"Il mio obiettivo è imparare a utilizzare l'intelligenza artificiale per sviluppare strumenti e applicazioni capaci di ispirare e coinvolgere gli utenti."</p>
-        <p>
-          Attraverso <em>La Fucina delle Idee</em>, aspiro a costruire un portfolio di progetti che dimostri come la tecnologia possa essere al servizio della creatività umana, creando ponti tra innovazione tecnica e impatto sociale positivo.
-        </p>
+        <p>Attraverso <em>La Fucina delle Idee</em>, aspiro a costruire un portfolio di progetti che dimostri come la tecnologia possa essere al servizio della creatività umana, creando ponti tra innovazione tecnica e impatto sociale positivo.</p>
       </article>
 
       <!-- CTA -->
@@ -69,5 +65,46 @@
 <!-- Stili locali -->
 <style>
   .chi-container{max-width:1200px;margin:0 auto;padding:24px}
-  .chi-layout{
-    display:grid;grid-template-columns:320px 1fr;gap:28px;align-ite
+  .chi-layout{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start}
+
+  /* Avatar */
+  .chi-avatar-full img{
+    width:100%;max-width:300px;border-radius:14px;border:4px solid #4979c6;
+    background:#fff;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,.12)
+  }
+
+  /* Bio */
+  .chi-content{min-width:0}
+  .chi-bio h3{margin:.1em 0 .5em;color:#0f172a;font-size:1.6rem}
+  .chi-bio p{margin:.6em 0;line-height:1.65}
+
+  /* Card */
+  .chi-card{background:#dbeef6;border-left:4px solid #4979c6;border-radius:12px;
+    padding:18px;margin:18px 0;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  .chi-card h4{color:#244977;margin:0 0 .6em;font-size:1.15rem}
+  .chi-card .chi-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .chi-card .chi-chips span{background:#4979c6;color:#fff;padding:5px 12px;
+    border-radius:16px;font-size:.85rem;font-weight:500}
+
+  /* Card gradient */
+  .chi-card--gradient{position:relative;color:#fff;
+    background:linear-gradient(135deg,#003b4f 0%,#244977 100%);border:none}
+  .chi-card--gradient h4{color:#fff;margin-bottom:8px}
+  .chi-quote{margin:.2em 0 .6em}
+  .chi-muted{opacity:.95;margin:0}
+  .chi-decor{position:absolute;top:-8px;right:-8px;font-size:2.6rem;opacity:.2}
+
+  /* CTA */
+  .chi-home{text-align:center;margin:24px 0 8px}
+  .chi-btn{display:inline-block;background:#003b4f;color:#fff;padding:.65em 1.25em;
+    border-radius:8px;text-decoration:none;font-weight:700;transition:background .25s}
+  .chi-btn:hover{background:#244977}
+
+  /* Responsive */
+  @media (max-width: 980px){
+    .chi-layout{grid-template-columns:1fr;gap:18px}
+    .chi-avatar-full{text-align:center}
+    .chi-avatar-full img{max-width:220px}
+  }
+</style>
+
