@@ -20,7 +20,7 @@
     }
     p {
       font-size: 1.1em;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
       line-height: 1.6;
       color: #dcdcdc;
@@ -32,6 +32,36 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.6);
     }
+    .construction {
+      font-size: 1.4em;
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    /* Badge Work in Progress */
+    .badge {
+      display: inline-block;
+      margin-top: 1.5em;
+      padding: 0.6em 1.2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.95em;
+      color: #000;
+      background: repeating-linear-gradient(
+        45deg,
+        #FFD700,
+        #FFD700 10px,
+        #000 10px,
+        #000 20px
+      );
+      border-radius: 6px;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.85; }
+      100% { transform: scale(1); opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -40,8 +70,13 @@
 
   <h1>Fantateam</h1>
 
-  <p>Fantateam è una mini-app dedicata al Fantacalcio: login utenti, gestione rose, punteggi e mercato. 
-     Il progetto è in evoluzione e nuove funzionalità arriveranno presto!</p>
+  <p>
+    <span class="construction">🚧</span>
+    Giocando al Fantacalcio ho usato tante app, ma ognuna mi suggeriva che si potesse fare <strong>di più e meglio</strong>.<br><br>
+    <strong>Fantateam</strong> nasce da questa intuizione: è un progetto <em>in costruzione</em>, che diventerà l’app di Fantacalcio capace di rispondere davvero alle mie esigenze.
+  </p>
+
+  <div class="badge">Work in Progress</div>
 
 </body>
 </html>
