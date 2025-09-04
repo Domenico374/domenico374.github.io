@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contatti – La Fucina delle Idee</title>
+  <title>La Fucina delle Idee</title>
   <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
   <style>
     :root { --brand:#003b4f; --ink:#0f172a; --accent:#244977; --page:#e8f1fa; }
     *{box-sizing:border-box}
     body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--page);color:var(--ink)}
 
-    /* header */
+    /* header centrato */
     header{display:flex;align-items:center;justify-content:center;gap:12px;background:var(--brand);padding:12px 16px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
     header img{width:50px;height:50px;border-radius:6px;object-fit:cover}
     header h1{margin:0;color:#fff;font-size:1.8rem}
@@ -20,13 +20,29 @@
     nav a{margin:0 10px;color:var(--brand);text-decoration:none;font-weight:600}
     nav a:hover{text-decoration:underline}
 
-    /* box contatti */
-    main{max-width:800px;margin:40px auto;padding:0 16px}
-    #contatti{background:#fff;border:2px solid var(--brand);border-radius:10px;text-align:center;padding:32px 20px;color:var(--brand);box-shadow:0 2px 10px rgba(0,0,0,.06)}
-    #contatti h2{color:var(--accent);font-size:2rem;margin:0 0 18px;display:inline-block;padding-bottom:.3em;border-bottom:2px solid var(--accent)}
-    #contatti p{font-size:1.1rem;line-height:1.6;margin:0}
-    #contatti a{color:var(--brand);font-weight:700;text-decoration:none}
-    #contatti a:hover{text-decoration:underline}
+    /* progetti */
+    main{padding:0 16px}
+    #progetti{max-width:1200px;margin:0 auto 32px}
+    #progetti h2{margin:0 auto 16px;padding:0 6px 10px;border-bottom:3px solid rgba(0,0,0,.12);color:var(--accent)}
+    .cards-container{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media (max-width:980px){.cards-container{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.cards-container{grid-template-columns:1fr}}
+
+    /* card base */
+    .card{background:#ffffff; border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:22px; box-shadow:0 6px 16px rgba(0,0,0,.06); text-align:center}
+    .card img{width:110px;height:110px;object-fit:contain;margin:6px auto 10px;border-radius:12px;background:#f5f7fb;box-shadow:inset 0 0 0 6px rgba(255,255,255,.75)}
+    .card h3{margin:8px 0 10px}
+    .card p{margin:0 auto 14px;max-width:320px;line-height:1.55}
+    .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 14px}
+    .tag{font-size:.8rem;background:#edf2f7;border:1px solid #d6dde6;border-radius:999px;padding:4px 8px}
+    .btn-group{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:#0d3b4f;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    /* varianti colore card */
+    .fantateam{background:#2f6f34;color:#fff}
+    .fantateam .btn{background:#123746}
+    .storygen{background:#5e379a;color:#fff}
+    .castello-kids{background:#e28329;color:#fff}
 
     /* footer */
     footer{background:var(--brand);color:#fff;text-align:center;padding:18px 12px;margin-top:40px}
@@ -42,18 +58,62 @@
 <nav>
   <a href="index.html">Home</a>
   <a href="chi-sono.html">Chi Sono</a>
-  <a href="progetti.html">Progetti</a>
+  <a href="index.html#progetti">Progetti</a>
   <a href="contatti.html">Contatti</a>
 </nav>
 
 <main>
-  <section id="contatti">
-    <h2>Contattami</h2>
-    <p>
-      Per collaborazioni o domande puoi scrivermi a:<br />
-      <a href="mailto:domenico.cocco@gmail.com">domenico.cocco@gmail.com</a><br />
-      oppure su <a href="https://www.linkedin.com/in/domenico-cocco-577aab83" target="_blank" rel="noopener">LinkedIn</a>.
-    </p>
+  <section id="progetti">
+    <h2>La Fucina delle Idee - Progetti</h2>
+
+    <div class="cards-container">
+      <!-- Fantateam -->
+      <article class="card fantateam">
+        <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/fantateam_logo.png" alt="Logo Fantateam" />
+        <h3>Fantateam</h3>
+        <p>Fantateam è una mini-app per chi gioca al Fantacalcio. Attualmente in versione base, offre funzioni semplici per la gestione della propria squadra.</p>
+        <div class="tags">
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <div class="btn-group">
+          <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn" rel="noopener">GitHub</a>
+          <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn" rel="noopener">Prova la demo</a>
+        </div>
+      </article>
+
+      <!-- Storygen -->
+      <article class="card storygen">
+        <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/storygen_logo.png" alt="Storygen Logo" />
+        <h3>Storygen</h3>
+        <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">OpenAI API</span>
+          <span class="tag">SVG Generation</span>
+        </div>
+        <div class="btn-group">
+          <a href="https://github.com/Domenico374/storygen" target="_blank" class="btn" rel="noopener">GitHub</a>
+          <a href="https://domenico374.github.io/storygen.html" target="_blank" class="btn" rel="noopener">Prova la Demo</a>
+        </div>
+      </article>
+
+      <!-- Castello Kids -->
+      <article class="card castello-kids">
+        <img src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/castello_kids_logo.png" alt="Castello Kids Logo" />
+        <h3>Castello Kids</h3>
+        <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
+        <div class="tags">
+          <span class="tag">React Native</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Storytelling</span>
+        </div>
+        <div class="btn-group">
+          <a href="https://github.com/domenico374/castello-kids" target="_blank" class="btn" rel="noopener">GitHub</a>
+          <a href="https://domenico374.github.io/castello_kids.html" target="_blank" class="btn" rel="noopener">Prova la Demo</a>
+        </div>
+      </article>
+    </div> <!-- /cards-container -->
   </section>
 </main>
 
@@ -63,3 +123,4 @@
 
 </body>
 </html>
+
