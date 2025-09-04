@@ -41,6 +41,7 @@
 
     /* card base */
     .card{
+      position: relative; /* necessario per la ribbon */
       background:#ffffff; border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:22px;
       box-shadow:0 6px 16px rgba(0,0,0,.06); text-align:center;
       transition:transform .15s ease, box-shadow .15s ease;
@@ -66,6 +67,35 @@
     .fantateam .btn{background:#123746}
     .storygen{background:#5e379a;color:#fff}
     .castello-kids{background:#e28329;color:#fff}
+
+    /* --- Ribbon "work in progress" sulla card di Fantateam --- */
+    .card .ribbon-wip{
+      position:absolute;
+      top:14px;
+      left:-12px;
+      padding:.35em .8em;
+      font: 800 .78rem/1 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+      color:#ffd700;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      text-shadow:1px 1px 0 #000;
+      background: repeating-linear-gradient(
+        45deg,
+        #ffd700 0 12px,
+        #000 12px 24px
+      );
+      border-radius:6px;
+      box-shadow:0 4px 10px rgba(0,0,0,.25);
+      transform:rotate(-8deg);
+      user-select:none;
+    }
+    .ribbon-wip::before{ content:"🚧 "; }
+
+    @media (max-width:640px){
+      .card .ribbon-wip{
+        top:10px; left:-10px; font-size:.72rem; padding:.3em .7em;
+      }
+    }
 
     /* footer */
     footer{background:var(--brand);color:#fff;text-align:center;padding:18px 12px;margin-top:40px}
@@ -93,6 +123,9 @@
 
         <!-- Fantateam -->
         <article class="card fantateam">
+          <!-- >>> BADGE LAVORI IN CORSO <<< -->
+          <span class="ribbon-wip" aria-label="Progetto in costruzione">In costruzione</span>
+
           <img
             src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/fantateam_logo.png"
             alt="Logo Fantateam" width="110" height="110" loading="lazy"
