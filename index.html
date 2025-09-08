@@ -41,7 +41,7 @@
 
     /* card base */
     .card{
-      position: relative; /* necessario per la ribbon */
+      position: relative;
       background:#ffffff; border:1px solid rgba(0,0,0,.08); border-radius:14px; padding:22px;
       box-shadow:0 6px 16px rgba(0,0,0,.06); text-align:center;
       transition:transform .15s ease, box-shadow .15s ease;
@@ -55,31 +55,24 @@
     .card p{margin:0 auto 14px;max-width:320px;line-height:1.55}
     .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 14px}
 
-    /* TAG: stile base + varianti colore */
-    .tag {
-      font-size:.8rem;
-      font-weight:600;
-      border-radius:999px;
-      padding:4px 10px;
-      margin:2px;
-      display:inline-block;
-      transition:transform .12s ease;
-    }
+    /* TAG */
+    .tag { font-size:.8rem; font-weight:600; border-radius:999px; padding:4px 10px; margin:2px; display:inline-block; transition:transform .12s ease; }
     .tag:hover { transform: translateY(-2px); }
-
-    .tag.htmlcss   { background:#e44d26; color:#fff; }           
-    .tag.js        { background:#f7df1e; color:#000; }           
-    .tag.react     { background:#61dafb; color:#000; }           
-    .tag.api       { background:#0f9d58; color:#fff; }           
-    .tag.svg       { background:#6a5acd; color:#fff; }           
-    .tag.reactnative{background:#282c34; color:#61dafb;}         
-    .tag.story     { background:#ff69b4; color:#fff; }           
+    .tag.htmlcss   { background:#e44d26; color:#fff; }
+    .tag.js        { background:#f7df1e; color:#000; }
+    .tag.react     { background:#61dafb; color:#000; }
+    .tag.api       { background:#0f9d58; color:#fff; }
+    .tag.svg       { background:#6a5acd; color:#fff; }
+    .tag.reactnative{background:#282c34; color:#61dafb;}
+    .tag.story     { background:#ff69b4; color:#fff; }
 
     /* varianti colore card */
     .fantateam{background:#2f6f34;color:#fff}
     .fantateam .btn{background:#123746}
     .storygen{background:#5e379a;color:#fff}
     .castello-kids{background:#e28329;color:#fff}
+    .herogen{background:#0b1b2a;color:#fff}
+    .herogen .btn{background:#f2b740;color:#0b1b2a;font-weight:700}
 
     /* Ribbon "work in progress" */
     .card .ribbon-wip{
@@ -120,7 +113,7 @@
 </head>
 <body>
 
-  <!-- Skip link per saltare direttamente alle card -->
+  <!-- Skip link -->
   <a class="skip-link" href="#progetti">Salta al contenuto</a>
 
   <header>
@@ -186,7 +179,7 @@
         </article>
 
         <!-- HeroGen -->
-        <article class="card">
+        <article class="card herogen">
           <img src="img/HeroGen.png" alt="HeroGen Logo" width="110" height="110" loading="lazy" />
           <h3>HeroGen</h3>
           <p>Crea eroi, avventurieri e leggende con l’AI. Scrivi poche parole e ottieni <strong>immagine + scheda personaggio</strong> pronte per storie, GdR e worldbuilding.</p>
@@ -220,3 +213,6 @@
   </script>
 </body>
 </html>
+
+ 
+
