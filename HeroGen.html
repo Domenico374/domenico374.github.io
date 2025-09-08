@@ -11,26 +11,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    :root{
-      --brand:#003b4f;
-      --ink:#0f172a;
-      --accent:#244977;
-      --page:#e8f1fa;
-      --card:#ffffff;
-      --muted:#64748b;
-      --ring:#93c5fd;
-      --gold:#f2b740;
-    }
+    :root{ --brand:#003b4f; --ink:#0f172a; --accent:#244977; --page:#e8f1fa; --card:#ffffff; --muted:#64748b; --ring:#93c5fd; --gold:#f2b740; }
     *{box-sizing:border-box}
     html,body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--page)}
     a{color:inherit;text-decoration:none}
     .container{max-width:1100px;margin-inline:auto;padding:24px}
-    header{
-      position:sticky;top:0;z-index:10;
-      backdrop-filter:blur(6px);
-      background:linear-gradient(180deg,rgba(232,241,250,.9),rgba(232,241,250,.6));
-      border-bottom:1px solid #dbeafe;
-    }
+    header{position:sticky;top:0;z-index:10;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(232,241,250,.9),rgba(232,241,250,.6));border-bottom:1px solid #dbeafe}
     nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--brand)}
     .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(242,183,64,.25)}
@@ -43,9 +29,161 @@
     .logoCard{background:var(--card);border-radius:20px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,.08);border:1px solid #e5e7eb}
     .logoBox{display:grid;place-items:center;background:#0b1b2a;border-radius:16px;padding:24px;aspect-ratio:1/1;position:relative;overflow:hidden}
     .logoBox img{max-width:76%;height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.25))}
-    .logoBox::after{content:"";position:absolute;inset:auto -60px -60px auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--gold),transparent 60%) ;opacity:.35}
+    .logoBox::after{content:"";position:absolute;inset:auto -60px -60px auto;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--gold),transparent 60%);opacity:.35}
     h1{font-size:clamp(30px,4vw,48px);margin:0 0 10px}
     .lead{color:var(--muted);font-size:1.05rem;line-height:1.6}
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     section{padding:32px 0}
-    h2{font-size:clamp(2
+    h2{font-size:clamp(24px,3vw,34px);margin:0 0 12px;color:var(--brand)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:18px;padding:18px;box-shadow:0 14px 28px rgba(2,6,23,.06)}
+    .card h3{margin:6px 0 8px}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;border:1px solid #c7d2fe;font-weight:700;color:var(--accent)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .step{background:#fff;border:1px dashed #d1d5db;border-radius:14px;padding:16px}
+    .promptbox{display:grid;gap:10px}
+    .prompt{background:#0b1b2a;color:#e2e8f0;border-radius:14px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace}
+    .copy{justify-self:start}
+    footer{padding:36px 0;color:var(--muted);border-top:1px solid #dbeafe}
+    @media (max-width:960px){.hero__wrap{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand"><span class="dot"></span>La Fucina delle Idee</div>
+        <div class="navlinks">
+          <a href="index.html">Home</a>
+          <a href="#funzioni">Funzioni</a>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#prompt">Prompt demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__wrap">
+        <div>
+          <span class="badge">Nuovo progetto</span>
+          <h1>HeroGen</h1>
+          <p class="lead">
+            Crea eroi, avventurieri e leggende con l’AI. Scrivi poche parole e ottieni
+            <strong>immagine + scheda personaggio</strong> pronte per storie, GdR e worldbuilding.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#" id="launchBtn"><i class="fa-solid fa-wand-magic-sparkles"></i> Prova HeroGen</a>
+            <a class="btn" href="#" id="githubBtn"><i class="fa-brands fa-github"></i> Repo GitHub</a>
+            <a class="btn ghost" href="#funzioni"><i class="fa-regular fa-circle-play"></i> Guarda le funzioni</a>
+          </div>
+        </div>
+
+        <div class="logoCard" aria-label="Logo HeroGen">
+          <div class="logoBox">
+            <img src="img/HeroGen.png" alt="Logo HeroGen: cavaliere, montagne blu e luna dorata" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funzioni">
+      <div class="container">
+        <h2>Funzioni principali</h2>
+        <div class="grid">
+          <article class="card">
+            <h3><i class="fa-solid fa-image"></i> Generazione Immagine</h3>
+            <p class="muted">Dalle parole alla visual: ottieni una resa coerente dello stile (realistico, anime, pittorico, fumetto).</p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-file-lines"></i> Scheda Personaggio</h3>
+            <p class="muted">Nome, background, tratti, abilità, equipaggiamento. Tutto pronto per storie e GdR.</p>
+          </article>
+          <article class="card">
+            <h3><i class="fa-solid fa-sliders"></i> Personalizzazione</h3>
+            <p class="muted">Affina immagine e testo con prompt guidati. Salva, duplica, rigenera varianti.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="come-funziona">
+      <div class="container">
+        <h2>Come funziona</h2>
+        <div class="steps">
+          <div class="step"><strong>1.</strong> Scrivi 1–2 frasi (es. “guerriero nomade, mantello rosso, bussola magica”).</div>
+          <div class="step"><strong>2.</strong> HeroGen genera <em>immagine + scheda</em> con uno stile scelto.</div>
+          <div class="step"><strong>3.</strong> Affina con modifiche mirate e salva nella tua collezione.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prompt">
+      <div class="container">
+        <h2>Prompt di esempio</h2>
+        <div class="promptbox">
+          <div class="prompt" id="p1">
+            "Eroe epico con armatura blu notte e mantello al vento, in posa eroica su un promontorio.
+            Sullo sfondo montagne maestose e una grande luna dorata. Stile illustrativo, dettagli puliti, atmosfera cinematografica."
+          </div>
+          <button class="btn copy" data-copy="#p1"><i class="fa-regular fa-clone"></i> Copia prompt</button>
+
+          <div class="prompt" id="p2">
+            "Ritratto personaggio: ranger elfico, occhi verdi, arco intagliato, mantello muschio.
+            Indole silenziosa ma leale. Background: guardiano delle foreste del Nord, in missione per fermare un’antica minaccia."
+          </div>
+          <button class="btn copy" data-copy="#p2"><i class="fa-regular fa-clone"></i> Copia prompt</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Roadmap breve</h2>
+        <div class="grid">
+          <div class="card"><strong>MVP</strong><br><span class="muted">Generazione immagine + scheda, salvataggio locale, varianti.</span></div>
+          <div class="card"><strong>Personalizzazione</strong><br><span class="muted">Editing guidato, stili artistici, suggerimenti AI.</span></div>
+          <div class="card"><strong>Extra</strong><br><span class="muted">Mini-fumetti, scene ambientate, esportazione PDF.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> La Fucina delle Idee — HeroGen</div>
+      <div style="margin-top:6px">Torna a <a href="index.html"><strong>Home</strong></a> • Guarda anche <a href="Storygen.html">Storygen</a> e <a href="Fantateam.html">Fantateam</a></div>
+    </div>
+  </footer>
+
+  <script>
+    // anno footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // copia prompt
+    document.querySelectorAll('.copy').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const sel = btn.getAttribute('data-copy');
+        const text = document.querySelector(sel).innerText.trim();
+        navigator.clipboard.writeText(text).then(()=>{
+          btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiato!';
+          setTimeout(()=>btn.innerHTML = '<i class="fa-regular fa-clone"></i> Copia prompt', 1400);
+        });
+      });
+    });
+
+    // placeholder link demo/repo
+    document.getElementById('launchBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      alert('Collega qui il link alla demo/app di HeroGen.');
+    });
+    document.getElementById('githubBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      alert('Collega qui l’URL della repository GitHub di HeroGen.');
+    });
+  </script>
+</body>
+</html>
