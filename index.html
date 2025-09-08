@@ -54,13 +54,26 @@
     .card h3{margin:8px 0 10px}
     .card p{margin:0 auto 14px;max-width:320px;line-height:1.55}
     .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:8px 0 14px}
-    .tag{
-      font-size:.8rem;background:#edf2f7;border:1px solid #d6dde6;border-radius:999px;padding:4px 8px;
+
+    /* TAG: stile base + varianti colore */
+    .tag {
+      font-size:.8rem;
+      font-weight:600;
+      border-radius:999px;
+      padding:4px 10px;
+      margin:2px;
+      display:inline-block;
       transition:transform .12s ease;
     }
-    .tag:hover{ transform:translateY(-1px) }
-    .btn-group{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .btn{display:inline-block;background:#0d3b4f;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;min-width:140px}
+    .tag:hover { transform: translateY(-2px); }
+
+    .tag.htmlcss   { background:#e44d26; color:#fff; }           /* HTML/CSS arancio */
+    .tag.js        { background:#f7df1e; color:#000; }           /* JavaScript giallo */
+    .tag.react     { background:#61dafb; color:#000; }           /* React azzurro */
+    .tag.api       { background:#0f9d58; color:#fff; }           /* API verde */
+    .tag.svg       { background:#6a5acd; color:#fff; }           /* SVG viola */
+    .tag.reactnative{background:#282c34; color:#61dafb;}         /* React Native dark */
+    .tag.story     { background:#ff69b4; color:#fff; }           /* Storytelling rosa */
 
     /* varianti colore card */
     .fantateam{background:#2f6f34;color:#fff}
@@ -97,6 +110,10 @@
       }
     }
 
+    /* Bottoni */
+    .btn-group{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:#0d3b4f;color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700;min-width:140px}
+
     /* footer */
     footer{background:var(--brand);color:#fff;text-align:center;padding:18px 12px;margin-top:40px}
   </style>
@@ -113,42 +130,38 @@
 
   <nav>
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="chi-sono.html"><i class="fa-solid fa-user"></i> Chi Sono</a>
-    <a href="contatti.html"><i class="fa-solid fa-envelope"></i> Contatti</a>
   </nav>
 
   <main>
     <section id="progetti" role="region" aria-label="Progetti">
       <div class="cards-container">
 
-      <!-- Fantateam -->
-<article class="card fantateam">
-  <!-- >>> BADGE LAVORI IN CORSO <<< -->
-  <span class="ribbon-wip" aria-label="Progetto in costruzione">In costruzione</span>
+        <!-- Fantateam -->
+        <article class="card fantateam">
+          <span class="ribbon-wip" aria-label="Progetto in costruzione">In costruzione</span>
 
-  <img
-    src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/fantateam_logo.png"
-    alt="Logo Fantateam" width="110" height="110" loading="lazy"
-  />
-  <h3>Fantateam</h3>
-  <p>
-    Giocando al Fantacalcio ho usato tante app, ma ognuna mi suggeriva che si potesse fare 
-    <strong>di più e meglio</strong>.
-  </p>
-  <p>
-    <strong>Fantateam</strong> nasce da questa intuizione: è un progetto <em>in costruzione</em>, 
-    che diventerà l’app di Fantacalcio capace di rispondere davvero alle mie esigenze.
-  </p>
-  <div class="tags">
-    <span class="tag">HTML/CSS</span>
-    <span class="tag">JavaScript</span>
-  </div>
-  <div class="btn-group">
-    <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn" rel="noopener">GitHub</a>
-    <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn" rel="noopener">Prova la demo</a>
-  </div>
-</article>
-
+          <img
+            src="https://raw.githubusercontent.com/Domenico374/domenico374.github.io/main/img/fantateam_logo.png"
+            alt="Logo Fantateam" width="110" height="110" loading="lazy"
+          />
+          <h3>Fantateam</h3>
+          <p>
+            Giocando al Fantacalcio ho usato tante app, ma ognuna mi suggeriva che si potesse fare 
+            <strong>di più e meglio</strong>.
+          </p>
+          <p>
+            <strong>Fantateam</strong> nasce da questa intuizione: è un progetto <em>in costruzione</em>, 
+            che diventerà l’app di Fantacalcio capace di rispondere davvero alle mie esigenze.
+          </p>
+          <div class="tags">
+            <span class="tag htmlcss">HTML/CSS</span>
+            <span class="tag js">JavaScript</span>
+          </div>
+          <div class="btn-group">
+            <a href="https://github.com/Domenico374/fantateam" target="_blank" class="btn" rel="noopener">GitHub</a>
+            <a href="https://domenico374.github.io/fantateam.html" target="_blank" class="btn" rel="noopener">Prova la demo</a>
+          </div>
+        </article>
 
         <!-- Storygen -->
         <article class="card storygen">
@@ -159,9 +172,9 @@
           <h3>Storygen</h3>
           <p>Generatore di storie illustrate con AI: trasforma idee in racconti visivi con testo e immagini in stile fumetto, fiaba o fotoromanzo. Ideale per aspiranti scrittori, scuole e famiglie.</p>
           <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">OpenAI API</span>
-            <span class="tag">SVG Generation</span>
+            <span class="tag react">React</span>
+            <span class="tag api">OpenAI API</span>
+            <span class="tag svg">SVG Generation</span>
           </div>
           <div class="btn-group">
             <a href="https://github.com/Domenico374/storygen" target="_blank" class="btn" rel="noopener">GitHub</a>
@@ -178,9 +191,9 @@
           <h3>Castello Kids</h3>
           <p>App educativa per scuole elementari che porta i bambini alla scoperta della storia del Castello di Cagliari, guidati da un'AI in un'avventura didattica interattiva.</p>
           <div class="tags">
-            <span class="tag">React Native</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Storytelling</span>
+            <span class="tag reactnative">React Native</span>
+            <span class="tag js">JavaScript</span>
+            <span class="tag story">Storytelling</span>
           </div>
           <div class="btn-group">
             <a href="https://github.com/domenico374/castello-kids" target="_blank" class="btn" rel="noopener">GitHub</a>
