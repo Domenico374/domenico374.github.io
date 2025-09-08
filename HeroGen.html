@@ -21,9 +21,11 @@
     .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--brand)}
     .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(242,183,64,.25)}
     .navlinks{display:flex;gap:16px;font-weight:600}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid #c7d2fe;background:#fff;box-shadow:0 6px 16px rgba(2,6,23,.06);font-weight:700}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:14px;border:1px solid #c7d2fe;background:#fff;box-shadow:0 6px 16px rgba(2,6,23,.06);font-weight:700;cursor:pointer}
     .btn.primary{background:var(--brand);color:#fff;border-color:transparent}
     .btn.ghost{background:transparent}
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;border:1px solid #c7d2fe;font-weight:700;color:var(--accent)}
     .hero{padding:56px 0}
     .hero__wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
     .logoCard{background:var(--card);border-radius:20px;padding:22px;box-shadow:0 16px 40px rgba(2,6,23,.08);border:1px solid #e5e7eb}
@@ -35,19 +37,17 @@
     .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
     section{padding:32px 0}
     h2{font-size:clamp(24px,3vw,34px);margin:0 0 12px;color:var(--brand)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .card{background:var(--card);border:1px solid #e5e7eb;border-radius:18px;padding:18px;box-shadow:0 14px 28px rgba(2,6,23,.06)}
-    .card h3{margin:6px 0 8px}
     .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef2ff;border:1px solid #c7d2fe;font-weight:700;color:var(--accent)}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .step{background:#fff;border:1px dashed #d1d5db;border-radius:14px;padding:16px}
-    .promptbox{display:grid;gap:10px}
-    .prompt{background:#0b1b2a;color:#e2e8f0;border-radius:14px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace}
-    .copy{justify-self:start}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width:960px){.hero__wrap{grid-template-columns:1fr}.row{grid-template-columns:1fr}}
+    .promptarea{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .promptarea input{flex:1;padding:12px;border-radius:12px;border:1px solid #c7d2fe;outline:none}
+    .spinner{display:none;margin-left:8px}
+    .err{color:#b91c1c;font-weight:600;margin-top:8px}
+    .ok{color:#166534;font-weight:600;margin-top:8px}
+    .sheet dd{margin:0 0 8px}
     footer{padding:36px 0;color:var(--muted);border-top:1px solid #dbeafe}
-    @media (max-width:960px){.hero__wrap{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
-    @media (max-width:640px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -57,15 +57,15 @@
         <div class="brand"><span class="dot"></span>La Fucina delle Idee</div>
         <div class="navlinks">
           <a href="index.html">Home</a>
-          <a href="#funzioni">Funzioni</a>
-          <a href="#come-funziona">Come funziona</a>
-          <a href="#prompt">Prompt demo</a>
+          <a href="#demo">Prova</a>
+          <a href="#prompt">Prompt</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero__wrap">
         <div>
@@ -76,77 +76,63 @@
             <strong>immagine + scheda personaggio</strong> pronte per storie, GdR e worldbuilding.
           </p>
           <div class="cta">
-            <a class="btn primary" href="#" id="launchBtn"><i class="fa-solid fa-wand-magic-sparkles"></i> Prova HeroGen</a>
-            <a class="btn" href="#" id="githubBtn"><i class="fa-brands fa-github"></i> Repo GitHub</a>
-            <a class="btn ghost" href="#funzioni"><i class="fa-regular fa-circle-play"></i> Guarda le funzioni</a>
+            <a class="btn primary" href="#demo"><i class="fa-solid fa-wand-magic-sparkles"></i> Prova HeroGen</a>
+            <a class="btn" href="https://github.com/Domenico374/HeroGen" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo GitHub</a>
           </div>
         </div>
 
         <div class="logoCard" aria-label="Logo HeroGen">
           <div class="logoBox">
-         <img src="img/HeroGen_Logo.png" alt="Logo HeroGen: cavaliere, montagne blu e luna dorata" />
+            <img src="img/HeroGen_logo.png" alt="Logo HeroGen: cavaliere, montagne blu e luna dorata" />
           </div>
         </div>
       </div>
     </section>
 
-    <section id="funzioni">
+    <!-- DEMO -->
+    <section id="demo">
       <div class="container">
-        <h2>Funzioni principali</h2>
-        <div class="grid">
-          <article class="card">
-            <h3><i class="fa-solid fa-image"></i> Generazione Immagine</h3>
-            <p class="muted">Dalle parole alla visual: ottieni una resa coerente dello stile (realistico, anime, pittorico, fumetto).</p>
-          </article>
-          <article class="card">
-            <h3><i class="fa-solid fa-file-lines"></i> Scheda Personaggio</h3>
-            <p class="muted">Nome, background, tratti, abilità, equipaggiamento. Tutto pronto per storie e GdR.</p>
-          </article>
-          <article class="card">
-            <h3><i class="fa-solid fa-sliders"></i> Personalizzazione</h3>
-            <p class="muted">Affina immagine e testo con prompt guidati. Salva, duplica, rigenera varianti.</p>
-          </article>
+        <h2>Prova la demo</h2>
+        <p class="muted">Scrivi un breve prompt (min 10 caratteri). Esempio: <em>“cavaliere nano, ascia runica, barba lunga, leale ma scontroso”</em>.</p>
+
+        <div class="promptarea">
+          <input id="promptInput" placeholder="Es: ranger elfico, arco intagliato, mantello muschio, occhi verdi">
+          <button id="genBtn" class="btn primary"><i class="fa-solid fa-magic"></i> Genera</button>
+          <button id="copyEx" class="btn"><i class="fa-regular fa-clone"></i> Copia esempio</button>
+          <span id="spin" class="spinner">⏳ Generazione…</span>
+        </div>
+        <div id="msg" class="muted" style="margin-top:6px"></div>
+
+        <div class="row" style="margin-top:18px">
+          <div class="card">
+            <h3>Scheda personaggio</h3>
+            <dl class="sheet">
+              <dt><strong>Nome</strong></dt><dd id="s-nome">—</dd>
+              <dt><strong>Razza/Classe</strong></dt><dd id="s-razza">—</dd>
+              <dt><strong>Tratti</strong></dt><dd id="s-tratti">—</dd>
+              <dt><strong>Background</strong></dt><dd id="s-bg">—</dd>
+              <dt><strong>Abilità</strong></dt><dd id="s-abilita">—</dd>
+              <dt><strong>Equipaggiamento</strong></dt><dd id="s-eq">—</dd>
+            </dl>
+          </div>
+
+          <div class="card">
+            <h3>Immagine generata</h3>
+            <img id="preview" alt="Immagine personaggio" style="max-width:100%;border-radius:14px;border:1px solid #e5e7eb;display:none">
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="come-funziona">
-      <div class="container">
-        <h2>Come funziona</h2>
-        <div class="steps">
-          <div class="step"><strong>1.</strong> Scrivi 1–2 frasi (es. “guerriero nomade, mantello rosso, bussola magica”).</div>
-          <div class="step"><strong>2.</strong> HeroGen genera <em>immagine + scheda</em> con uno stile scelto.</div>
-          <div class="step"><strong>3.</strong> Affina con modifiche mirate e salva nella tua collezione.</div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Prompt di esempio -->
     <section id="prompt">
       <div class="container">
         <h2>Prompt di esempio</h2>
-        <div class="promptbox">
-          <div class="prompt" id="p1">
-            "Eroe epico con armatura blu notte e mantello al vento, in posa eroica su un promontorio.
-            Sullo sfondo montagne maestose e una grande luna dorata. Stile illustrativo, dettagli puliti, atmosfera cinematografica."
-          </div>
-          <button class="btn copy" data-copy="#p1"><i class="fa-regular fa-clone"></i> Copia prompt</button>
-
-          <div class="prompt" id="p2">
-            "Ritratto personaggio: ranger elfico, occhi verdi, arco intagliato, mantello muschio.
-            Indole silenziosa ma leale. Background: guardiano delle foreste del Nord, in missione per fermare un’antica minaccia."
-          </div>
-          <button class="btn copy" data-copy="#p2"><i class="fa-regular fa-clone"></i> Copia prompt</button>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Roadmap breve</h2>
-        <div class="grid">
-          <div class="card"><strong>MVP</strong><br><span class="muted">Generazione immagine + scheda, salvataggio locale, varianti.</span></div>
-          <div class="card"><strong>Personalizzazione</strong><br><span class="muted">Editing guidato, stili artistici, suggerimenti AI.</span></div>
-          <div class="card"><strong>Extra</strong><br><span class="muted">Mini-fumetti, scene ambientate, esportazione PDF.</span></div>
+        <div class="card">
+          <pre id="example" style="margin:0;white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace">
+"Eroe epico con armatura blu notte e mantello al vento, in posa eroica su un promontorio.
+Sullo sfondo montagne maestose e una grande luna dorata.
+Stile illustrativo, dettagli puliti, atmosfera cinematografica."</pre>
         </div>
       </div>
     </section>
@@ -155,35 +141,87 @@
   <footer>
     <div class="container">
       <div>© <span id="year"></span> La Fucina delle Idee — HeroGen</div>
-      <div style="margin-top:6px">Torna a <a href="index.html"><strong>Home</strong></a> • Guarda anche <a href="Storygen.html">Storygen</a> e <a href="Fantateam.html">Fantateam</a></div>
+      <div style="margin-top:6px">Torna a <a href="index.html"><strong>Home</strong></a></div>
     </div>
   </footer>
 
   <script>
-    // anno footer
+    // CONFIG: endpoint Vercel
+    const ENDPOINT = "https://hero-gen.vercel.app/api/generate";
+
+    // footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // copia prompt
-    document.querySelectorAll('.copy').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const sel = btn.getAttribute('data-copy');
-        const text = document.querySelector(sel).innerText.trim();
-        navigator.clipboard.writeText(text).then(()=>{
-          btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiato!';
-          setTimeout(()=>btn.innerHTML = '<i class="fa-regular fa-clone"></i> Copia prompt', 1400);
-        });
+    // copia esempio
+    document.getElementById('copyEx').addEventListener('click', () => {
+      const t = document.getElementById('example').innerText.trim();
+      navigator.clipboard.writeText(t).then(()=>{
+        const btn=document.getElementById('copyEx');
+        const old=btn.innerHTML;
+        btn.innerHTML='<i class="fa-solid fa-check"></i> Copiato!';
+        setTimeout(()=>btn.innerHTML=old,1200);
       });
     });
 
-    // placeholder link demo/repo
-    document.getElementById('launchBtn').addEventListener('click', (e)=>{
-      e.preventDefault();
-      alert('Collega qui il link alla demo/app di HeroGen.');
-    });
-    document.getElementById('githubBtn').addEventListener('click', (e)=>{
-      e.preventDefault();
-      alert('Collega qui l’URL della repository GitHub di HeroGen.');
+    // genera
+    document.getElementById('genBtn').addEventListener('click', async () => {
+      const input = document.getElementById('promptInput');
+      const prompt = input.value.trim();
+      const msg = document.getElementById('msg');
+      const spin = document.getElementById('spin');
+      const btn = document.getElementById('genBtn');
+
+      if (prompt.length < 10) {
+        msg.className = 'err';
+        msg.textContent = 'Scrivi un prompt più dettagliato (almeno 10 caratteri).';
+        return;
+      }
+
+      msg.textContent = '';
+      spin.style.display = 'inline-block';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt })
+        });
+
+        if (!res.ok) {
+          const e = await res.json().catch(()=>({error:'Errore'}));
+          throw new Error(e.error || 'Errore server');
+        }
+
+        const data = await res.json();
+
+        // popola scheda
+        const s = data.sheet || {};
+        document.getElementById('s-nome').textContent   = s.nome || '—';
+        document.getElementById('s-razza').textContent  = s.razza_classe || '—';
+        document.getElementById('s-tratti').textContent = (s.tratti||[]).join(', ') || '—';
+        document.getElementById('s-bg').textContent     = s.background || '—';
+        document.getElementById('s-abilita').textContent= (s.abilita||[]).join(', ') || '—';
+        document.getElementById('s-eq').textContent     = (s.equipaggiamento||[]).join(', ') || '—';
+
+        // immagine
+        const img = document.getElementById('preview');
+        if (data.image_url) { img.src = data.image_url; img.style.display = 'block'; }
+
+        msg.className = 'ok';
+        msg.textContent = 'Fatto! 👌';
+      } catch (err) {
+        console.error(err);
+        msg.className = 'err';
+        msg.textContent = 'Non sono riuscito a generare il personaggio. Riprova.';
+      } finally {
+        spin.style.display = 'none';
+        btn.disabled = false;
+      }
     });
   </script>
 </body>
 </html>
+
+
+       
