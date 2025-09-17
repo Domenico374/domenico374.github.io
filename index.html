@@ -65,14 +65,18 @@
     .tag.svg       { background:#6a5acd; color:#fff; }
     .tag.reactnative{background:#282c34; color:#61dafb;}
     .tag.story     { background:#ff69b4; color:#fff; }
+    /* nuovi tag */
+    .tag.image     { background:#0ea5e9; color:#fff; }  /* Image Gen */
+    .tag.vercel    { background:#111827; color:#fff; }  /* Vercel  */
 
     /* varianti colore card */
     .fantateam{background:#2f6f34;color:#fff}
     .fantateam .btn{background:#123746}
     .storygen{background:#5e379a;color:#fff}
     .castello-kids{background:#e28329;color:#fff}
-    .herogen{background:#0b1b2a;color:#fff}
-    .herogen .btn{background:#f2b740;color:#0b1b2a;font-weight:700}
+    /* Artemisia AI (ex HeroGen) */
+    .artemisia{background:#082737;color:#fff}
+    .artemisia .btn{background:#0ea5e9;color:#082737;font-weight:700}
 
     /* Ribbon "work in progress" */
     .card .ribbon-wip{
@@ -178,61 +182,62 @@
           </div>
         </article>
 
-       <!-- HeroGen -->
-<article class="card herogen">
-  <img src="img/HeroGen_logo.png" alt="HeroGen Logo" width="110" height="110" loading="lazy" />
-  <h3>HeroGen</h3>
-  <p>
-    Crea eroi, avventurieri e leggende con l’AI. Scrivi poche parole e ottieni
-    <strong>immagine + scheda personaggio</strong> pronte per storie, GdR e worldbuilding.
-  </p>
-  <div class="tags">
-    <span class="tag api">OpenAI API</span>
-    <span class="tag svg">SVG/Immagini</span>
-  </div>
-  <div class="btn-group">
-    <a href="https://github.com/Domenico374/HeroGen" target="_blank" class="btn" rel="noopener">GitHub</a>
-    <a href="HeroGen.html" class="btn">Prova la Demo</a>
-  </div>
-</article>
+        <!-- Artemisia AI (ex HeroGen) -->
+        <article class="card artemisia">
+          <img src="img/artemisia_logo.png" alt="Artemisia AI Logo" width="110" height="110" loading="lazy" />
+          <h3>Artemisia AI</h3>
+          <p>
+            Generatore & trasformatore di immagini con IA: da un prompt crea stili
+            cartoon, fotorealistici, “Studio Ghibli”, acquerello, vintage ’90 e altro.
+            Supporta proporzioni 1:1 / 16:9 / 4:5 e download PNG.
+          </p>
+          <div class="tags">
+            <span class="tag image">Image Gen</span>
+            <span class="tag api">OpenAI API</span>
+            <span class="tag vercel">Vercel</span>
+          </div>
+          <div class="btn-group">
+            <a href="https://github.com/Domenico374/Artemisia-AI" target="_blank" class="btn" rel="noopener">GitHub</a>
+            <a href="https://artemisia-ai-app.vercel.app" target="_blank" class="btn" rel="noopener">Prova la Demo</a>
+          </div>
+        </article>
 
       </div>
     </section>
   </main>
-     <!-- Contatti -->
-<section id="contatti" role="region" aria-label="Contatti" style="margin-bottom:30px">
-  <div style="max-width:800px;margin:0 auto;text-align:center">
-    <h2>Contatti</h2>
-    <p>Per informazioni, collaborazioni o curiosità sui progetti di <strong>La Fucina delle Idee</strong> puoi scrivermi:</p>
-    <p>
-      <a href="mailto:domenico.cocco@email.com" class="btn" style="margin:6px">
-        <i class="fa-solid fa-envelope"></i> Email
-      </a>
-      <a href="https://github.com/Domenico374" target="_blank" rel="noopener" class="btn" style="margin:6px">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/domenico-cocco-577aab83/" target="_blank" rel="noopener" class="btn" style="margin:6px">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-    </p>
-  </div>
-</section>
 
-<footer>
-  <p>© 2025 La Fucina delle Idee</p>
-</footer>
+  <!-- Contatti -->
+  <section id="contatti" role="region" aria-label="Contatti" style="margin-bottom:30px">
+    <div style="max-width:800px;margin:0 auto;text-align:center">
+      <h2>Contatti</h2>
+      <p>Per informazioni, collaborazioni o curiosità sui progetti di <strong>La Fucina delle Idee</strong> puoi scrivermi:</p>
+      <p>
+        <a href="mailto:domenico.cocco@email.com" class="btn" style="margin:6px">
+          <i class="fa-solid fa-envelope"></i> Email
+        </a>
+        <a href="https://github.com/Domenico374" target="_blank" rel="noopener" class="btn" style="margin:6px">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/domenico-cocco-577aab83/" target="_blank" rel="noopener" class="btn" style="margin:6px">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+      </p>
+    </div>
+  </section>
 
-<script>
-  (function(){
-    var here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('nav a').forEach(function(a){
-      if (a.getAttribute('href') === here) {
-        a.setAttribute('aria-current','page');
-      }
-    });
-  })();
-</script>
+  <footer>
+    <p>© 2025 La Fucina delle Idee</p>
+  </footer>
+
+  <script>
+    (function(){
+      var here = location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('nav a').forEach(function(a){
+        if (a.getAttribute('href') === here) {
+          a.setAttribute('aria-current','page');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
-
-
